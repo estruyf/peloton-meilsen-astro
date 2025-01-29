@@ -1,0 +1,131 @@
+---
+const navItems = [
+  { href: "/", text: "Home" },
+  { href: "/calendar", text: "Agenda" },
+  { href: "/documents", text: "Documenten" },
+];
+---
+
+<header
+  class="bg-primary py-4 sticky top-0 left-0 right-0 transition-all duration-300"
+>
+  <div class="container mx-auto px-4">
+    <nav class="flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-2">
+        <svg
+          data-name="Peloton Meilsen - Logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 612 612"
+          class="w-10 h-10"
+        >
+          <path
+            fill="currentcolor"
+            d="M278.03,47.68c205.74-13.65,340.68,213.43,225.64,386.4-97.74,146.96-313.07,148.2-412.89,2.71C-17.47,279.04,88.46,60.26,278.03,47.68ZM105.38,347.21c36.55,140.14,210.26,194.88,320.82,98.59,116.07-101.08,76.97-290.68-68.48-338.1-123.23-40.18-250.85,48.13-259.1,176.02h235.75c2,0,9.88-5.45,11.5-7.41,7.87-9.56,6.23-24.21-3.4-31.77-.96-.75-6.36-4.05-6.75-4.05h-56.07v29.05l-2.03,2.03h-73.63v-94.57h149.28c5.31,0,22.72,5.8,28.18,8.3,61.88,28.29,63.13,125.81,0,153.63-6.11,2.69-23.49,8.3-29.53,8.3h-72.28v81.06h-75.66v-81.06h-98.62Z"
+          ></path>
+        </svg>
+        <span class="text-xl font-bold">Peloton Meilsen</span>
+      </a>
+      <ul id="nav-menu" class="hidden md:flex md:space-x-6 md:items-center">
+        {
+          navItems.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="hover:text-accent/80 transition-colors"
+              >
+                {item.text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <button
+        id="nav-toggle"
+        class="md:hidden text-accent z-50"
+        aria-label="Menu omschakelen"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-6 h-6 hamburger-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-6 h-6 close-icon hidden"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </nav>
+  </div>
+  <div
+    id="menu-overlay"
+    class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm hidden z-40"
+  >
+  </div>
+</header>
+
+<script>
+  const navToggle = document.getElementById("nav-toggle");
+  const navMenu = document.getElementById("nav-menu");
+  const menuOverlay = document.getElementById("menu-overlay");
+  const hamburgerIcon = navToggle?.querySelector(".hamburger-icon");
+  const closeIcon = navToggle?.querySelector(".close-icon");
+
+  function toggleMenu() {
+    navMenu?.classList.toggle("open");
+    menuOverlay?.classList.toggle("hidden");
+    document.body.classList.toggle("overflow-hidden");
+    hamburgerIcon?.classList.toggle("hidden");
+    closeIcon?.classList.toggle("hidden");
+  }
+
+  if (navToggle && navMenu && menuOverlay) {
+    navToggle.addEventListener("click", toggleMenu);
+    menuOverlay.addEventListener("click", toggleMenu);
+  }
+</script>
+
+<style>
+  @media (max-width: 768px) {
+    #nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      bottom: 0;
+      width: 70%;
+      max-width: 300px;
+      background-color: var(--color-primary);
+      padding: 6rem 2rem 2rem;
+      transition: right 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      z-index: 45;
+    }
+
+    #nav-menu.open {
+      right: 0;
+    }
+  }
+
+  :root {
+    --color-primary: #342c3b;
+    --color-accent: #ddcca8;
+  }
+</style>

@@ -1,22 +1,31 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Peloton Meilsen Wielerclub" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Peloton Meilsen</title>
+    <title>{title} | Peloton Meilsen</title>
   </head>
-  <body>
-    <slot />
+  <body class="bg-primary text-accent min-h-screen flex flex-col">
+    <Header />
+
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <Footer />
   </body>
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
