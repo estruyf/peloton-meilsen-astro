@@ -49,20 +49,20 @@ export const EventItem: React.FunctionComponent<IEventItemProps> = ({
   }, [type]);
 
   return (
-    <li key={event.id} className="py-6">
+    <li className="py-6">
       <div className="flex flex-col md:flex-row md:justify-between md:items-center">
         <div className="mb-4 md:mb-0">
-          <h3 className="text-xl font-semibold mb-2 inline-flex items-center space-x-2">{icon}<span>{event.summary}</span></h3>
-          <p className="text-accent/80">
+          <h3 className="text-xl font-semibold text-light mb-2 inline-flex items-center space-x-2">{icon}<span>{event.summary}</span></h3>
+          <p className="text-secondary">
             {formatEventDate(event.start.dateTime)}
           </p>
-          <p className="text-accent/80">
+          <p className="text-secondary">
             {formatEventTime(event.start.dateTime)}
           </p>
         </div>
 
         <div className="md:text-right">
-          <p className="text-accent/80 mb-2">{event.location}</p>
+          <p className="text-secondary mb-2">{event.location}</p>
 
           <SummaryButtons
             garmin={garmin}
