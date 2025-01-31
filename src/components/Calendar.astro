@@ -10,7 +10,11 @@ const nextYearToday = `${nextYear}-01-01`;
 const googleApi = `https://clients6.google.com/calendar/v3/calendars/9bbd6f5fa0b03af92856f5f16dc87c3e515c9ad884df703aec2c16bb303d3bb7%40group.calendar.google.com/events?calendarId=9bbd6f5fa0b03af92856f5f16dc87c3e515c9ad884df703aec2c16bb303d3bb7%40group.calendar.google.com&singleEvents=true&eventTypes=default&eventTypes=focusTime&eventTypes=outOfOffice&timeZone=Europe%2FBrussels&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=${today}T00%3A00%3A00%2B18%3A00&timeMax=${nextYearToday}T00%3A00%3A00-18%3A00&key=${import.meta.env.GOOGLE_CAL_KEY}&%24unique=gc237`;
 const response = await fetch(googleApi);
 const data: CalendarEvents = await response.json();
-const events = data.items || [];
+const events = (data.items || []).sort((a, b) => {
+  return (
+    new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime()
+  );
+});
 
 const iCal = `https://calendar.google.com/calendar/ical/9bbd6f5fa0b03af92856f5f16dc87c3e515c9ad884df703aec2c16bb303d3bb7%40group.calendar.google.com/public/basic.ics`;
 ---

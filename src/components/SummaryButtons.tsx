@@ -1,23 +1,14 @@
 import * as React from 'react';
 
 export interface ISummaryButtonsProps {
-  description: string;
+  garmin: string;
   location: string;
 }
 
 export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
-  description,
+  garmin,
   location
 }: React.PropsWithChildren<ISummaryButtonsProps>) => {
-
-  const garmin = React.useMemo(() => {
-    try {
-      const parsed = JSON.parse(description);
-      return parsed.garmin;
-    } catch (e) {
-      return null;
-    }
-  }, [description]);
 
   return (
     <div className="space-x-2 justify-self-end">
