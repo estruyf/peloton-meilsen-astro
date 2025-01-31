@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { Event } from '../models';
-import { addDays, format } from 'date-fns';
+import { format } from 'date-fns';
 import { nl } from 'date-fns/locale/nl';
 import { SummaryButtons } from './SummaryButtons';
 
@@ -47,17 +47,17 @@ export const CalendarView: React.FunctionComponent<ICalendarViewProps> = ({ even
           <li key={event.id} className="py-6">
             <div className="flex flex-col md:flex-row md:justify-between md:items-center">
               <div className="mb-4 md:mb-0">
-                <h3 className="text-xl font-semibold mb-2">{event.summary}</h3>
-                <p className="text-accent/80">
+                <h3 className="text-xl text-light font-semibold mb-2">{event.summary}</h3>
+                <p className="text-secondary">
                   {formatEventDate(event.start.dateTime)}
                 </p>
-                <p className="text-accent/80">
+                <p className="text-secondary">
                   {formatEventTime(event.start.dateTime)}
                 </p>
               </div>
 
               <div className="md:text-right">
-                <p className="text-accent/80 mb-2">{event.location}</p>
+                <p className="text-secondary mb-2">{event.location}</p>
 
                 <SummaryButtons
                   description={event.description}
@@ -75,17 +75,17 @@ export const CalendarView: React.FunctionComponent<ICalendarViewProps> = ({ even
 
       <div className="flex justify-between items-center mt-6">
         <button
-          className="px-4 py-2 bg-accent text-primary rounded-lg hover:bg-accent/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-4 py-2 bg-secondary text-primary rounded-lg hover:bg-secondary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           disabled={currentPage === 1}
           onClick={() => setCurrentPage(currentPage - 1)}
         >
           Vorige
         </button>
-        <span className="text-accent/80">
+        <span className="text-secondary/80">
           Pagina {currentPage} van {totalPages}
         </span>
         <button
-          className="px-4 py-2 bg-accent text-primary rounded-lg hover:bg-accent/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-4 py-2 bg-secondary text-primary rounded-lg hover:bg-secondary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           disabled={currentPage === totalPages}
           onClick={() => setCurrentPage(currentPage + 1)}
         >

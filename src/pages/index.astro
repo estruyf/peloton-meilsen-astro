@@ -98,7 +98,7 @@ const documents = [
           </g>
         </svg>
       </h1>
-      <p class="text-xl text-accent/80 max-w-2xl mx-auto">
+      <p class="text-xl text-secondary max-w-2xl mx-auto">
         Doe mee met onze gepassioneerde fietsgemeenschap voor onvergetelijke
         ritten en blijvende vriendschappen.
       </p>
@@ -108,21 +108,21 @@ const documents = [
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-3xl font-bold mb-6">Over onze club</h2>
-          <p class="text-accent/80 mb-4">
+          <p class="text-secondary mb-4">
             Peloton Meilsen is meer dan alleen een wielerclub - we zijn een
             gemeenschap van gepassioneerde fietsers die een liefde voor de sport
             en de open weg delen.
           </p>
           <a
             href="/#agenda"
-            class="inline-block px-6 py-2 bg-accent text-primary font-semibold rounded-lg hover:bg-accent/90 transition-colors"
+            class="inline-block px-6 py-2 bg-secondary text-primary font-semibold rounded-lg hover:bg-secondary/90 transition-colors"
           >
             Bekijk onze agenda
           </a>
         </div>
-        <div class="bg-primary-light p-8 rounded-lg">
+        <div class="bg-light text-primary p-8 rounded-lg">
           <h3 class="text-2xl font-bold mb-4">Club hoogtepunten</h3>
-          <ul class="space-y-3 text-accent/80">
+          <ul class="space-y-3 text-primary/80">
             <li>• Wekelijkse groepsritten voor alle niveaus</li>
             <li>• Sociale evenementen en bijeenkomsten</li>
           </ul>
@@ -139,10 +139,10 @@ const documents = [
           documents.map((doc) => (
             <a
               href={doc.link}
-              class="block p-6 bg-primary-light rounded-lg hover:bg-primary-dark transition-colors"
+              class="block p-6 bg-light hover:bg-secondary text-primary rounded-lg  transition-colors"
             >
               <h3 class="text-xl font-semibold mb-2">{doc.title}</h3>
-              <p class="text-accent/80">{doc.description}</p>
+              <p class="text-primary/80">{doc.description}</p>
             </a>
           ))
         }

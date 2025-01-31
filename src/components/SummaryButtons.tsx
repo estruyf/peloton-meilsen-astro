@@ -27,7 +27,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
             href={`https://connect.garmin.com/modern/course/${garmin}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-4 py-2 bg-accent text-primary text-sm rounded-lg hover:bg-accent/90 transition-colors"
+            className="inline-block px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
           >
             GPX
           </a>
@@ -40,7 +40,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-4 py-2 bg-accent text-primary text-sm rounded-lg hover:bg-accent/90 transition-colors"
+            className="inline-block px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
           >
             Bekijk startlocatie
           </a>

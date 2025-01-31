@@ -7,11 +7,11 @@ const navItems = [
 ---
 
 <header
-  class="bg-primary-light py-4 sticky top-0 left-0 right-0 transition-all duration-300"
+  class="bg-light text-primary py-4 sticky top-0 left-0 right-0 transition-all duration-300"
 >
   <div class="container mx-auto px-4">
     <nav class="flex justify-between items-center">
-      <a href="/" class="flex items-center space-x-2">
+      <a href="/" class="flex items-center space-x-2 hover:text-accent">
         <svg
           data-name="Peloton Meilsen - Logo"
           xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,8 @@ const navItems = [
             <li>
               <a
                 href={item.href}
-                class="hover:text-accent/80 transition-colors"
+                class="text-white md:text-primary md:hover:text-primary/90 hover:text-secondary transition-colors"
+                title={item.text}
               >
                 {item.text}
               </a>
@@ -41,7 +42,7 @@ const navItems = [
       </ul>
       <button
         id="nav-toggle"
-        class="md:hidden text-accent z-50"
+        class="md:hidden z-50"
         aria-label="Menu omschakelen"
       >
         <svg
@@ -75,7 +76,7 @@ const navItems = [
   </div>
   <div
     id="menu-overlay"
-    class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm hidden z-40"
+    class="fixed inset-0 bg-opacity-50 backdrop-blur-sm hidden z-40"
   >
   </div>
 </header>
@@ -125,7 +126,7 @@ const navItems = [
   }
 
   :root {
-    --color-primary: #342c3b;
-    --color-accent: #ddcca8;
+    --color-primary: #002b3a;
+    --color-accent: #ffffff;
   }
 </style>

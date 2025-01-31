@@ -5,25 +5,43 @@ const sponsors = [
     logo: "/sponsors/struyf-consulting.svg",
     website: "https://struyfconsulting.be",
   },
+  {
+    name: "ADR Construct",
+    logo: "/sponsors/adr.png",
+    website: "https://www.adrconstruct.be",
+  },
+  {
+    name: "De Gruyter BVBA",
+    logo: "/sponsors/de-gruyter.png",
+    website: "https://www.dgr.be",
+  },
+  {
+    name: "Hans Cools",
+    logo: "/sponsors/hans-cools.png",
+    website: "https://www.coolsverf.be",
+  },
 ];
 ---
 
-<section class="py-8 md:py-20 bg-primary-light">
+<section class="py-8 md:py-20 bg-light">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12">Onze sponsors</h2>
+    <h2 class="text-primary text-3xl font-bold text-center mb-12">
+      Onze sponsors
+    </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
         sponsors.map((sponsor) => (
           <a
             href={sponsor.website}
-            class="block p-6 bg-primary rounded-lg hover:bg-primary-dark transition-colors"
+            class="p-6 bg-primary rounded-lg hover:bg-primary/90 transition-colors flex items-center"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src={sponsor.logo || "/placeholder.svg"}
+              src={sponsor.logo || ""}
               alt={`${sponsor.name} logo`}
               class="w-full h-auto"
+              loading="lazy"
             />
           </a>
         ))
