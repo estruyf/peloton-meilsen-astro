@@ -85,8 +85,9 @@ export const EventItem: React.FunctionComponent<IEventItemProps> = ({
           <p className="text-secondary mb-2">{event.location}</p>
 
           <SummaryButtons
+            event={event}
             garmin={garmin}
-            location={event.location}
+            description={description}
           />
         </div>
       </div>
