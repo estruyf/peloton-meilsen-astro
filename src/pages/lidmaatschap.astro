@@ -1,0 +1,125 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SponsorSection from "../components/SponsorSection.astro";
+import Documents from "../components/Documents.astro";
+---
+
+<Layout title="Lidmaatschap">
+  <div class="container mx-auto px-4">
+    <section class="py-8 md:py-20 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center">
+        <span class="sr-only">Welkom bij Peloton Meilsen</span>
+        <img
+          src="/peloton-meilsen-grijs.svg"
+          alt="Peloton Meilsen"
+          class="w-96 mx-auto"
+        />
+      </h2>
+      <p class="text-xl text-secondary max-w-2xl mx-auto">
+        Doe mee met onze gepassioneerde fietsgemeenschap voor onvergetelijke
+        ritten en blijvende vriendschappen.
+      </p>
+    </section>
+
+    <section class="py-8 md:py-20 space-y-8">
+      <h1 class="text-4xl font-bold mb-6">Lidmaatschap</h1>
+
+      <div class="space-y-4">
+        <p>Fijn dat je interesse hebt om lid te worden van Peloton Meilsen!</p>
+
+        <p>
+          Iedereen die door de raad van bestuur wordt aanvaard, kan lid worden,
+          mits betaling van het jaarlijkse lidgeld.
+        </p>
+
+        <p>
+          Minderjarigen vallen onder volledige verantwoordelijkheid van hun
+          ouders en kunnen meefietsen onder begeleiding van een ouder of
+          volwassene.
+        </p>
+
+        <p>De leden van de vereniging zijn verplicht:</p>
+
+        <ul class="space-y-2 list-disc pl-6">
+          <li>Het huishoudelijk reglement van de vereniging na te leven;</li>
+          <li>De besluiten van de raad van bestuur na te leven;</li>
+          <li>Lidgeld te betalen voor elk nieuw seizoen;</li>
+          <li>
+            Te handelen in lijn met de doelstellingen van de club: “Eén
+            Peloton”.
+          </li>
+        </ul>
+
+        <p>
+          Gelieve het lidmaatschapsformulier in te vullen en we nemen zo snel
+          mogelijk contact met je op.
+        </p>
+      </div>
+
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        class="space-y-6 bg-white p-8 rounded-lg shadow-md"
+      >
+        <div>
+          <label
+            for="name"
+            class="block text-sm font-medium text-gray-700 mb-1"
+          >
+            Naam
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+          />
+        </div>
+
+        <div>
+          <label
+            for="email"
+            class="block text-sm font-medium text-gray-700 mb-1"
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+          />
+        </div>
+
+        <div>
+          <label
+            for="message"
+            class="block text-sm font-medium text-gray-700 mb-1"
+          >
+            Opmerkingen
+          </label>
+          <textarea
+            name="message"
+            id="message"
+            rows="4"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-primary text-secondary py-3 px-6 rounded-md hover:opacity-90 transition-opacity font-semibold"
+        >
+          Verzenden
+        </button>
+      </form>
+    </section>
+
+    <Documents />
+  </div>
+
+  <SponsorSection />
+</Layout>

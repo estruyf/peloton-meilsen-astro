@@ -2,24 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import SponsorSection from "../components/SponsorSection.astro";
 import Calendar from "../components/Calendar.astro";
-
-const documents = [
-  {
-    title: "Clubregels & Richtlijnen",
-    description: "Belangrijke informatie voor alle leden",
-    link: "#",
-  },
-  {
-    title: "Lidmaatschapsformulier",
-    description: "Word lid van onze fietsgemeenschap",
-    link: "#",
-  },
-  {
-    title: "Veiligheidsprotocol",
-    description: "Essentiële veiligheidsrichtlijnen voor groepsritten",
-    link: "#",
-  },
-];
+import Documents from "../components/Documents.astro";
 ---
 
 <Layout title="Home">
@@ -66,23 +49,7 @@ const documents = [
     </section>
 
     <Calendar />
-
-    <div class="container mx-auto py-8 md:py-20">
-      <h2 id="documenten" class="text-4xl font-bold mb-8">Clubdocumenten</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {
-          documents.map((doc) => (
-            <a
-              href={doc.link}
-              class="block p-6 bg-light hover:bg-secondary text-primary rounded-lg  transition-colors"
-            >
-              <h3 class="text-xl font-semibold mb-2">{doc.title}</h3>
-              <p class="text-primary/80">{doc.description}</p>
-            </a>
-          ))
-        }
-      </div>
-    </div>
+    <Documents />
   </div>
 
   <SponsorSection />
