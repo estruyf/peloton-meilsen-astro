@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import { nl } from 'date-fns/locale/nl';
 import { SummaryButtons } from './SummaryButtons';
 import { BiCycling, BiParty } from "react-icons/bi";
+import { RiPinDistanceFill } from 'react-icons/ri';
 
 export interface IEventItemProps {
   event: Event;
@@ -23,15 +24,27 @@ export const EventItem: React.FunctionComponent<IEventItemProps> = ({
     return format(date, "HH:mm");
   }
 
-  const { garmin, type } = React.useMemo(() => {
+  const { description, garmin, type } = React.useMemo(() => {
+    let description = "";
     try {
-      const parsed = JSON.parse(event.description);
+      const data = event.description.split(`---`);
+
+      description = data[0];
+      description = description.replace(/<\/?[^>]+(>|$)/g, "");
+
+      let details = data[1];
+      details = details.replace(/<\/?[^>]+(>|$)/g, "");
+      details = details.replace(/&quot;/g, '"');
+      const parsed = JSON.parse(details);
+
       return {
+        description,
         garmin: parsed.garmin || null,
         type: parsed.type || null
       };
     } catch (e) {
       return {
+        description,
         garmin: null,
         type: null
       };
@@ -62,6 +75,13 @@ export const EventItem: React.FunctionComponent<IEventItemProps> = ({
         </div>
 
         <div className="md:text-right">
+          {
+            description && (
+              <p className="inline-flex items-center gap-2 text-secondary mb-2">
+                <RiPinDistanceFill aria-hidden={true} /> {description.split('\n').join(' - ')}
+              </p>
+            )
+          }
           <p className="text-secondary mb-2">{event.location}</p>
 
           <SummaryButtons
