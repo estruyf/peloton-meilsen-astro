@@ -4,14 +4,20 @@ import type { Event } from '../models';
 
 export interface ISummaryButtonsProps {
   event: Event;
-  garmin: string;
+  group1: string;
+  group2: string;
+  groupAll: string;
   description: string;
+  garmin?: string;
 }
 
 export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
-  garmin,
+  group1,
+  group2,
+  groupAll,
   event,
-  description
+  description,
+  garmin
 }: React.PropsWithChildren<ISummaryButtonsProps>) => {
 
   const addSingleEventToCalendar = React.useCallback(() => {
@@ -44,7 +50,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
   }, [event, description]);
 
   return (
-    <div className="flex space-x-2 justify-self-end">
+    <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full lg:flex lg:space-x-2 lg:gap-0 lg:grid-cols-none lg:grid-rows-none lg:w-auto justify-self-end">
       {
         garmin && (
           <a
@@ -52,7 +58,49 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             title='GPX'
-            className="inline-flex items-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
+            className="w-full text-center lg:w-auto lg:flex items-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
+          >
+            GPX
+          </a>
+        )
+      }
+
+      {
+        group1 && (
+          <a
+            href={group1}
+            target="_blank"
+            rel="noopener noreferrer"
+            title='GPX'
+            className="w-full text-center lg:w-auto lg:flex items-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
+          >
+            GPX (groep 1)
+          </a>
+        )
+      }
+
+      {
+        group2 && (
+          <a
+            href={group2}
+            target="_blank"
+            rel="noopener noreferrer"
+            title='GPX'
+            className="w-full text-center lg:w-auto lg:flex items-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
+          >
+            GPX (groep 2)
+          </a>
+        )
+      }
+
+      {
+        groupAll && (
+          <a
+            href={groupAll}
+            target="_blank"
+            rel="noopener noreferrer"
+            title='GPX'
+            className="w-full text-center lg:w-auto lg:flex items-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
           >
             GPX
           </a>
@@ -66,7 +114,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             title='Bekijk startlocatie'
-            className="inline-flex items-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
+            className="w-full text-center lg:w-auto lg:flex items-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
           >
             Bekijk startlocatie
           </a>
@@ -74,11 +122,12 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
       }
 
       <button
-        className="inline-flex items-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
+        className="w-full text-center lg:w-auto lg:flex items-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
         title='Voeg toe aan je agenda'
         onClick={addSingleEventToCalendar}
       >
-        <BiCalendarPlus className='h-6' aria-hidden={true} />
+        <span className='sr-only'>Voeg toe aan je agenda</span>
+        <BiCalendarPlus className='h-6 mx-auto' aria-hidden={true} />
       </button>
     </div>
   );

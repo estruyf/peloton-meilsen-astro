@@ -24,7 +24,7 @@ export const EventItem: React.FunctionComponent<IEventItemProps> = ({
     return format(date, "HH:mm");
   }
 
-  const { description, garmin, type } = React.useMemo(() => {
+  const { description, group1, group2, groupAll, type } = React.useMemo(() => {
     let description = "";
     try {
       const data = event.description.split(`---`);
@@ -39,13 +39,17 @@ export const EventItem: React.FunctionComponent<IEventItemProps> = ({
 
       return {
         description,
-        garmin: parsed.garmin || null,
+        group1: parsed.group1 || null,
+        group2: parsed.group2 || null,
+        groupAll: parsed.groupAll || null,
         type: parsed.type || null
       };
     } catch (e) {
       return {
         description,
-        garmin: null,
+        group1: null,
+        group2: null,
+        groupAll: null,
         type: null
       };
     }
@@ -86,7 +90,9 @@ export const EventItem: React.FunctionComponent<IEventItemProps> = ({
 
           <SummaryButtons
             event={event}
-            garmin={garmin}
+            group1={group1}
+            group2={group2}
+            groupAll={groupAll}
             description={description}
           />
         </div>
