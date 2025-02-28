@@ -1,0 +1,1979 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.15.7" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2025-02-17T18:28:22Z</time>
+    <bounds maxlat="51.2292910" maxlon="4.3066406" minlat="51.1225605" minlon="4.0518951"/>
+  </metadata>
+
+  <rte>
+    <name>wintertoer</name>
+    <extensions>
+      <gpxx:RouteExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="51.2233281" lon="4.2802219">
+      <ele>6.7851563</ele>
+      <time>2024-10-26T16:09:24Z</time>
+      <name>Lokale Weg</name>
+      <cmt>Lokale Weg</cmt>
+      <desc>Lokale Weg</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600754B9600160085010D240300EC6C310B</gpxx:Subclass>
+          <gpxx:rpt lat="51.2233282" lon="4.2802216">
+            <gpxx:Subclass>0600754B9600531902002116000034001500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2233257" lon="4.2802262"/>
+          <gpxx:rpt lat="51.2230682" lon="4.2808056">
+            <gpxx:Subclass>0600754B9600531902001F000200E8852400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2229180" lon="4.2812133"/>
+          <gpxx:rpt lat="51.2227464" lon="4.2819643">
+            <gpxx:Subclass>0600754B9600CA0B04001F00060082781100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2224460" lon="4.2823076">
+            <gpxx:Subclass>0600754B9600D31402001F060600A8783E00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2229395" lon="4.2840242"/>
+          <gpxx:rpt lat="51.2230056" lon="4.2842159">
+            <gpxx:Subclass>0600754B9600D314020021170000F5020000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2230373" lon="4.2841878">
+      <time>2024-10-22T16:20:05Z</time>
+      <name>Kalishoekstraat</name>
+      <cmt>Kalishoekstraat</cmt>
+      <desc>Kalishoekstraat</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D16013E20B4010D240300DE6CE90B</gpxx:Subclass>
+          <gpxx:rpt lat="51.2230372" lon="4.2841875">
+            <gpxx:Subclass>06005A0D1601591C040021160000BF002C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2234545" lon="4.2855263">
+            <gpxx:Subclass>06005A0D1601591C04001F000400C9E94C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2234545" lon="4.2855263"/>
+          <gpxx:rpt lat="51.2239265" lon="4.2868996"/>
+          <gpxx:rpt lat="51.2241411" lon="4.2871141"/>
+          <gpxx:rpt lat="51.2245274" lon="4.2872429">
+            <gpxx:Subclass>06005A0D160168FB04001F02040079DE7500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2244844" lon="4.2882299"/>
+          <gpxx:rpt lat="51.2243128" lon="4.2886591"/>
+          <gpxx:rpt lat="51.2237120" lon="4.2894316"/>
+          <gpxx:rpt lat="51.2232047" lon="4.2904101">
+            <gpxx:Subclass>06005A0D160168FB0400211700009A000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2232047" lon="4.2904099">
+      <time>2024-10-22T16:19:51Z</time>
+      <name>Burggravenstraat 50</name>
+      <cmt>Burggravenstraat 50</cmt>
+      <desc>Burggravenstraat 50</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D160168FB040001000000D8990000</gpxx:Subclass>
+          <gpxx:rpt lat="51.2232047" lon="4.2904101">
+            <gpxx:Subclass>06005A0D160168FB0400211600009A009A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2231112" lon="4.2905903"/>
+          <gpxx:rpt lat="51.2219524" lon="4.2922640"/>
+          <gpxx:rpt lat="51.2216520" lon="4.2929506"/>
+          <gpxx:rpt lat="51.2213516" lon="4.2933369"/>
+          <gpxx:rpt lat="51.2207508" lon="4.2938519">
+            <gpxx:Subclass>06005A0D16017AE202001F0009003DDF1101</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2194204" lon="4.2943668"/>
+          <gpxx:rpt lat="51.2182188" lon="4.2949677"/>
+          <gpxx:rpt lat="51.2169313" lon="4.2957830"/>
+          <gpxx:rpt lat="51.2163305" lon="4.2959547"/>
+          <gpxx:rpt lat="51.2156439" lon="4.2963409"/>
+          <gpxx:rpt lat="51.2151289" lon="4.2963839">
+            <gpxx:Subclass>06005A0D16010EE502001F06040048DF1300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2148285" lon="4.2967701">
+            <gpxx:Subclass>06005A0D1601CCDB02001F0004003CDF0000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2148285" lon="4.2967701">
+            <gpxx:Subclass>06005A0D1601CCDB02002117000064000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2148285" lon="4.2967701">
+      <time>2024-10-22T16:19:49Z</time>
+      <name>Doornlarenboom en Pauwstraat</name>
+      <cmt>Doornlarenboom en Pauwstraat</cmt>
+      <desc>Doornlarenboom en Pauwstraat</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D16010A2081010F240300606B340E</gpxx:Subclass>
+          <gpxx:rpt lat="51.2148285" lon="4.2967701">
+            <gpxx:Subclass>06005A0D1601CCDB02002116000064000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2148285" lon="4.2967701">
+            <gpxx:Subclass>06005A0D16010EE502001F0304003CDF0B01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2136269" lon="4.2976284"/>
+          <gpxx:rpt lat="51.2131548" lon="4.2981005"/>
+          <gpxx:rpt lat="51.2130690" lon="4.2981863"/>
+          <gpxx:rpt lat="51.2129402" lon="4.2982721"/>
+          <gpxx:rpt lat="51.2122965" lon="4.2988300"/>
+          <gpxx:rpt lat="51.2116528" lon="4.2990017"/>
+          <gpxx:rpt lat="51.2116528" lon="4.2990017"/>
+          <gpxx:rpt lat="51.2099361" lon="4.2994738"/>
+          <gpxx:rpt lat="51.2097216" lon="4.2996883"/>
+          <gpxx:rpt lat="51.2095499" lon="4.2999887">
+            <gpxx:Subclass>06005A0D1601E2E402001F02040017EBDC00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2092495" lon="4.2995167"/>
+          <gpxx:rpt lat="51.2082624" lon="4.2982721"/>
+          <gpxx:rpt lat="51.2077904" lon="4.2981434"/>
+          <gpxx:rpt lat="51.2061596" lon="4.2983580"/>
+          <gpxx:rpt lat="51.2056875" lon="4.2983580"/>
+          <gpxx:rpt lat="51.2053442" lon="4.2987871">
+            <gpxx:Subclass>06005A0D160129A103001F020400E7EAA400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2038851" lon="4.2987013"/>
+          <gpxx:rpt lat="51.2020397" lon="4.2982292"/>
+          <gpxx:rpt lat="51.2018598" lon="4.2981758">
+            <gpxx:Subclass>06005A0D160129A103002117000012040000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2018599" lon="4.2981760">
+      <time>2024-10-22T16:18:50Z</time>
+      <name>Priemstraat 17</name>
+      <cmt>Priemstraat 17</cmt>
+      <desc>Priemstraat 17</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D160129A10300010003001A570000</gpxx:Subclass>
+          <gpxx:rpt lat="51.2018598" lon="4.2981758">
+            <gpxx:Subclass>06005A0D160129A103002116000012045700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2001514" lon="4.2976713"/>
+          <gpxx:rpt lat="51.2000227" lon="4.2977142"/>
+          <gpxx:rpt lat="51.2000227" lon="4.2977142">
+            <gpxx:Subclass>06005A0D1601ECB001001F06020017CEA400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1989069" lon="4.3008041"/>
+          <gpxx:rpt lat="51.1986065" lon="4.3012333"/>
+          <gpxx:rpt lat="51.1980486" lon="4.3017483"/>
+          <gpxx:rpt lat="51.1978769" lon="4.3019629">
+            <gpxx:Subclass>06005A0D1601ECB001002114000000000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1978769" lon="4.3019629">
+            <gpxx:Subclass>0600540D1601F9C400001F000100A0B46200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1976194" lon="4.3025637"/>
+          <gpxx:rpt lat="51.1974478" lon="4.3028212"/>
+          <gpxx:rpt lat="51.1963561" lon="4.3042669">
+            <gpxx:Subclass>0600540D1601F9C400002117000097000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1963562" lon="4.3042668">
+      <time>2024-10-22T16:23:08Z</time>
+      <name>Biestraat 1</name>
+      <cmt>Biestraat 1</cmt>
+      <desc>Biestraat 1</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600540D1601F9C40000010002000E1E0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1963561" lon="4.3042669">
+            <gpxx:Subclass>0600540D1601F9C400002116000097006800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1958599" lon="4.3049240"/>
+          <gpxx:rpt lat="51.1947012" lon="4.3066406">
+            <gpxx:Subclass>0600540D16012FC900001F0201006AB4A700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1925983" lon="4.3019629">
+            <gpxx:Subclass>0600540D16012FC900002114000000000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1925983" lon="4.3019629">
+            <gpxx:Subclass>06005A0D160168AA01001F00020036CE0C01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1925125" lon="4.3017912"/>
+          <gpxx:rpt lat="51.1910963" lon="4.2986584"/>
+          <gpxx:rpt lat="51.1908817" lon="4.2981005"/>
+          <gpxx:rpt lat="51.1906672" lon="4.2973280"/>
+          <gpxx:rpt lat="51.1903667" lon="4.2950964"/>
+          <gpxx:rpt lat="51.1900234" lon="4.2938948">
+            <gpxx:Subclass>06005A0D1601DF9E03001F000200E4CE7C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1889662" lon="4.2900185">
+            <gpxx:Subclass>06005A0D1601DF9E030021170000C0010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1889663" lon="4.2900186">
+      <time>2024-10-22T16:04:23Z</time>
+      <name>Heirbaan 91</name>
+      <cmt>Heirbaan 91</cmt>
+      <desc>Heirbaan 91</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D1601DF9E030001800100BB910100</gpxx:Subclass>
+          <gpxx:rpt lat="51.1889662" lon="4.2900185">
+            <gpxx:Subclass>06005A0D1601DF9E030021160000C001C001</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1887360" lon="4.2891741"/>
+          <gpxx:rpt lat="51.1883497" lon="4.2876291"/>
+          <gpxx:rpt lat="51.1882210" lon="4.2869425"/>
+          <gpxx:rpt lat="51.1880493" lon="4.2863417"/>
+          <gpxx:rpt lat="51.1874056" lon="4.2850113"/>
+          <gpxx:rpt lat="51.1867619" lon="4.2831230"/>
+          <gpxx:rpt lat="51.1855173" lon="4.2775011"/>
+          <gpxx:rpt lat="51.1852598" lon="4.2759562">
+            <gpxx:Subclass>05005A0D1601239B03001F00070041028700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1849594" lon="4.2749262"/>
+          <gpxx:rpt lat="51.1845732" lon="4.2736387"/>
+          <gpxx:rpt lat="51.1841440" lon="4.2717075">
+            <gpxx:Subclass>05005A0D1601239B03001F0002003CD7E800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1838865" lon="4.2703772"/>
+          <gpxx:rpt lat="51.1838436" lon="4.2699480"/>
+          <gpxx:rpt lat="51.1839294" lon="4.2682314"/>
+          <gpxx:rpt lat="51.1838865" lon="4.2675018"/>
+          <gpxx:rpt lat="51.1837149" lon="4.2666435"/>
+          <gpxx:rpt lat="51.1831570" lon="4.2641544"/>
+          <gpxx:rpt lat="51.1831389" lon="4.2640517">
+            <gpxx:Subclass>05005A0D1601239B0300211700002E010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1831389" lon="4.2640519">
+      <time>2024-10-22T16:04:25Z</time>
+      <name>Heirbaan 49</name>
+      <cmt>Heirbaan 49</cmt>
+      <desc>Heirbaan 49</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D1601239B0300018003003C5D0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1831389" lon="4.2640517">
+            <gpxx:Subclass>05005A0D1601239B0300211600002E015D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1825991" lon="4.2609787">
+            <gpxx:Subclass>05005A0D1601239B03001F0007005603D000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1825562" lon="4.2605066"/>
+          <gpxx:rpt lat="51.1825991" lon="4.2600775"/>
+          <gpxx:rpt lat="51.1827278" lon="4.2594337"/>
+          <gpxx:rpt lat="51.1827278" lon="4.2594337"/>
+          <gpxx:rpt lat="51.1831570" lon="4.2578030"/>
+          <gpxx:rpt lat="51.1838007" lon="4.2566872"/>
+          <gpxx:rpt lat="51.1839294" lon="4.2563009"/>
+          <gpxx:rpt lat="51.1841011" lon="4.2556143"/>
+          <gpxx:rpt lat="51.1841869" lon="4.2545414">
+            <gpxx:Subclass>05005A0D160155A103001F00070037034D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1841869" lon="4.2538118"/>
+          <gpxx:rpt lat="51.1840153" lon="4.2519236">
+            <gpxx:Subclass>05005A0D160155A103001F00020093D94600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1840153" lon="4.2516661"/>
+          <gpxx:rpt lat="51.1838436" lon="4.2512798"/>
+          <gpxx:rpt lat="51.1832857" lon="4.2503357"/>
+          <gpxx:rpt lat="51.1831726" lon="4.2500050">
+            <gpxx:Subclass>05005A0D160155A10300211700002B000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1831726" lon="4.2500051">
+      <time>2024-10-22T16:04:36Z</time>
+      <name>Heirbaan 7</name>
+      <cmt>Heirbaan 7</cmt>
+      <desc>Heirbaan 7</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D160155A1030001800000452B0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1831726" lon="4.2500050">
+            <gpxx:Subclass>05005A0D160155A10300211600002B002B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1827278" lon="4.2487049">
+            <gpxx:Subclass>05005A0D1601839C03001F00070011035A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1824703" lon="4.2479753"/>
+          <gpxx:rpt lat="51.1823416" lon="4.2476749"/>
+          <gpxx:rpt lat="51.1821270" lon="4.2470312"/>
+          <gpxx:rpt lat="51.1819124" lon="4.2459154">
+            <gpxx:Subclass>05005A0D1601F56404001F000700D602F700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1817408" lon="4.2448425"/>
+          <gpxx:rpt lat="51.1816978" lon="4.2437696"/>
+          <gpxx:rpt lat="51.1817837" lon="4.2431259"/>
+          <gpxx:rpt lat="51.1818266" lon="4.2429972"/>
+          <gpxx:rpt lat="51.1819124" lon="4.2428255"/>
+          <gpxx:rpt lat="51.1819553" lon="4.2423105"/>
+          <gpxx:rpt lat="51.1819553" lon="4.2420101"/>
+          <gpxx:rpt lat="51.1818266" lon="4.2413664"/>
+          <gpxx:rpt lat="51.1817837" lon="4.2411518"/>
+          <gpxx:rpt lat="51.1815691" lon="4.2404222"/>
+          <gpxx:rpt lat="51.1814404" lon="4.2399073"/>
+          <gpxx:rpt lat="51.1812258" lon="4.2391777"/>
+          <gpxx:rpt lat="51.1811399" lon="4.2387915"/>
+          <gpxx:rpt lat="51.1810112" lon="4.2378902">
+            <gpxx:Subclass>03005A0D1601F06304001F000800F4B72500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1809254" lon="4.2372894"/>
+          <gpxx:rpt lat="51.1807537" lon="4.2366886">
+            <gpxx:Subclass>03005A0D1601916704001F00080028B85D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1804962" lon="4.2357874"/>
+          <gpxx:rpt lat="51.1803246" lon="4.2351007"/>
+          <gpxx:rpt lat="51.1799383" lon="4.2337704">
+            <gpxx:Subclass>03005A0D1601496504001F00080039B93700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1797667" lon="4.2330837"/>
+          <gpxx:rpt lat="51.1794233" lon="4.2320967">
+            <gpxx:Subclass>05005A0D1601E09A03001F000800F0B81E00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1793375" lon="4.2317963"/>
+          <gpxx:rpt lat="51.1791658" lon="4.2314529"/>
+          <gpxx:rpt lat="51.1790800" lon="4.2312384">
+            <gpxx:Subclass>05005A0D1601A99F03001F000700E9067400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1789513" lon="4.2310667"/>
+          <gpxx:rpt lat="51.1784363" lon="4.2301655"/>
+          <gpxx:rpt lat="51.1778784" lon="4.2295647"/>
+          <gpxx:rpt lat="51.1772346" lon="4.2286634">
+            <gpxx:Subclass>05005A0D1601319D03001F000700CA06DC00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1769342" lon="4.2280197"/>
+          <gpxx:rpt lat="51.1761189" lon="4.2254448"/>
+          <gpxx:rpt lat="51.1759472" lon="4.2246723"/>
+          <gpxx:rpt lat="51.1756468" lon="4.2227840"/>
+          <gpxx:rpt lat="51.1756468" lon="4.2226124"/>
+          <gpxx:rpt lat="51.1755180" lon="4.2220116"/>
+          <gpxx:rpt lat="51.1754751" lon="4.2217112">
+            <gpxx:Subclass>05005A0D1601AD9903001F0607009B061200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1753464" lon="4.2215824"/>
+          <gpxx:rpt lat="51.1751747" lon="4.2213249">
+            <gpxx:Subclass>05005A0D1601129E03001F00070069066800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1748314" lon="4.2207670"/>
+          <gpxx:rpt lat="51.1738598" lon="4.2184551">
+            <gpxx:Subclass>05005A0D1601129E030021170000F7000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1738598" lon="4.2184555">
+      <time>2024-10-22T16:04:37Z</time>
+      <name>Krekelstraat 67</name>
+      <cmt>Krekelstraat 67</cmt>
+      <desc>Krekelstraat 67</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D1601129E03000101010096C00000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1738598" lon="4.2184551">
+            <gpxx:Subclass>05005A0D1601129E030021160000F700C100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1735868" lon="4.2178059"/>
+          <gpxx:rpt lat="51.1723423" lon="4.2151451"/>
+          <gpxx:rpt lat="51.1720419" lon="4.2147589"/>
+          <gpxx:rpt lat="51.1710978" lon="4.2136431">
+            <gpxx:Subclass>05005A0D1601129E03001F000700B8033800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1704540" lon="4.2120981">
+            <gpxx:Subclass>05005A0D1601A49D03001F000700CF030A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1703253" lon="4.2117977">
+            <gpxx:Subclass>05005A0D16013E9E03001F000700E1030A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1702394" lon="4.2114973">
+            <gpxx:Subclass>0C005A0D1601149D03001F0E070040041500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1702824" lon="4.2113686"/>
+          <gpxx:rpt lat="51.1702394" lon="4.2111969"/>
+          <gpxx:rpt lat="51.1701536" lon="4.2111969"/>
+          <gpxx:rpt lat="51.1701107" lon="4.2113686">
+            <gpxx:Subclass>05005A0D160130A003001F4F07001604BE00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1700249" lon="4.2113686"/>
+          <gpxx:rpt lat="51.1698961" lon="4.2114115"/>
+          <gpxx:rpt lat="51.1696815" lon="4.2114544"/>
+          <gpxx:rpt lat="51.1691666" lon="4.2116690"/>
+          <gpxx:rpt lat="51.1687374" lon="4.2117977"/>
+          <gpxx:rpt lat="51.1680508" lon="4.2120981"/>
+          <gpxx:rpt lat="51.1671925" lon="4.2123985"/>
+          <gpxx:rpt lat="51.1669350" lon="4.2124844"/>
+          <gpxx:rpt lat="51.1666775" lon="4.2125702"/>
+          <gpxx:rpt lat="51.1663771" lon="4.2126560"/>
+          <gpxx:rpt lat="51.1661196" lon="4.2126131">
+            <gpxx:Subclass>05005A0D160130A003001F0007002E060900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1659279" lon="4.2125363">
+            <gpxx:Subclass>05005A0D160130A0030021170000F1000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1659280" lon="4.2125363">
+      <time>2024-10-22T16:05:18Z</time>
+      <name>Haasdonksesteenweg 63</name>
+      <cmt>Haasdonksesteenweg 63</cmt>
+      <desc>Haasdonksesteenweg 63</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D160130A00300010007001A010000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1659050" lon="4.2125273">
+            <gpxx:Subclass>0500AFD77F0028FE0F0021160000F1000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1659050" lon="4.2125273">
+            <gpxx:Subclass>0500AFD77F0028FE0F001F001A0095D1F100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1645746" lon="4.2116690"/>
+          <gpxx:rpt lat="51.1640596" lon="4.2113256"/>
+          <gpxx:rpt lat="51.1633730" lon="4.2107248"/>
+          <gpxx:rpt lat="51.1629868" lon="4.2102528"/>
+          <gpxx:rpt lat="51.1624289" lon="4.2096090"/>
+          <gpxx:rpt lat="51.1619139" lon="4.2091799"/>
+          <gpxx:rpt lat="51.1616135" lon="4.2089653"/>
+          <gpxx:rpt lat="51.1613560" lon="4.2087507">
+            <gpxx:Subclass>0500AFD77F00350710001F001A00E1CFEB00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1611414" lon="4.2083645"/>
+          <gpxx:rpt lat="51.1607552" lon="4.2075491"/>
+          <gpxx:rpt lat="51.1604977" lon="4.2069054"/>
+          <gpxx:rpt lat="51.1601973" lon="4.2065191"/>
+          <gpxx:rpt lat="51.1598539" lon="4.2061758"/>
+          <gpxx:rpt lat="51.1591673" lon="4.2056179"/>
+          <gpxx:rpt lat="51.1578369" lon="4.2045879"/>
+          <gpxx:rpt lat="51.1573648" lon="4.2042017">
+            <gpxx:Subclass>0500AFD77F00350710001F001A001BDE0B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1571643" lon="4.2040250">
+            <gpxx:Subclass>0500AFD77F0035071000211700007B000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1571644" lon="4.2040252">
+      <time>2025-02-17T12:10:17Z</time>
+      <name>Velle 36</name>
+      <cmt>Velle 36</cmt>
+      <desc>Velle 36</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500AFD77F0035071000010003006F2E0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1571643" lon="4.2040250">
+            <gpxx:Subclass>0500AFD77F0035071000211600007B002E00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1562920" lon="4.2032576"/>
+          <gpxx:rpt lat="51.1562920" lon="4.2032576">
+            <gpxx:Subclass>0500AFD77F00350710001F000E003B264D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1552620" lon="4.2020130"/>
+          <gpxx:rpt lat="51.1550474" lon="4.2017984"/>
+          <gpxx:rpt lat="51.1549616" lon="4.2017126">
+            <gpxx:Subclass>0C00AFD77F00230710001F0E1A003CDE0700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1549187" lon="4.2015409"/>
+          <gpxx:rpt lat="51.1549187" lon="4.2015409"/>
+          <gpxx:rpt lat="51.1548758" lon="4.2014980">
+            <gpxx:Subclass>0500AFD77F004C0B10001F4F1A004DDE3B01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1547470" lon="4.2011118"/>
+          <gpxx:rpt lat="51.1541033" lon="4.1990948"/>
+          <gpxx:rpt lat="51.1523867" lon="4.1937304"/>
+          <gpxx:rpt lat="51.1520433" lon="4.1917562">
+            <gpxx:Subclass>0500AFD77F00250B10001F001A00E6DD1500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1518288" lon="4.1911125">
+            <gpxx:Subclass>0500AFD77F00790910001F001A0079DD0000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1518288" lon="4.1911125">
+            <gpxx:Subclass>0500AFD77F00790910002117000026000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1518288" lon="4.1911125">
+      <time>2025-02-17T12:10:20Z</time>
+      <name>Eigenlostraat en Eigenlo</name>
+      <cmt>Eigenlostraat en Eigenlo</cmt>
+      <desc>Eigenlostraat en Eigenlo</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0580AFD77F001F2098070F240200E85FF8FA</gpxx:Subclass>
+          <gpxx:rpt lat="51.1518318" lon="4.1911092">
+            <gpxx:Subclass>05008C4B9600D0DE020021160000B7014500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1516786" lon="4.1907263"/>
+          <gpxx:rpt lat="51.1510134" lon="4.1895890"/>
+          <gpxx:rpt lat="51.1508846" lon="4.1892886"/>
+          <gpxx:rpt lat="51.1508846" lon="4.1892886">
+            <gpxx:Subclass>05008C4B9600D0DE02001F000100691F6F01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1506271" lon="4.1885591"/>
+          <gpxx:rpt lat="51.1504340" lon="4.1880441"/>
+          <gpxx:rpt lat="51.1495972" lon="4.1863489"/>
+          <gpxx:rpt lat="51.1488247" lon="4.1847181"/>
+          <gpxx:rpt lat="51.1482239" lon="4.1830444"/>
+          <gpxx:rpt lat="51.1482239" lon="4.1830444"/>
+          <gpxx:rpt lat="51.1477733" lon="4.1814995"/>
+          <gpxx:rpt lat="51.1471081" lon="4.1784954"/>
+          <gpxx:rpt lat="51.1470652" lon="4.1783237">
+            <gpxx:Subclass>06008C4B9600713501001F06020052CA0100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1470437" lon="4.1783452">
+            <gpxx:Subclass>05008C4B96003AD802001F0202005FCA5000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1462574" lon="4.1758969">
+            <gpxx:Subclass>05008C4B96003AD802002117000050000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1462573" lon="4.1758967">
+      <ele>25.9062500</ele>
+      <time>2025-02-17T12:11:55Z</time>
+      <name>Verbindingsweg</name>
+      <cmt>Verbindingsweg</cmt>
+      <desc>Verbindingsweg</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05008C4B96001000BD000D240200E35E33F8</gpxx:Subclass>
+          <gpxx:rpt lat="51.1462574" lon="4.1758969">
+            <gpxx:Subclass>05008C4B96003AD802002116000050002B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1460996" lon="4.1754055"/>
+          <gpxx:rpt lat="51.1457992" lon="4.1746330">
+            <gpxx:Subclass>05008C4B96003AD802001F0002001EC43700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1455846" lon="4.1740966"/>
+          <gpxx:rpt lat="51.1451340" lon="4.1730237">
+            <gpxx:Subclass>05008C4B96003AD802001F000200BDC35500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1441464" lon="4.1705707">
+            <gpxx:Subclass>05008C4B96003AD802002117000009010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1441535" lon="4.1705633">
+      <time>2025-02-17T12:10:27Z</time>
+      <name>Oude Heirbaan 62</name>
+      <cmt>Oude Heirbaan 62</cmt>
+      <desc>Oude Heirbaan 62</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600AFD77F00D8FF08000100000096520000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1441535" lon="4.1705634">
+            <gpxx:Subclass>06005A0D1601EFCB01002116000053005B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1432028" lon="4.1682816"/>
+          <gpxx:rpt lat="51.1430740" lon="4.1679811">
+            <gpxx:Subclass>06005A0D16019FCF01001F0003001D0C0A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1429453" lon="4.1676807">
+            <gpxx:Subclass>06005A0D1601E9CB01001F000300110C3F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1428595" lon="4.1675091"/>
+          <gpxx:rpt lat="51.1428165" lon="4.1673374"/>
+          <gpxx:rpt lat="51.1427307" lon="4.1668653"/>
+          <gpxx:rpt lat="51.1426878" lon="4.1664791"/>
+          <gpxx:rpt lat="51.1427307" lon="4.1662645"/>
+          <gpxx:rpt lat="51.1429024" lon="4.1657066">
+            <gpxx:Subclass>06005A0D1601D5CB01001F0603002D0C9F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1426449" lon="4.1657066"/>
+          <gpxx:rpt lat="51.1423874" lon="4.1655779"/>
+          <gpxx:rpt lat="51.1409712" lon="4.1644621"/>
+          <gpxx:rpt lat="51.1403704" lon="4.1639042"/>
+          <gpxx:rpt lat="51.1399841" lon="4.1631317">
+            <gpxx:Subclass>06005A0D16016F0902001F000300750B7601</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1395550" lon="4.1615438"/>
+          <gpxx:rpt lat="51.1385250" lon="4.1555786"/>
+          <gpxx:rpt lat="51.1383533" lon="4.1542912"/>
+          <gpxx:rpt lat="51.1384392" lon="4.1526175"/>
+          <gpxx:rpt lat="51.1383963" lon="4.1518450"/>
+          <gpxx:rpt lat="51.1382675" lon="4.1507721">
+            <gpxx:Subclass>05005A0D1601B6A703001F060300A07FA800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1378813" lon="4.1509438"/>
+          <gpxx:rpt lat="51.1375380" lon="4.1511583"/>
+          <gpxx:rpt lat="51.1374092" lon="4.1512442"/>
+          <gpxx:rpt lat="51.1372805" lon="4.1513300"/>
+          <gpxx:rpt lat="51.1371517" lon="4.1515017"/>
+          <gpxx:rpt lat="51.1370230" lon="4.1516304"/>
+          <gpxx:rpt lat="51.1368513" lon="4.1518879"/>
+          <gpxx:rpt lat="51.1365938" lon="4.1521883"/>
+          <gpxx:rpt lat="51.1353064" lon="4.1534758"/>
+          <gpxx:rpt lat="51.1351776" lon="4.1535616">
+            <gpxx:Subclass>05005A0D160112BE03001F02070045165100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1349201" lon="4.1532612"/>
+          <gpxx:rpt lat="51.1340618" lon="4.1514587">
+            <gpxx:Subclass>05005A0D160112BE03001F00070013540B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1339462" lon="4.1511303">
+            <gpxx:Subclass>05005A0D160112BE030021170000AF000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1339463" lon="4.1511307">
+      <time>2025-02-17T12:12:10Z</time>
+      <name>Kettermuitstraat 19</name>
+      <cmt>Kettermuitstraat 19</cmt>
+      <desc>Kettermuitstraat 19</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D160112BE03000100000090AE0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1339462" lon="4.1511303">
+            <gpxx:Subclass>05005A0D160112BE030021160000AF00AF00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1329889" lon="4.1484118"/>
+          <gpxx:rpt lat="51.1326856" lon="4.1471580">
+            <gpxx:Subclass>05005A0D160112BE0300211700002C000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1326856" lon="4.1471582">
+      <time>2024-10-22T16:08:31Z</time>
+      <name>Steenweg Hulst-Lessen 49</name>
+      <cmt>Steenweg Hulst-Lessen 49</cmt>
+      <desc>Steenweg Hulst-Lessen 49</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D160112BE0300018100001A2C0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1326856" lon="4.1471579">
+            <gpxx:Subclass>05005A0D160112BE0300211600002C002C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1323452" lon="4.1457510">
+            <gpxx:Subclass>05005A0D1601D3C303001F00070050542200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1322594" lon="4.1452360"/>
+          <gpxx:rpt lat="51.1322165" lon="4.1450214"/>
+          <gpxx:rpt lat="51.1320877" lon="4.1446781">
+            <gpxx:Subclass>05005A0D16017EC303001F00070020544A01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1318302" lon="4.1435194"/>
+          <gpxx:rpt lat="51.1311007" lon="4.1405153"/>
+          <gpxx:rpt lat="51.1306715" lon="4.1384554"/>
+          <gpxx:rpt lat="51.1299849" lon="4.1339064">
+            <gpxx:Subclass>05005A0D1601A6C103001F00070069544300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1298132" lon="4.1326189"/>
+          <gpxx:rpt lat="51.1296415" lon="4.1318893"/>
+          <gpxx:rpt lat="51.1295986" lon="4.1317177">
+            <gpxx:Subclass>05005A0D1601CAC103001F00070077544000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1287832" lon="4.1299152">
+            <gpxx:Subclass>05005A0D160162BD03001F00070055527B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1278820" lon="4.1280699"/>
+          <gpxx:rpt lat="51.1273670" lon="4.1270399"/>
+          <gpxx:rpt lat="51.1271954" lon="4.1265678">
+            <gpxx:Subclass>05005A0D160162BD03001F0007003D52AA00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1260366" lon="4.1229200"/>
+          <gpxx:rpt lat="51.1257072" lon="4.1212732">
+            <gpxx:Subclass>05005A0D160162BD03002117000066020000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1257073" lon="4.1212734">
+      <time>2024-10-22T16:08:33Z</time>
+      <name>Nijverheidslaan 168</name>
+      <cmt>Nijverheidslaan 168</cmt>
+      <desc>Nijverheidslaan 168</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D160162BD030001000C00272B0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1257072" lon="4.1212732">
+            <gpxx:Subclass>05005A0D160162BD03002116000066022B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1256504" lon="4.1209888"/>
+          <gpxx:rpt lat="51.1255217" lon="4.1198301">
+            <gpxx:Subclass>05005A0D160162BD03001F0007006752A600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1253929" lon="4.1184139"/>
+          <gpxx:rpt lat="51.1253071" lon="4.1179419"/>
+          <gpxx:rpt lat="51.1242771" lon="4.1160965"/>
+          <gpxx:rpt lat="51.1242342" lon="4.1160107"/>
+          <gpxx:rpt lat="51.1240625" lon="4.1157103"/>
+          <gpxx:rpt lat="51.1237192" lon="4.1151524">
+            <gpxx:Subclass>06005A0D1601D60502001F190300B96AB700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1238050" lon="4.1148949"/>
+          <gpxx:rpt lat="51.1234188" lon="4.1125345"/>
+          <gpxx:rpt lat="51.1233759" lon="4.1089725">
+            <gpxx:Subclass>06005A0D1601D60502001F00030056693A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1232744" lon="4.1070107">
+            <gpxx:Subclass>06005A0D1601D605020021170000E4000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1232744" lon="4.1070109">
+      <time>2024-10-26T16:11:18Z</time>
+      <name>Fortenstraat 50</name>
+      <cmt>Fortenstraat 50</cmt>
+      <desc>Fortenstraat 50</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D1601D60502000180020030630000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1232744" lon="4.1070107">
+            <gpxx:Subclass>06005A0D1601D605020021160000E4006300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1232471" lon="4.1064835"/>
+          <gpxx:rpt lat="51.1229897" lon="4.1036510">
+            <gpxx:Subclass>06005A0D1601D60502001F00030071690800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1229467" lon="4.1033936">
+            <gpxx:Subclass>06005A0D1601D60502001F0003007E694800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1226669" lon="4.1009799">
+            <gpxx:Subclass>06005A0D1601D60502002117000031000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1226669" lon="4.1009802">
+      <time>2024-10-26T16:11:21Z</time>
+      <name>Fortenstraat 66</name>
+      <cmt>Fortenstraat 66</cmt>
+      <desc>Fortenstraat 66</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D1601D605020001800000FD300000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1226669" lon="4.1009799">
+            <gpxx:Subclass>06005A0D1601D60502002116000031003100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1226034" lon="4.1004324"/>
+          <gpxx:rpt lat="51.1225605" lon="4.0993166">
+            <gpxx:Subclass>06005A0D16013AFD01001F020300A5692F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1232901" lon="4.0992308"/>
+          <gpxx:rpt lat="51.1235551" lon="4.0990763">
+            <gpxx:Subclass>06005A0D16013AFD0100211700002F000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1235552" lon="4.0990762">
+      <time>2024-10-22T16:08:47Z</time>
+      <name>Lode Ontropdreef 7</name>
+      <cmt>Lode Ontropdreef 7</cmt>
+      <desc>Lode Ontropdreef 7</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D16013AFD010001800000402F0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1235551" lon="4.0990763">
+            <gpxx:Subclass>06005A0D16013AFD0100211600002F002600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1243200" lon="4.0986300">
+            <gpxx:Subclass>06005A0D160145FD01001F00030096690E00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1245346" lon="4.0982866">
+            <gpxx:Subclass>06005A0D16014E0602001F000300F466BF00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1263800" lon="4.0975571"/>
+          <gpxx:rpt lat="51.1273670" lon="4.0970421"/>
+          <gpxx:rpt lat="51.1281824" lon="4.0967417"/>
+          <gpxx:rpt lat="51.1285257" lon="4.0966988">
+            <gpxx:Subclass>06005A0D16014E0602001F000300F1670000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1285257" lon="4.0966988">
+            <gpxx:Subclass>06005A0D16014E06020021170000D1000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1285257" lon="4.0966988">
+      <time>2024-10-22T16:08:49Z</time>
+      <name>Groenstraat</name>
+      <cmt>Groenstraat</cmt>
+      <desc>Groenstraat</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06B05A0D16010A205F010F240200AA5BC8E9</gpxx:Subclass>
+          <gpxx:rpt lat="51.1285257" lon="4.0966988">
+            <gpxx:Subclass>06005A0D16014E06020021160000D1000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1285257" lon="4.0966988">
+            <gpxx:Subclass>06005A0D16014E0602001F010300F1676300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1287832" lon="4.0968704"/>
+          <gpxx:rpt lat="51.1289120" lon="4.0971708"/>
+          <gpxx:rpt lat="51.1289549" lon="4.0974283"/>
+          <gpxx:rpt lat="51.1291695" lon="4.0997028">
+            <gpxx:Subclass>06005A0D16017F0602001F0603006D684E00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1293840" lon="4.0998316"/>
+          <gpxx:rpt lat="51.1299419" lon="4.0996599"/>
+          <gpxx:rpt lat="51.1301136" lon="4.0996170"/>
+          <gpxx:rpt lat="51.1308002" lon="4.0994024">
+            <gpxx:Subclass>06005A0D16017F0602001F260300C4680900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1309719" lon="4.0991879">
+            <gpxx:Subclass>06005A0D1601B80502001F000300B4684500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1308002" lon="4.0981150"/>
+          <gpxx:rpt lat="51.1307573" lon="4.0973854"/>
+          <gpxx:rpt lat="51.1308002" lon="4.0971279"/>
+          <gpxx:rpt lat="51.1309290" lon="4.0969563">
+            <gpxx:Subclass>06005A0D1601F50602001F000300B5670D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1311865" lon="4.0969133">
+            <gpxx:Subclass>06005A0D1601330702001F000300AA67DB00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1329889" lon="4.0969563"/>
+          <gpxx:rpt lat="51.1332035" lon="4.0969133"/>
+          <gpxx:rpt lat="51.1333752" lon="4.0967846"/>
+          <gpxx:rpt lat="51.1352600" lon="4.0942181">
+            <gpxx:Subclass>06005A0D16013307020021170000DA000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1352600" lon="4.0942181">
+      <time>2024-10-22T16:08:51Z</time>
+      <name>Bergstraat 53</name>
+      <cmt>Bergstraat 53</cmt>
+      <desc>Bergstraat 53</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D1601330702000100000077DA0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1352600" lon="4.0942181">
+            <gpxx:Subclass>06005A0D16013307020021160000DA002400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1353922" lon="4.0940380"/>
+          <gpxx:rpt lat="51.1356926" lon="4.0932226">
+            <gpxx:Subclass>06005A0D1601E80002001F0003009C67C700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1358643" lon="4.0924501"/>
+          <gpxx:rpt lat="51.1361217" lon="4.0920210"/>
+          <gpxx:rpt lat="51.1369801" lon="4.0909910"/>
+          <gpxx:rpt lat="51.1378813" lon="4.0900469"/>
+          <gpxx:rpt lat="51.1389542" lon="4.0890169">
+            <gpxx:Subclass>06005A0D16016EF001001F020300C2501C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1392975" lon="4.0897894">
+            <gpxx:Subclass>06005A0D160183F001001F000300D0500000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1392975" lon="4.0897894">
+            <gpxx:Subclass>06005A0D160183F001002117000000000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1392975" lon="4.0897894">
+      <time>2024-10-22T16:08:54Z</time>
+      <name>Isengrimlaan en Koning Nobellaan</name>
+      <cmt>Isengrimlaan en Koning Nobellaan</cmt>
+      <desc>Isengrimlaan en Koning Nobellaan</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06B05A0D160105205B010F240200A05D86E8</gpxx:Subclass>
+          <gpxx:rpt lat="51.1392975" lon="4.0897894">
+            <gpxx:Subclass>06005A0D160183F001002116000000000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1392975" lon="4.0897894">
+            <gpxx:Subclass>06005A0D16016EF001001F000300D050AA00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1396837" lon="4.0908194"/>
+          <gpxx:rpt lat="51.1400270" lon="4.0916777"/>
+          <gpxx:rpt lat="51.1403275" lon="4.0924072"/>
+          <gpxx:rpt lat="51.1404562" lon="4.0924501"/>
+          <gpxx:rpt lat="51.1418724" lon="4.0912485">
+            <gpxx:Subclass>0C005A0D1601E1F201001F0E030030510A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1419582" lon="4.0913343"/>
+          <gpxx:rpt lat="51.1420870" lon="4.0912914">
+            <gpxx:Subclass>06005A0D160161F401001F0F030014510E00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1423016" lon="4.0916348">
+            <gpxx:Subclass>06005A0D1601E3F601001F0003003E510F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1425591" lon="4.0919352">
+            <gpxx:Subclass>05005A0D1601B5B903001F0007000A455B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1425591" lon="4.0920210"/>
+          <gpxx:rpt lat="51.1427307" lon="4.0924072"/>
+          <gpxx:rpt lat="51.1429024" lon="4.0945530"/>
+          <gpxx:rpt lat="51.1429882" lon="4.0948963">
+            <gpxx:Subclass>05005A0D1601B7B703001F060700D6442100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1433744" lon="4.0951109"/>
+          <gpxx:rpt lat="51.1436749" lon="4.0951538">
+            <gpxx:Subclass>05005A0D1601B7B703001F000700C4444500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1451491" lon="4.0954773">
+            <gpxx:Subclass>05005A0D1601B7B703002117000066000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1451491" lon="4.0954773">
+      <time>2024-10-22T16:08:56Z</time>
+      <name>Hulstendreef 7</name>
+      <cmt>Hulstendreef 7</cmt>
+      <desc>Hulstendreef 7</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D1601B7B70300010001005B450000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1451491" lon="4.0954773">
+            <gpxx:Subclass>05005A0D1601B7B703002116000066000D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1454344" lon="4.0955400">
+            <gpxx:Subclass>05005A0D1601B7B703001F000700AC443A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1457348" lon="4.0956259"/>
+          <gpxx:rpt lat="51.1463785" lon="4.0957546"/>
+          <gpxx:rpt lat="51.1466789" lon="4.0958405">
+            <gpxx:Subclass>06005A0D160124B803001F00070064445C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1467648" lon="4.0958834"/>
+          <gpxx:rpt lat="51.1483097" lon="4.0962267"/>
+          <gpxx:rpt lat="51.1486101" lon="4.0960550">
+            <gpxx:Subclass>06005A0D16010BF101001F06030064537900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1487818" lon="4.0946817"/>
+          <gpxx:rpt lat="51.1490393" lon="4.0939951"/>
+          <gpxx:rpt lat="51.1493826" lon="4.0934801"/>
+          <gpxx:rpt lat="51.1500692" lon="4.0930939">
+            <gpxx:Subclass>06005A0D16010BF101001F000300E4534300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1507988" lon="4.0922356"/>
+          <gpxx:rpt lat="51.1510444" lon="4.0914986">
+            <gpxx:Subclass>06005A0D16010BF1010021170000BB000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1510445" lon="4.0914985">
+      <time>2024-10-22T16:09:08Z</time>
+      <name>Gavermolenstraat 22</name>
+      <cmt>Gavermolenstraat 22</cmt>
+      <desc>Gavermolenstraat 22</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D16010BF1010001800200A6420000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1510444" lon="4.0914986">
+            <gpxx:Subclass>06005A0D16010BF1010021160000BB002400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1510992" lon="4.0913343"/>
+          <gpxx:rpt lat="51.1511421" lon="4.0903044">
+            <gpxx:Subclass>06005A0D16010BF101001F000300D3514200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1511421" lon="4.0897894"/>
+          <gpxx:rpt lat="51.1506701" lon="4.0882444">
+            <gpxx:Subclass>06005A0D160141BA03001F0203008B510400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1507559" lon="4.0881586">
+            <gpxx:Subclass>06005A0D16019CF601001F0003009D510A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1509705" lon="4.0880299">
+            <gpxx:Subclass>05005A0D1601FBB603001F060700A6458B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1507559" lon="4.0872145"/>
+          <gpxx:rpt lat="51.1508846" lon="4.0863132"/>
+          <gpxx:rpt lat="51.1510134" lon="4.0861416"/>
+          <gpxx:rpt lat="51.1514425" lon="4.0858412"/>
+          <gpxx:rpt lat="51.1515284" lon="4.0856695"/>
+          <gpxx:rpt lat="51.1516142" lon="4.0839958">
+            <gpxx:Subclass>06005A0D16019EB803001F02070061461900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1521721" lon="4.0840816">
+            <gpxx:Subclass>06005A0D16019EB803001F00030001542200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1528587" lon="4.0841675"/>
+          <gpxx:rpt lat="51.1529035" lon="4.0841616">
+            <gpxx:Subclass>06005A0D16019EB80300211700003C000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1529036" lon="4.0841616">
+      <time>2024-10-22T16:09:09Z</time>
+      <name>Kleemstraat 97</name>
+      <cmt>Kleemstraat 97</cmt>
+      <desc>Kleemstraat 97</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D16019EB803000180010032220000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1529035" lon="4.0841616">
+            <gpxx:Subclass>06005A0D16019EB80300211600003C001001</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1535025" lon="4.0840816"/>
+          <gpxx:rpt lat="51.1550903" lon="4.0836525"/>
+          <gpxx:rpt lat="51.1566782" lon="4.0821505"/>
+          <gpxx:rpt lat="51.1568499" lon="4.0821505"/>
+          <gpxx:rpt lat="51.1574078" lon="4.0825796"/>
+          <gpxx:rpt lat="51.1583948" lon="4.0827513">
+            <gpxx:Subclass>06005A0D16019EB803001F0003006D4F3600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1590385" lon="4.0825367"/>
+          <gpxx:rpt lat="51.1592531" lon="4.0823221"/>
+          <gpxx:rpt lat="51.1593819" lon="4.0820217">
+            <gpxx:Subclass>06005A0D1601FEF101001F0603005F4F9200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1596488" lon="4.0770491">
+            <gpxx:Subclass>06005A0D1601FEF101002117000092000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1596488" lon="4.0770489">
+      <time>2024-10-22T16:09:16Z</time>
+      <name>Gouden Leeuwstraat 32</name>
+      <cmt>Gouden Leeuwstraat 32</cmt>
+      <desc>Gouden Leeuwstraat 32</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D1601FEF1010001000000DF910000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1596488" lon="4.0770491">
+            <gpxx:Subclass>06005A0D1601FEF101002116000092004000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1597252" lon="4.0756273"/>
+          <gpxx:rpt lat="51.1597252" lon="4.0748549">
+            <gpxx:Subclass>06005A0D1601B2F901001F020300414F6401</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1629009" lon="4.0762281"/>
+          <gpxx:rpt lat="51.1629009" lon="4.0762281"/>
+          <gpxx:rpt lat="51.1633730" lon="4.0764427"/>
+          <gpxx:rpt lat="51.1636734" lon="4.0764427"/>
+          <gpxx:rpt lat="51.1644459" lon="4.0763140"/>
+          <gpxx:rpt lat="51.1651325" lon="4.0763140"/>
+          <gpxx:rpt lat="51.1656475" lon="4.0761852"/>
+          <gpxx:rpt lat="51.1671495" lon="4.0754128">
+            <gpxx:Subclass>06005A0D1601B2F901001F000300ED4E4B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1687152" lon="4.0748909">
+            <gpxx:Subclass>06005A0D1601B2F9010021170000AF010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1687153" lon="4.0748909">
+      <time>2024-10-26T16:24:18Z</time>
+      <name>Bosstraat 72</name>
+      <cmt>Bosstraat 72</cmt>
+      <desc>Bosstraat 72</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D1601B2F90100010002008B4A0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1687152" lon="4.0748909">
+            <gpxx:Subclass>06005A0D1601B2F9010021160000AF01CB00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1689520" lon="4.0748119"/>
+          <gpxx:rpt lat="51.1710978" lon="4.0746403"/>
+          <gpxx:rpt lat="51.1716557" lon="4.0745115"/>
+          <gpxx:rpt lat="51.1729002" lon="4.0734816">
+            <gpxx:Subclass>06005A0D1601B2F901001F000300E44E3800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1739731" lon="4.0726233">
+            <gpxx:Subclass>05005A0D16016BBA03001F060300CA4E0E00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1738873" lon="4.0721941">
+            <gpxx:Subclass>05005A0D16011DBB03001F00070073422800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1735010" lon="4.0709496">
+            <gpxx:Subclass>05005A0D160197B903001F02070066422300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1741447" lon="4.0703058">
+            <gpxx:Subclass>05005A0D1601C1B803001F00070001425B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1743164" lon="4.0700912"/>
+          <gpxx:rpt lat="51.1748743" lon="4.0694046"/>
+          <gpxx:rpt lat="51.1754322" lon="4.0687180"/>
+          <gpxx:rpt lat="51.1756897" lon="4.0683317">
+            <gpxx:Subclass>05005A0D1601FFB903001F000700F3411000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1759505" lon="4.0679788">
+            <gpxx:Subclass>05005A0D1601FFB903002117000010000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1759507" lon="4.0679787">
+      <time>2024-10-22T16:09:19Z</time>
+      <name>Kemzekestraat 52</name>
+      <cmt>Kemzekestraat 52</cmt>
+      <desc>Kemzekestraat 52</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D1601FFB9030001000000F20F0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1759505" lon="4.0679788">
+            <gpxx:Subclass>05005A0D1601FFB903002116000010001D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1764193" lon="4.0673447">
+            <gpxx:Subclass>05005A0D160141B803001F000700C441CF00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1771059" lon="4.0666580"/>
+          <gpxx:rpt lat="51.1774492" lon="4.0664864"/>
+          <gpxx:rpt lat="51.1785650" lon="4.0663576"/>
+          <gpxx:rpt lat="51.1796808" lon="4.0662289"/>
+          <gpxx:rpt lat="51.1806679" lon="4.0664434">
+            <gpxx:Subclass>05005A0D1601DBAF03001F00070065371900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1811829" lon="4.0666151">
+            <gpxx:Subclass>05005A0D1601DBAF03001F00070058378800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1811829" lon="4.0666151"/>
+          <gpxx:rpt lat="51.1816120" lon="4.0666580"/>
+          <gpxx:rpt lat="51.1821699" lon="4.0665293"/>
+          <gpxx:rpt lat="51.1825991" lon="4.0664434"/>
+          <gpxx:rpt lat="51.1829424" lon="4.0661860"/>
+          <gpxx:rpt lat="51.1832857" lon="4.0657997"/>
+          <gpxx:rpt lat="51.1836197" lon="4.0648394">
+            <gpxx:Subclass>05005A0D1601DBAF030021170000A0000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1836197" lon="4.0648392">
+      <time>2024-10-22T16:09:31Z</time>
+      <name>Puyveldestraat 34</name>
+      <cmt>Puyveldestraat 34</cmt>
+      <desc>Puyveldestraat 34</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D1601DBAF030001800100CE870000</gpxx:Subclass>
+          <gpxx:rpt lat="51.1836197" lon="4.0648394">
+            <gpxx:Subclass>05005A0D1601DBAF030021160000A0009200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1836290" lon="4.0648127"/>
+          <gpxx:rpt lat="51.1840153" lon="4.0639114"/>
+          <gpxx:rpt lat="51.1842728" lon="4.0636110"/>
+          <gpxx:rpt lat="51.1845303" lon="4.0636110"/>
+          <gpxx:rpt lat="51.1853456" lon="4.0638685"/>
+          <gpxx:rpt lat="51.1863327" lon="4.0642548">
+            <gpxx:Subclass>05005A0D1601C5ED03001F060700ACC33900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1868048" lon="4.0628815"/>
+          <gpxx:rpt lat="51.1869335" lon="4.0625811">
+            <gpxx:Subclass>05005A0D1601EFEF03001F02070089C34600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1871481" lon="4.0626240"/>
+          <gpxx:rpt lat="51.1877918" lon="4.0630531"/>
+          <gpxx:rpt lat="51.1883497" lon="4.0633965">
+            <gpxx:Subclass>05005A0D16018FEC03001F060700C0C3A500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1888218" lon="4.0615940"/>
+          <gpxx:rpt lat="51.1893797" lon="4.0597486"/>
+          <gpxx:rpt lat="51.1895084" lon="4.0594053"/>
+          <gpxx:rpt lat="51.1898088" lon="4.0589333"/>
+          <gpxx:rpt lat="51.1901093" lon="4.0585899">
+            <gpxx:Subclass>05005A0D16018FEC03001F0004008C489B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1909246" lon="4.0581179"/>
+          <gpxx:rpt lat="51.1918688" lon="4.0573025"/>
+          <gpxx:rpt lat="51.1923409" lon="4.0569592"/>
+          <gpxx:rpt lat="51.1926413" lon="4.0568733"/>
+          <gpxx:rpt lat="51.1932122" lon="4.0568162">
+            <gpxx:Subclass>05005A0D16018FEC03002117000041010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.1932123" lon="4.0568162">
+      <time>2024-10-22T16:09:33Z</time>
+      <name>Kwakkelstraat</name>
+      <cmt>Kwakkelstraat</cmt>
+      <desc>Kwakkelstraat</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D16010F2064010D240200706785E2</gpxx:Subclass>
+          <gpxx:rpt lat="51.1932122" lon="4.0568162">
+            <gpxx:Subclass>05005A0D16018FEC0300211600004101A000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1934996" lon="4.0567875"/>
+          <gpxx:rpt lat="51.1950445" lon="4.0561867"/>
+          <gpxx:rpt lat="51.1956882" lon="4.0560579"/>
+          <gpxx:rpt lat="51.1965895" lon="4.0560579">
+            <gpxx:Subclass>05005A0D16018FEC03001F0007002BC45600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1975336" lon="4.0560579"/>
+          <gpxx:rpt lat="51.1975336" lon="4.0560579"/>
+          <gpxx:rpt lat="51.1984348" lon="4.0563583">
+            <gpxx:Subclass>06005A0D160103F503001F00070018C40801</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.1991215" lon="4.0564013"/>
+          <gpxx:rpt lat="51.2010956" lon="4.0569592"/>
+          <gpxx:rpt lat="51.2040567" lon="4.0569162">
+            <gpxx:Subclass>06005A0D160178F803001F060400675F9D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2039709" lon="4.0554571"/>
+          <gpxx:rpt lat="51.2043142" lon="4.0547705"/>
+          <gpxx:rpt lat="51.2045288" lon="4.0542555"/>
+          <gpxx:rpt lat="51.2053013" lon="4.0524530"/>
+          <gpxx:rpt lat="51.2053871" lon="4.0522385">
+            <gpxx:Subclass>06005A0D1601F08902001F020400A75E1701</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2055159" lon="4.0521526"/>
+          <gpxx:rpt lat="51.2066746" lon="4.0520239"/>
+          <gpxx:rpt lat="51.2072325" lon="4.0521097"/>
+          <gpxx:rpt lat="51.2086916" lon="4.0526676"/>
+          <gpxx:rpt lat="51.2095499" lon="4.0528393"/>
+          <gpxx:rpt lat="51.2100220" lon="4.0529680"/>
+          <gpxx:rpt lat="51.2105799" lon="4.0535259"/>
+          <gpxx:rpt lat="51.2109661" lon="4.0535688"/>
+          <gpxx:rpt lat="51.2111807" lon="4.0534830">
+            <gpxx:Subclass>06005A0D1601F08902001F000400FC5E0000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2111807" lon="4.0534830">
+            <gpxx:Subclass>06005A0D1601F08902002117000016010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2111807" lon="4.0534830">
+      <time>2024-10-22T16:22:23Z</time>
+      <name>Zavelstraat en Bettestraat en Lamstraat</name>
+      <cmt>Zavelstraat en Bettestraat en Lamstraat</cmt>
+      <desc>Zavelstraat en Bettestraat en Lamstraat</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06805A0D160115206C010F240200B66AEAE1</gpxx:Subclass>
+          <gpxx:rpt lat="51.2111807" lon="4.0534830">
+            <gpxx:Subclass>06005A0D1601F08902002116000016010000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2111807" lon="4.0534830">
+            <gpxx:Subclass>06005A0D1601018A02001F000400FC5E8D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2126827" lon="4.0528393"/>
+          <gpxx:rpt lat="51.2140131" lon="4.0518951">
+            <gpxx:Subclass>0C005A0D16011EFA03001F0E070051E40A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2141418" lon="4.0520239"/>
+          <gpxx:rpt lat="51.2142277" lon="4.0519810">
+            <gpxx:Subclass>05005A0D16012EFC03001F0F070064E43600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2145710" lon="4.0524960"/>
+          <gpxx:rpt lat="51.2148714" lon="4.0534401">
+            <gpxx:Subclass>05005A0D1601E7FB03001F00070076E49800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2157726" lon="4.0564013"/>
+          <gpxx:rpt lat="51.2163734" lon="4.0580320">
+            <gpxx:Subclass>05005A0D1601E7FB03001F00070085E46A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2176177" lon="4.0610803">
+            <gpxx:Subclass>05005A0D1601E7FB03002117000002010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2176177" lon="4.0610804">
+      <time>2024-10-22T16:12:38Z</time>
+      <name>Drieschouwen 73</name>
+      <cmt>Drieschouwen 73</cmt>
+      <desc>Drieschouwen 73</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D1601E7FB030001000100366A0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.2176177" lon="4.0610803">
+            <gpxx:Subclass>05005A0D1601E7FB03002116000002012800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2180901" lon="4.0622377">
+            <gpxx:Subclass>05005A0D160155FB03001F000700C5E4B000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2182617" lon="4.0626240"/>
+          <gpxx:rpt lat="51.2185192" lon="4.0630960"/>
+          <gpxx:rpt lat="51.2189913" lon="4.0636539"/>
+          <gpxx:rpt lat="51.2192059" lon="4.0639544"/>
+          <gpxx:rpt lat="51.2194633" lon="4.0643406"/>
+          <gpxx:rpt lat="51.2208366" lon="4.0664005">
+            <gpxx:Subclass>05005A0D1601140304001F0007009DEE0501</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2210083" lon="4.0670013"/>
+          <gpxx:rpt lat="51.2214375" lon="4.0683317"/>
+          <gpxx:rpt lat="51.2217379" lon="4.0688896"/>
+          <gpxx:rpt lat="51.2222958" lon="4.0696621"/>
+          <gpxx:rpt lat="51.2228537" lon="4.0703487"/>
+          <gpxx:rpt lat="51.2232399" lon="4.0708637"/>
+          <gpxx:rpt lat="51.2237120" lon="4.0716362"/>
+          <gpxx:rpt lat="51.2240553" lon="4.0724945"/>
+          <gpxx:rpt lat="51.2242699" lon="4.0732241">
+            <gpxx:Subclass>05005A0D16014E0404001F000700ECEE1F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2243986" lon="4.0736961"/>
+          <gpxx:rpt lat="51.2245703" lon="4.0742111">
+            <gpxx:Subclass>05005A0D1601C00304001F000700F6EE0000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2245703" lon="4.0742111">
+            <gpxx:Subclass>05005A0D1601C00304002117000000000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2245703" lon="4.0742111">
+      <time>2024-10-22T16:18:03Z</time>
+      <name>Reepstraat en Hofpachtstraat</name>
+      <cmt>Reepstraat en Hofpachtstraat</cmt>
+      <desc>Reepstraat en Hofpachtstraat</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05805A0D16011D206F010F240200266DB0E5</gpxx:Subclass>
+          <gpxx:rpt lat="51.2245703" lon="4.0742111">
+            <gpxx:Subclass>05005A0D1601C00304002116000000000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2245703" lon="4.0742111">
+            <gpxx:Subclass>05005A0D1601C00304001F000700F6EEBF01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2249136" lon="4.0768719"/>
+          <gpxx:rpt lat="51.2249136" lon="4.0784168"/>
+          <gpxx:rpt lat="51.2249994" lon="4.0792751"/>
+          <gpxx:rpt lat="51.2254715" lon="4.0818930"/>
+          <gpxx:rpt lat="51.2256002" lon="4.0827084"/>
+          <gpxx:rpt lat="51.2259007" lon="4.0844250"/>
+          <gpxx:rpt lat="51.2260723" lon="4.0856266"/>
+          <gpxx:rpt lat="51.2262011" lon="4.0866995"/>
+          <gpxx:rpt lat="51.2263727" lon="4.0885019"/>
+          <gpxx:rpt lat="51.2264156" lon="4.0891886">
+            <gpxx:Subclass>05005A0D16014EFF03001F0007002CEF3D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2265873" lon="4.0907764"/>
+          <gpxx:rpt lat="51.2266302" lon="4.0912485">
+            <gpxx:Subclass>05005A0D16013F0604001F02070050EFA000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2263298" lon="4.0912914"/>
+          <gpxx:rpt lat="51.2246990" lon="4.0916777"/>
+          <gpxx:rpt lat="51.2231970" lon="4.0917206">
+            <gpxx:Subclass>06005A0D16015E0104001F06070003F1F200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2232399" lon="4.0923214"/>
+          <gpxx:rpt lat="51.2231541" lon="4.0936947"/>
+          <gpxx:rpt lat="51.2230682" lon="4.0941668"/>
+          <gpxx:rpt lat="51.2226391" lon="4.0955400"/>
+          <gpxx:rpt lat="51.2222099" lon="4.0966558"/>
+          <gpxx:rpt lat="51.2218237" lon="4.0974712"/>
+          <gpxx:rpt lat="51.2213087" lon="4.0992308">
+            <gpxx:Subclass>06005A0D16015D9802001F000400C86DB600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2210941" lon="4.0995741"/>
+          <gpxx:rpt lat="51.2187640" lon="4.1039723">
+            <gpxx:Subclass>06005A0D16015D9802002117000050000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2187640" lon="4.1039722">
+      <time>2024-10-22T16:13:06Z</time>
+      <name>Holdamstraat 1</name>
+      <cmt>Holdamstraat 1</cmt>
+      <desc>Holdamstraat 1</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D16015D98020001800000994F0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.2187640" lon="4.1039723">
+            <gpxx:Subclass>06005A0D16015D9802002116000050005000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2176609" lon="4.1060543">
+            <gpxx:Subclass>06005A0D16016A9A02001F020400B76D6D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2156439" lon="4.1059685"/>
+          <gpxx:rpt lat="51.2153435" lon="4.1057539">
+            <gpxx:Subclass>06005A0D16016D9F02001F000400956D0B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2151718" lon="4.1054964">
+            <gpxx:Subclass>05005A0D1601E40304001F060700E0F09400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2150860" lon="4.1058397"/>
+          <gpxx:rpt lat="51.2146139" lon="4.1079426"/>
+          <gpxx:rpt lat="51.2146139" lon="4.1079426"/>
+          <gpxx:rpt lat="51.2141418" lon="4.1102600">
+            <gpxx:Subclass>06005A0D1601C79C02001F000700D3F10000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2141418" lon="4.1102600">
+            <gpxx:Subclass>06005A0D1601C79C02002117000015010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2141418" lon="4.1102600">
+      <time>2024-10-22T16:13:08Z</time>
+      <name>Aststraat en Astweg</name>
+      <cmt>Aststraat en Astweg</cmt>
+      <desc>Aststraat en Astweg</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D1601432070010F240200406B40EC</gpxx:Subclass>
+          <gpxx:rpt lat="51.2141418" lon="4.1102600">
+            <gpxx:Subclass>06005A0D1601C79C02002116000015010000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2141418" lon="4.1102600">
+            <gpxx:Subclass>05005A0D1601E40304001F000700D3F19E00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2137556" lon="4.1123199"/>
+          <gpxx:rpt lat="51.2136698" lon="4.1133499"/>
+          <gpxx:rpt lat="51.2137127" lon="4.1142511"/>
+          <gpxx:rpt lat="51.2137127" lon="4.1142511"/>
+          <gpxx:rpt lat="51.2137985" lon="4.1155386">
+            <gpxx:Subclass>05005A0D1601900304001F00070003F29D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2138414" lon="4.1164398"/>
+          <gpxx:rpt lat="51.2139273" lon="4.1174269"/>
+          <gpxx:rpt lat="51.2142277" lon="4.1209030">
+            <gpxx:Subclass>05005A0D1601840904001F02070029F29D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2132406" lon="4.1206026"/>
+          <gpxx:rpt lat="51.2109075" lon="4.1199303">
+            <gpxx:Subclass>05005A0D1601840904002117000068000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2109076" lon="4.1199303">
+      <time>2024-10-22T16:13:19Z</time>
+      <name>Gaversstraat 79</name>
+      <cmt>Gaversstraat 79</cmt>
+      <desc>Gaversstraat 79</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D1601840904000100020072290000</gpxx:Subclass>
+          <gpxx:rpt lat="51.2109075" lon="4.1199303">
+            <gpxx:Subclass>05005A0D1601840904002116000068006200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2107086" lon="4.1198730"/>
+          <gpxx:rpt lat="51.2100220" lon="4.1199160"/>
+          <gpxx:rpt lat="51.2088203" lon="4.1200876">
+            <gpxx:Subclass>05005A0D1601840904001F000700C4F10700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2086916" lon="4.1201305">
+            <gpxx:Subclass>06005A0D16015F0904001F060700A3F1ED00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2086916" lon="4.1203022"/>
+          <gpxx:rpt lat="51.2086916" lon="4.1203022"/>
+          <gpxx:rpt lat="51.2091208" lon="4.1230917"/>
+          <gpxx:rpt lat="51.2093353" lon="4.1237783"/>
+          <gpxx:rpt lat="51.2095499" lon="4.1241646"/>
+          <gpxx:rpt lat="51.2096786" lon="4.1246796"/>
+          <gpxx:rpt lat="51.2101078" lon="4.1278553">
+            <gpxx:Subclass>06005A0D16015F0904001F000400D971A500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2107944" lon="4.1316748"/>
+          <gpxx:rpt lat="51.2111076" lon="4.1332885">
+            <gpxx:Subclass>06005A0D16015F0904002117000093010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2111076" lon="4.1332888">
+      <time>2024-10-22T16:13:33Z</time>
+      <name>Doornstraat 11</name>
+      <cmt>Doornstraat 11</cmt>
+      <desc>Doornstraat 11</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D16015F0904000100030056A50000</gpxx:Subclass>
+          <gpxx:rpt lat="51.2111076" lon="4.1332885">
+            <gpxx:Subclass>06005A0D16015F0904002116000093016400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2113523" lon="4.1345501"/>
+          <gpxx:rpt lat="51.2117386" lon="4.1365671">
+            <gpxx:Subclass>05005A0D16019F0404001F0204000072D000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2114382" lon="4.1369534"/>
+          <gpxx:rpt lat="51.2112665" lon="4.1372108"/>
+          <gpxx:rpt lat="51.2105370" lon="4.1382408"/>
+          <gpxx:rpt lat="51.2086916" lon="4.1412449"/>
+          <gpxx:rpt lat="51.2085199" lon="4.1415024">
+            <gpxx:Subclass>05005A0D1601230104001F00070042F44600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2077045" lon="4.1429615"/>
+          <gpxx:rpt lat="51.2075329" lon="4.1433048">
+            <gpxx:Subclass>06005A0D16010CFE03001F06070065F42301</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2076187" lon="4.1434336"/>
+          <gpxx:rpt lat="51.2103224" lon="4.1470385"/>
+          <gpxx:rpt lat="51.2111807" lon="4.1484547"/>
+          <gpxx:rpt lat="51.2114811" lon="4.1491413"/>
+          <gpxx:rpt lat="51.2117815" lon="4.1501713"/>
+          <gpxx:rpt lat="51.2118812" lon="4.1503207">
+            <gpxx:Subclass>06005A0D16010CFE03002117000023010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2118812" lon="4.1503208">
+      <time>2025-02-17T18:28:10Z</time>
+      <name>Laarstraat 9</name>
+      <cmt>Laarstraat 9</cmt>
+      <desc>Laarstraat 9</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D16010CFE030001800100B11D0100</gpxx:Subclass>
+          <gpxx:rpt lat="51.2118812" lon="4.1503207">
+            <gpxx:Subclass>06005A0D16010CFE03002116000023019900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2124681" lon="4.1512012"/>
+          <gpxx:rpt lat="51.2137127" lon="4.1525316"/>
+          <gpxx:rpt lat="51.2145710" lon="4.1532612">
+            <gpxx:Subclass>06005A0D16010CFE03001F00040058722302</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2145710" lon="4.1532612"/>
+          <gpxx:rpt lat="51.2151289" lon="4.1535616"/>
+          <gpxx:rpt lat="51.2181759" lon="4.1544199"/>
+          <gpxx:rpt lat="51.2188196" lon="4.1544628"/>
+          <gpxx:rpt lat="51.2191200" lon="4.1546774"/>
+          <gpxx:rpt lat="51.2198067" lon="4.1555786"/>
+          <gpxx:rpt lat="51.2211800" lon="4.1576815"/>
+          <gpxx:rpt lat="51.2216520" lon="4.1581535"/>
+          <gpxx:rpt lat="51.2222099" lon="4.1584110"/>
+          <gpxx:rpt lat="51.2252998" lon="4.1592693">
+            <gpxx:Subclass>05005A0D1601871604001F020800ED185200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2247419" lon="4.1618872"/>
+          <gpxx:rpt lat="51.2247249" lon="4.1619380">
+            <gpxx:Subclass>05005A0D16018716040021170000D3010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2247250" lon="4.1619379">
+      <time>2024-10-22T16:13:49Z</time>
+      <name>Klein Laarstraat 45</name>
+      <cmt>Klein Laarstraat 45</cmt>
+      <desc>Klein Laarstraat 45</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D16018716040001000400D0A70000</gpxx:Subclass>
+          <gpxx:rpt lat="51.2247249" lon="4.1619380">
+            <gpxx:Subclass>05005A0D16018716040021160000D301A800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2245274" lon="4.1625309"/>
+          <gpxx:rpt lat="51.2242270" lon="4.1630888"/>
+          <gpxx:rpt lat="51.2234116" lon="4.1642046"/>
+          <gpxx:rpt lat="51.2222958" lon="4.1661358">
+            <gpxx:Subclass>05005A0D1601871604001F000400F29E2B01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2220812" lon="4.1676378"/>
+          <gpxx:rpt lat="51.2215233" lon="4.1689682"/>
+          <gpxx:rpt lat="51.2212229" lon="4.1697407"/>
+          <gpxx:rpt lat="51.2208796" lon="4.1705561"/>
+          <gpxx:rpt lat="51.2206221" lon="4.1708994"/>
+          <gpxx:rpt lat="51.2203646" lon="4.1711998"/>
+          <gpxx:rpt lat="51.2198496" lon="4.1716290"/>
+          <gpxx:rpt lat="51.2191200" lon="4.1722727"/>
+          <gpxx:rpt lat="51.2188196" lon="4.1724014"/>
+          <gpxx:rpt lat="51.2182188" lon="4.1725302"/>
+          <gpxx:rpt lat="51.2179613" lon="4.1727018">
+            <gpxx:Subclass>05005A0D1601851304001F0608001C19EB00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2178755" lon="4.1731310"/>
+          <gpxx:rpt lat="51.2180471" lon="4.1755342"/>
+          <gpxx:rpt lat="51.2183046" lon="4.1787529"/>
+          <gpxx:rpt lat="51.2183475" lon="4.1806841">
+            <gpxx:Subclass>05005A0D1601EC1604001F000800FB192F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2184050" lon="4.1822938">
+            <gpxx:Subclass>05005A0D1601EC160400211700002F000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2184050" lon="4.1822941">
+      <time>2024-10-22T16:13:51Z</time>
+      <name>Grote Kouterstraat 97</name>
+      <cmt>Grote Kouterstraat 97</cmt>
+      <desc>Grote Kouterstraat 97</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D1601EC16040001800000122F0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.2184050" lon="4.1822938">
+            <gpxx:Subclass>05005A0D1601EC160400211600002F00BC00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2184763" lon="4.1842890"/>
+          <gpxx:rpt lat="51.2185621" lon="4.1855764"/>
+          <gpxx:rpt lat="51.2187338" lon="4.1887093">
+            <gpxx:Subclass>05005A0D1601EC1604001F000800151A0C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2187767" lon="4.1891384">
+            <gpxx:Subclass>05005A0D1601951504001F000800201AA300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2188196" lon="4.1893959"/>
+          <gpxx:rpt lat="51.2191200" lon="4.1909838"/>
+          <gpxx:rpt lat="51.2192917" lon="4.1930437"/>
+          <gpxx:rpt lat="51.2192917" lon="4.1933441"/>
+          <gpxx:rpt lat="51.2192917" lon="4.1936445"/>
+          <gpxx:rpt lat="51.2192917" lon="4.1945887">
+            <gpxx:Subclass>05005A0D1601F61104001F0009003903AB00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2195492" lon="4.1955328"/>
+          <gpxx:rpt lat="51.2196779" lon="4.1963911"/>
+          <gpxx:rpt lat="51.2198067" lon="4.1970778"/>
+          <gpxx:rpt lat="51.2198067" lon="4.1970778"/>
+          <gpxx:rpt lat="51.2199354" lon="4.1974211"/>
+          <gpxx:rpt lat="51.2199354" lon="4.1977215"/>
+          <gpxx:rpt lat="51.2196350" lon="4.1993952"/>
+          <gpxx:rpt lat="51.2195492" lon="4.2001677">
+            <gpxx:Subclass>05005A0D1601C31004001F000800FA1A9601</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2197638" lon="4.2031288"/>
+          <gpxx:rpt lat="51.2197208" lon="4.2039442"/>
+          <gpxx:rpt lat="51.2196350" lon="4.2048025"/>
+          <gpxx:rpt lat="51.2195492" lon="4.2052317"/>
+          <gpxx:rpt lat="51.2192488" lon="4.2062616"/>
+          <gpxx:rpt lat="51.2192059" lon="4.2064762"/>
+          <gpxx:rpt lat="51.2192488" lon="4.2066908"/>
+          <gpxx:rpt lat="51.2193775" lon="4.2070770"/>
+          <gpxx:rpt lat="51.2200212" lon="4.2078495"/>
+          <gpxx:rpt lat="51.2202787" lon="4.2083216"/>
+          <gpxx:rpt lat="51.2205362" lon="4.2089224"/>
+          <gpxx:rpt lat="51.2208366" lon="4.2097807"/>
+          <gpxx:rpt lat="51.2208796" lon="4.2100382"/>
+          <gpxx:rpt lat="51.2208796" lon="4.2102957"/>
+          <gpxx:rpt lat="51.2207937" lon="4.2105103"/>
+          <gpxx:rpt lat="51.2202358" lon="4.2127419">
+            <gpxx:Subclass>05005A0D1601FF1304001F000800951A0201</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2202787" lon="4.2131710"/>
+          <gpxx:rpt lat="51.2204075" lon="4.2135572"/>
+          <gpxx:rpt lat="51.2210941" lon="4.2153168"/>
+          <gpxx:rpt lat="51.2216520" lon="4.2164326"/>
+          <gpxx:rpt lat="51.2219095" lon="4.2172480"/>
+          <gpxx:rpt lat="51.2223816" lon="4.2192221"/>
+          <gpxx:rpt lat="51.2224674" lon="4.2206383">
+            <gpxx:Subclass>05005A0D1601141304001F000800161C4900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2225103" lon="4.2226982"/>
+          <gpxx:rpt lat="51.2225103" lon="4.2231274">
+            <gpxx:Subclass>05005A0D1601141304001F000800091C0A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2225103" lon="4.2234512">
+            <gpxx:Subclass>05005A0D1601141304002117000052000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2225103" lon="4.2234513">
+      <time>2024-10-22T16:13:55Z</time>
+      <name>Zillebeek 103</name>
+      <cmt>Zillebeek 103</cmt>
+      <desc>Zillebeek 103</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D1601141304000180020074090000</gpxx:Subclass>
+          <gpxx:rpt lat="51.2225103" lon="4.2234512">
+            <gpxx:Subclass>05005A0D1601141304002116000052003A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2225103" lon="4.2254448">
+            <gpxx:Subclass>05005A0D1601141304001F000800F81BFA00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2224674" lon="4.2260027"/>
+          <gpxx:rpt lat="51.2222958" lon="4.2276335"/>
+          <gpxx:rpt lat="51.2222958" lon="4.2278051"/>
+          <gpxx:rpt lat="51.2222099" lon="4.2282772"/>
+          <gpxx:rpt lat="51.2219095" lon="4.2299080"/>
+          <gpxx:rpt lat="51.2217808" lon="4.2306376"/>
+          <gpxx:rpt lat="51.2218237" lon="4.2321825"/>
+          <gpxx:rpt lat="51.2216520" lon="4.2338562">
+            <gpxx:Subclass>05005A0D16015A1404001F000800B71BBB00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2214375" lon="4.2346716"/>
+          <gpxx:rpt lat="51.2208366" lon="4.2365599"/>
+          <gpxx:rpt lat="51.2198496" lon="4.2395210">
+            <gpxx:Subclass>05005A0D1601541504001F0008001D1B1300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2196779" lon="4.2401218">
+            <gpxx:Subclass>05005A0D1601A11404001F000800551B0800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2195921" lon="4.2403793">
+            <gpxx:Subclass>05005A0D1601531F04001F0008003E1B7B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2195492" lon="4.2408514"/>
+          <gpxx:rpt lat="51.2193346" lon="4.2427397"/>
+          <gpxx:rpt lat="51.2193346" lon="4.2427397"/>
+          <gpxx:rpt lat="51.2192059" lon="4.2437267"/>
+          <gpxx:rpt lat="51.2191629" lon="4.2444992">
+            <gpxx:Subclass>06005A0D16016BC302001F00040052B30000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2191629" lon="4.2444992">
+            <gpxx:Subclass>06005A0D16016BC302002117000026000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2191629" lon="4.2444992">
+      <time>2024-10-22T16:13:57Z</time>
+      <name>Glazenleeuwstraat en Drie Lindekens</name>
+      <cmt>Glazenleeuwstraat en Drie Lindekens</cmt>
+      <desc>Glazenleeuwstraat en Drie Lindekens</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05B05A0D16013020A6010F2403002A6CB004</gpxx:Subclass>
+          <gpxx:rpt lat="51.2191629" lon="4.2444992">
+            <gpxx:Subclass>06005A0D16016BC302002116000026000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2191629" lon="4.2444992">
+            <gpxx:Subclass>05005A0D1601531F04001F00040052B35200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2192059" lon="4.2451000"/>
+          <gpxx:rpt lat="51.2192059" lon="4.2454004"/>
+          <gpxx:rpt lat="51.2191629" lon="4.2456579"/>
+          <gpxx:rpt lat="51.2190771" lon="4.2460871"/>
+          <gpxx:rpt lat="51.2186909" lon="4.2470741">
+            <gpxx:Subclass>05005A0D1601CE1504001F060800D51D5F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2188196" lon="4.2471600"/>
+          <gpxx:rpt lat="51.2193346" lon="4.2477608"/>
+          <gpxx:rpt lat="51.2193775" lon="4.2478466"/>
+          <gpxx:rpt lat="51.2196779" lon="4.2483616"/>
+          <gpxx:rpt lat="51.2201500" lon="4.2492628">
+            <gpxx:Subclass>05005A0D1601C31604001F0008004B1E9D00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2202787" lon="4.2494345"/>
+          <gpxx:rpt lat="51.2204933" lon="4.2494774"/>
+          <gpxx:rpt lat="51.2204933" lon="4.2494774"/>
+          <gpxx:rpt lat="51.2207079" lon="4.2495632"/>
+          <gpxx:rpt lat="51.2209654" lon="4.2499924"/>
+          <gpxx:rpt lat="51.2211370" lon="4.2503786"/>
+          <gpxx:rpt lat="51.2223387" lon="4.2526102"/>
+          <gpxx:rpt lat="51.2223816" lon="4.2527390"/>
+          <gpxx:rpt lat="51.2223816" lon="4.2527390"/>
+          <gpxx:rpt lat="51.2224674" lon="4.2529106">
+            <gpxx:Subclass>0C005A0D1601341D04001F0E080097280900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2224245" lon="4.2530394"/>
+          <gpxx:rpt lat="51.2225103" lon="4.2530823">
+            <gpxx:Subclass>05005A0D1601811A04001F4F08005D285600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2224674" lon="4.2534256"/>
+          <gpxx:rpt lat="51.2224674" lon="4.2541122"/>
+          <gpxx:rpt lat="51.2225103" lon="4.2545414"/>
+          <gpxx:rpt lat="51.2231112" lon="4.2552280"/>
+          <gpxx:rpt lat="51.2232399" lon="4.2555714">
+            <gpxx:Subclass>05005A0D1601311904001F000800B6285F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2233257" lon="4.2557001"/>
+          <gpxx:rpt lat="51.2236691" lon="4.2559147"/>
+          <gpxx:rpt lat="51.2236691" lon="4.2559147"/>
+          <gpxx:rpt lat="51.2249136" lon="4.2566013"/>
+          <gpxx:rpt lat="51.2249136" lon="4.2566013"/>
+          <gpxx:rpt lat="51.2251282" lon="4.2567301">
+            <gpxx:Subclass>05005A0D1601311904001F00040095D50000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2251282" lon="4.2567301">
+            <gpxx:Subclass>05005A0D160131190400211700005F000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2251282" lon="4.2567301">
+      <time>2024-10-22T16:14:00Z</time>
+      <name>Leurshoek en Gaverlanddam</name>
+      <cmt>Leurshoek en Gaverlanddam</cmt>
+      <desc>Leurshoek en Gaverlanddam</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05B05A0D16010E2085010F240300406DEA06</gpxx:Subclass>
+          <gpxx:rpt lat="51.2251282" lon="4.2567301">
+            <gpxx:Subclass>05005A0D160131190400211600005F000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2251282" lon="4.2567301">
+            <gpxx:Subclass>05005A0D1601311904001F00040095D5CE00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2252998" lon="4.2568159"/>
+          <gpxx:rpt lat="51.2266302" lon="4.2574596"/>
+          <gpxx:rpt lat="51.2269735" lon="4.2577171"/>
+          <gpxx:rpt lat="51.2278748" lon="4.2588758"/>
+          <gpxx:rpt lat="51.2280464" lon="4.2590904"/>
+          <gpxx:rpt lat="51.2281752" lon="4.2592621"/>
+          <gpxx:rpt lat="51.2286901" lon="4.2599916"/>
+          <gpxx:rpt lat="51.2288189" lon="4.2602491">
+            <gpxx:Subclass>05005A0D1601C72504001F000800B9396100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2289476" lon="4.2606783"/>
+          <gpxx:rpt lat="51.2290764" lon="4.2614508"/>
+          <gpxx:rpt lat="51.2292910" lon="4.2635107">
+            <gpxx:Subclass>05005A0D1601581A04001F0208001C2C5F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2284327" lon="4.2639399"/>
+          <gpxx:rpt lat="51.2279606" lon="4.2642403"/>
+          <gpxx:rpt lat="51.2276173" lon="4.2645836"/>
+          <gpxx:rpt lat="51.2274456" lon="4.2648411">
+            <gpxx:Subclass>05005A0D1601581A04001F0004000EC81700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2270529" lon="4.2653410">
+            <gpxx:Subclass>05005A0D1601581A0400211700003E000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2270529" lon="4.2653409">
+      <time>2024-10-22T16:14:01Z</time>
+      <name>Gaverlandstraat 168</name>
+      <cmt>Gaverlandstraat 168</cmt>
+      <desc>Gaverlandstraat 168</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D1601581A0400010001002A1B0000</gpxx:Subclass>
+          <gpxx:rpt lat="51.2270529" lon="4.2653410">
+            <gpxx:Subclass>05005A0D1601581A0400211600003E001B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2269735" lon="4.2654419"/>
+          <gpxx:rpt lat="51.2266731" lon="4.2660427">
+            <gpxx:Subclass>05005A0D1601581A04001F000400D2C72300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2262440" lon="4.2670298">
+            <gpxx:Subclass>05005A0D1601841B04001F000800D62B5C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2261581" lon="4.2672443"/>
+          <gpxx:rpt lat="51.2260723" lon="4.2674160"/>
+          <gpxx:rpt lat="51.2259865" lon="4.2676306"/>
+          <gpxx:rpt lat="51.2253857" lon="4.2689610"/>
+          <gpxx:rpt lat="51.2251711" lon="4.2696905">
+            <gpxx:Subclass>06005A0D1601671D04001F000800BC2C3100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2247419" lon="4.2712355">
+            <gpxx:Subclass>06005A0D1601671D04001F000400D0C82300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2245274" lon="4.2718792"/>
+          <gpxx:rpt lat="51.2244492" lon="4.2723224">
+            <gpxx:Subclass>06005A0D1601671D04002117000054000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2244492" lon="4.2723226">
+      <time>2024-10-22T16:14:16Z</time>
+      <name>Gaverlandstraat 73</name>
+      <cmt>Gaverlandstraat 73</cmt>
+      <desc>Gaverlandstraat 73</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06005A0D1601671D040001000100B9220000</gpxx:Subclass>
+          <gpxx:rpt lat="51.2244492" lon="4.2723224">
+            <gpxx:Subclass>06005A0D1601671D04002116000054001300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2243986" lon="4.2726088"/>
+          <gpxx:rpt lat="51.2243986" lon="4.2729521">
+            <gpxx:Subclass>06005A0D1601671D04001F000400EDC88700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2243986" lon="4.2741108"/>
+          <gpxx:rpt lat="51.2243986" lon="4.2741108"/>
+          <gpxx:rpt lat="51.2244844" lon="4.2753553"/>
+          <gpxx:rpt lat="51.2246132" lon="4.2761707"/>
+          <gpxx:rpt lat="51.2249136" lon="4.2774582">
+            <gpxx:Subclass>05005A0D16014B1B04001F0008001A2D0000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2249136" lon="4.2774582">
+            <gpxx:Subclass>05005A0D16014B1B04002117000000000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2249136" lon="4.2774582">
+      <time>2024-10-22T16:14:04Z</time>
+      <name>Dijkstraat en Schoolstraat en Gaverlandstraat</name>
+      <cmt>Dijkstraat en Schoolstraat en Gaverlandstraat</cmt>
+      <desc>Dijkstraat en Schoolstraat en Gaverlandstraat</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05B05A0D16014120B2010F240300366DB00A</gpxx:Subclass>
+          <gpxx:rpt lat="51.2249136" lon="4.2774582">
+            <gpxx:Subclass>05005A0D16014B1B04002116000000000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2249136" lon="4.2774582">
+            <gpxx:Subclass>05005A0D1601231A04001F0008001A2DEC00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2246132" lon="4.2778444"/>
+          <gpxx:rpt lat="51.2241411" lon="4.2784452"/>
+          <gpxx:rpt lat="51.2241411" lon="4.2784452"/>
+          <gpxx:rpt lat="51.2238407" lon="4.2787457"/>
+          <gpxx:rpt lat="51.2235403" lon="4.2788744"/>
+          <gpxx:rpt lat="51.2230682" lon="4.2790031"/>
+          <gpxx:rpt lat="51.2226391" lon="4.2790890"/>
+          <gpxx:rpt lat="51.2217379" lon="4.2786598"/>
+          <gpxx:rpt lat="51.2210941" lon="4.2786598"/>
+          <gpxx:rpt lat="51.2209654" lon="4.2786598"/>
+          <gpxx:rpt lat="51.2202358" lon="4.2789173">
+            <gpxx:Subclass>06005A0D1601DCCC02001F00040096C60000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="51.2202358" lon="4.2789173">
+            <gpxx:Subclass>06005A0D1601DCCC02002117000000000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="51.2202358" lon="4.2789173">
+      <time>2024-10-22T16:14:05Z</time>
+      <name>Schoolstraat en Hazaarddam</name>
+      <cmt>Schoolstraat en Hazaarddam</cmt>
+      <desc>Schoolstraat en Hazaarddam</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>05005A0D16013B20B4010F2403005C6CF40A</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>
