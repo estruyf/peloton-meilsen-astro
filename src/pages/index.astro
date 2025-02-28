@@ -3,24 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import SponsorSection from "../components/SponsorSection.astro";
 import Calendar from "../components/Calendar.astro";
 import Documents from "../components/Documents.astro";
+import PelotonMeilsen from "../components/PelotonMeilsen.astro";
 ---
 
 <Layout title="Home">
   <div class="container mx-auto px-4">
-    <section class="py-8 md:py-20 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center">
-        <span class="sr-only">Welkom bij Peloton Meilsen</span>
-        <img
-          src="/peloton-meilsen-grijs.svg"
-          alt="Peloton Meilsen"
-          class="w-96 mx-auto"
-        />
-      </h1>
-      <p class="text-xl text-secondary max-w-2xl mx-auto">
-        Doe mee met onze gepassioneerde fietsgemeenschap voor onvergetelijke
-        ritten en blijvende vriendschappen.
-      </p>
-    </section>
+    <PelotonMeilsen isHome />
 
     <section class="py-8 md:py-20">
       <div class="grid md:grid-cols-2 gap-12 items-center">

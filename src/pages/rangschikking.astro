@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SponsorSection from "../components/SponsorSection.astro";
+import Documents from "../components/Documents.astro";
+import PelotonMeilsen from "../components/PelotonMeilsen.astro";
+import RiderStats from "../components/RiderStats";
+---
+
+<Layout title="Home">
+  <div class="container mx-auto px-4">
+    <PelotonMeilsen />
+
+    <div class="container mx-auto py-8 md:py-20">
+      <h1 id="documenten" class="text-4xl font-bold mb-8">Rangschikking</h1>
+
+      <RiderStats client:load />
+    </div>
+
+    <Documents />
+  </div>
+
+  <SponsorSection />
+</Layout>

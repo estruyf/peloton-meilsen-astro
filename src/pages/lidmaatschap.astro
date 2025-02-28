@@ -2,24 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import SponsorSection from "../components/SponsorSection.astro";
 import Documents from "../components/Documents.astro";
+import PelotonMeilsen from "../components/PelotonMeilsen.astro";
 ---
 
 <Layout title="Lidmaatschap">
   <div class="container mx-auto px-4">
-    <section class="py-8 md:py-20 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center">
-        <span class="sr-only">Welkom bij Peloton Meilsen</span>
-        <img
-          src="/peloton-meilsen-grijs.svg"
-          alt="Peloton Meilsen"
-          class="w-96 mx-auto"
-        />
-      </h2>
-      <p class="text-xl text-secondary max-w-2xl mx-auto">
-        Doe mee met onze gepassioneerde fietsgemeenschap voor onvergetelijke
-        ritten en blijvende vriendschappen.
-      </p>
-    </section>
+    <PelotonMeilsen />
 
     <section class="py-8 md:py-20 space-y-8">
       <h1 class="text-4xl font-bold mb-6">Lidmaatschap</h1>
@@ -60,7 +48,7 @@ import Documents from "../components/Documents.astro";
         name="contact"
         method="POST"
         data-netlify="true"
-        class="space-y-6 bg-white p-8 rounded-lg shadow-md"
+        class="space-y-6 bg-light p-8 rounded-lg shadow-md"
       >
         <div>
           <label
