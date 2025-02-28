@@ -18,15 +18,34 @@ export default function RiderStats() {
     loadData();
   }, []);
 
+  // Function to extract first name from a full name
+  const getFirstName = (fullName: string): string => {
+    // Default case: first word is the first name
+    return fullName.split(' ')[0].toLowerCase();
+  };
+
   async function loadData() {
     try {
       setLoading(true);
       setError(null);
 
       let members = await getMembers();
-      setMembers(members);
-      const sortedMembers = Object.assign([], members).sort((a: RiderStat, b: RiderStat) => b.rideCount - a.rideCount);
-      setRiderStats(sortedMembers);
+
+      // Sort members by first name
+      const sortedByName = Object.assign([], members).sort((a: RiderStat, b: RiderStat) => {
+        const firstNameA = getFirstName(a.name);
+        const firstNameB = getFirstName(b.name);
+        return firstNameA.localeCompare(firstNameB);
+      });
+
+      setMembers(sortedByName);
+
+      // Sort by ride count for the leaderboard
+      const sortedByRideCount = Object.assign([], sortedByName).sort((a: RiderStat, b: RiderStat) =>
+        b.rideCount - a.rideCount
+      );
+
+      setRiderStats(sortedByRideCount);
     } catch (error) {
       console.error('Error loading data:', error);
       setError('Failed to load rider statistics. Please try again later.');
@@ -37,6 +56,11 @@ export default function RiderStats() {
 
   function handleRiderSelect(e: React.ChangeEvent<HTMLSelectElement>) {
     setSelectedRider(e.target.value);
+  }
+
+  // Calculate rider's rank based on ride count (same ride count = same rank)
+  function calculateRank(rider: RiderStat): number {
+    return riderStats.filter(r => r.rideCount > rider.rideCount).length + 1;
   }
 
   const selectedRiderStats = selectedRider
@@ -88,7 +112,7 @@ export default function RiderStats() {
             <div className="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="bg-light overflow-hidden shadow rounded-lg">
                 <div className="px-4 py-5 sm:p-6">
-                  <dt className="text-sm font-medium text-primary  truncate">
+                  <dt className="text-sm font-medium text-primary truncate">
                     Totaal Aantal Ritten
                   </dt>
                   <dd className="mt-1 text-3xl font-semibold text-gray-900">
@@ -98,11 +122,11 @@ export default function RiderStats() {
               </div>
               <div className="bg-light overflow-hidden shadow rounded-lg">
                 <div className="px-4 py-5 sm:p-6">
-                  <dt className="text-sm font-medium text-primary  truncate">
+                  <dt className="text-sm font-medium text-primary truncate">
                     Rang
                   </dt>
                   <dd className="mt-1 text-3xl font-semibold text-gray-900">
-                    {riderStats.findIndex(r => r.name === selectedRiderStats.name) + 1} / {riderStats.length}
+                    {calculateRank(selectedRiderStats)} / {riderStats.length}
                   </dd>
                 </div>
               </div>
@@ -113,6 +137,9 @@ export default function RiderStats() {
 
       <div className="bg-light rounded-lg shadow p-6 mt-6">
         <h2 className="text-xl font-semibold text-primary mb-4">Leaderboard</h2>
+        <p className="text-primary mb-4">
+          Totaal aantal rijders: <strong>{riderStats.length}</strong>
+        </p>
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
@@ -132,7 +159,7 @@ export default function RiderStats() {
               {riderStats.map((rider, index) => (
                 <tr key={index} className={selectedRider === rider.name ? "bg-gray-100" : ""}>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">
-                    {index + 1}
+                    {calculateRank(rider)}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-primary">
                     {rider.name}
