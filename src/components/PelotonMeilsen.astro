@@ -2,30 +2,36 @@
 const { isHome } = Astro.props;
 ---
 
-<section class="py-8 md:py-20 text-center">
-  {
-    isHome ? (
-      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center">
-        <span class="sr-only">Welkom bij Peloton Meilsen</span>
-        <img
-          src="/peloton-meilsen-grijs.svg"
-          alt="Peloton Meilsen"
-          class="w-96 mx-auto"
-        />
-      </h1>
-    ) : (
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center">
-        <span class="sr-only">Welkom bij Peloton Meilsen</span>
-        <img
-          src="/peloton-meilsen-grijs.svg"
-          alt="Peloton Meilsen"
-          class="w-96 mx-auto"
-        />
-      </h2>
-    )
-  }
-  <p class="text-xl text-secondary max-w-2xl mx-auto">
-    Doe mee met onze gepassioneerde fietsgemeenschap voor onvergetelijke ritten
-    en blijvende vriendschappen.
-  </p>
+<section
+  class="w-full py-8 md:py-20 text-center relative bg-cover bg-center"
+  style="background-image: url('/peloton-meilsen-2025.webp')"
+>
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10">
+    {
+      isHome ? (
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center">
+          <span class="sr-only">Welkom bij Peloton Meilsen</span>
+          <img
+            src="/peloton-meilsen-wit.svg"
+            alt="Peloton Meilsen"
+            class="w-96 mx-auto"
+          />
+        </h1>
+      ) : (
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center">
+          <span class="sr-only">Welkom bij Peloton Meilsen</span>
+          <img
+            src="/peloton-meilsen-grijs.svg"
+            alt="Peloton Meilsen"
+            class="w-96 mx-auto"
+          />
+        </h2>
+      )
+    }
+    <p class="text-xl text-white max-w-2xl mx-auto">
+      Doe mee met onze gepassioneerde fietsgemeenschap voor onvergetelijke
+      ritten en blijvende vriendschappen.
+    </p>
+  </div>
 </section>
