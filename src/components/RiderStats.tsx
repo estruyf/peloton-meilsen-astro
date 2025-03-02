@@ -60,6 +60,11 @@ export default function RiderStats() {
 
   // Calculate rider's rank based on ride count (same ride count = same rank)
   function calculateRank(rider: RiderStat): number {
+    if (rider.rideCount === 0) {
+      const nonZeroRideCounts = riderStats.map(r => r.rideCount).filter(count => count > 0);
+      const lowestRideCount = Math.min(...nonZeroRideCounts);
+      return riderStats.filter(r => r.rideCount > lowestRideCount).length + 2;
+    }
     return riderStats.filter(r => r.rideCount > rider.rideCount).length + 1;
   }
 
