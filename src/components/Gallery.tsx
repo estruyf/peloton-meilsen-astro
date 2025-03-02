@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IoClose, IoArrowBack, IoArrowForward } from 'react-icons/io5';
 import type { GalleryImage } from '../models/Gallery';
 
@@ -29,20 +29,23 @@ export const Gallery: React.FC<GalleryProps> = ({ images }) => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') goToPrevious();
-    if (e.key === 'ArrowRight') goToNext();
-  };
+  // Add keyboard event listener when lightbox is open
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isOpen) return;
 
-  // If no images, show a message
-  if (!images || images.length === 0) {
-    return (
-      <div className="text-center py-10">
-        <p className="text-xl text-secondary">Er zijn nog geen foto's toegevoegd aan dit evenement.</p>
-      </div>
-    );
-  }
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') goToPrevious();
+      if (e.key === 'ArrowRight') goToNext();
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    // Clean up event listener when component unmounts or lightbox closes
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, images.length]);
 
   return (
     <>
@@ -76,8 +79,6 @@ export const Gallery: React.FC<GalleryProps> = ({ images }) => {
         <div
           className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
           onClick={closeLightbox}
-          onKeyDown={handleKeyDown}
-          tabIndex={0}
         >
           <button
             className="absolute top-4 right-4 text-white text-3xl hover:text-secondary"
