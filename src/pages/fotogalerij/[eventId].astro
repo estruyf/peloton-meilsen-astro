@@ -1,0 +1,36 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SponsorSection from "../../components/SponsorSection.astro";
+import Documents from "../../components/Documents.astro";
+import PelotonMeilsen from "../../components/PelotonMeilsen.astro";
+import { GalleryEventDetail } from "../../components/GalleryEventDetail";
+
+export async function getStaticPaths() {
+  // Import all gallery data files at build time
+  const galleryModules = import.meta.glob("../../data/gallery/*.json", {
+    eager: true,
+  });
+  const events = Object.values(galleryModules).map(
+    (module: any) => module.default || module
+  );
+
+  return events.map((event) => ({
+    params: { eventId: event.id },
+    props: { event },
+  }));
+}
+
+const { event } = Astro.props;
+---
+
+<Layout title={event.title || "Fotogalerij"}>
+  <PelotonMeilsen />
+
+  <div class="container mx-auto px-4">
+    <GalleryEventDetail eventId={event.id} initialEvent={event} client:load />
+
+    <Documents />
+  </div>
+
+  <SponsorSection />
+</Layout>

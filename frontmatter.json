@@ -1,0 +1,21 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "astro",
+  "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.content.publicFolder": "public",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "blog",
+      "path": "[[workspace]]/temp"
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [],
+  "frontMatter.custom.scripts": [
+    {
+      "title": "Convert to webp",
+      "script": "./scripts/webp.mjs",
+      "command": "~/.nvm/versions/node/v18.20.5/bin/node",
+      "type": "mediaFile"
+    }
+  ]
+}

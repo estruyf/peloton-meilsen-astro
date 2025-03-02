@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SponsorSection from "../components/SponsorSection.astro";
+import Documents from "../components/Documents.astro";
+import PelotonMeilsen from "../components/PelotonMeilsen.astro";
+import { GalleryEventList } from "../components/GalleryEventList";
+
+// Import all gallery data files at build time
+const galleryModules = import.meta.glob("../data/gallery/*.json", {
+  eager: true,
+});
+const events = Object.values(galleryModules).map(
+  (module: any) => module.default || module
+);
+
+// Sort events by date (newest first)
+const sortedEvents = events.sort((a, b) => {
+  if (!a.date) return 1;
+  if (!b.date) return -1;
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+});
+---
+
+<Layout title="Fotogalerij">
+  <PelotonMeilsen />
+
+  <div class="container mx-auto px-4">
+    <div class="container mx-auto py-8 md:py-20">
+      <h1 class="text-4xl font-bold mb-4">Fotogalerij</h1>
+
+      <p class="text-xl text-secondary max-w-2xl mb-8">
+        Bekijk de mooiste momenten van onze ritten en evenementen. Klik op een
+        album om de foto's te bekijken.
+      </p>
+
+      <GalleryEventList initialEvents={sortedEvents} client:load />
+
+      <div class="mt-12 text-center">
+        <p class="text-secondary mb-4">
+          Heb je foto's van onze ritten of evenementen? Deel ze met ons!
+        </p>
+        <a
+          href="mailto:info@pelotonmeilsen.be?subject=Foto's%20voor%20de%20galerij"
+          class="inline-block px-6 py-2 bg-secondary text-primary font-semibold rounded-lg hover:bg-secondary/90 transition-colors"
+        >
+          Stuur je foto's
+        </a>
+      </div>
+    </div>
+
+    <Documents />
+  </div>
+
+  <SponsorSection />
+</Layout>
