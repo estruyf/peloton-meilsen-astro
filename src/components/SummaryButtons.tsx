@@ -49,6 +49,14 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
     URL.revokeObjectURL(url);
   }, [event, description]);
 
+  const isWithin7Days = (date: Date) => {
+    const now = new Date();
+    const diff = (date.getTime() - now.getTime()) / (1000 * 3600 * 24);
+    return diff < 7;
+  };
+
+  const eventStartDate = new Date(event.start.dateTime);
+
   return (
     <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full lg:flex lg:space-x-2 lg:gap-0 lg:grid-cols-none lg:grid-rows-none lg:w-auto justify-self-end">
       {
@@ -66,7 +74,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
       }
 
       {
-        group1 && (
+        group1 && isWithin7Days(eventStartDate) && (
           <a
             href={group1}
             target="_blank"
@@ -80,7 +88,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
       }
 
       {
-        group2 && (
+        group2 && isWithin7Days(eventStartDate) && (
           <a
             href={group2}
             target="_blank"
