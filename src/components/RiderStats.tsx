@@ -58,15 +58,26 @@ export default function RiderStats() {
     setSelectedRider(e.target.value);
   }
 
-  // Calculate rider's rank based on ride count (same ride count = same rank)
-  function calculateRank(rider: RiderStat): number {
-    if (rider.rideCount === 0) {
-      const nonZeroRideCounts = riderStats.map(r => r.rideCount).filter(count => count > 0);
-      const lowestRideCount = Math.min(...nonZeroRideCounts);
-      return riderStats.filter(r => r.rideCount > lowestRideCount).length + 2;
+  // Precompute ranks for all riders based on ride count
+  const ranks = React.useMemo(() => {
+    const sortedRiders = [...riderStats].sort((a, b) => b.rideCount - a.rideCount);
+    let rank = 1;
+    const computedRanks: { [nrOfRides: string]: number } = {};
+
+    for (const rider of sortedRiders) {
+      if (!computedRanks[rider.rideCount]) {
+        computedRanks[rider.rideCount] = rank;
+        rank++;
+      }
     }
-    return riderStats.filter(r => r.rideCount > rider.rideCount).length + 1;
-  }
+
+    return computedRanks;
+  }, [riderStats]);
+
+  // Function to get a rider's rank from precomputed ranks
+  const calculateRank = React.useCallback((rider: RiderStat): number => {
+    return ranks[rider.rideCount];
+  }, [ranks]);
 
   const selectedRiderStats = selectedRider
     ? riderStats.find(rider => rider.name === selectedRider)
