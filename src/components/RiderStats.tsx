@@ -40,10 +40,14 @@ export default function RiderStats() {
 
       setMembers(sortedByName);
 
-      // Sort by ride count for the leaderboard
-      const sortedByRideCount = Object.assign([], sortedByName).sort((a: RiderStat, b: RiderStat) =>
-        b.rideCount - a.rideCount
-      );
+      // Sort by ride count for the leaderboard, but put Yves Van Grimberge first
+      const sortedByRideCount = Object.assign([], sortedByName).sort((a: RiderStat, b: RiderStat) => {
+        // Always put Yves Van Grimberge at the top
+        if (a.name === 'Yves Van Grimberge') return -1;
+        if (b.name === 'Yves Van Grimberge') return 1;
+        // Otherwise sort by ride count as before
+        return b.rideCount - a.rideCount;
+      });
 
       setRiderStats(sortedByRideCount);
     } catch (error) {
@@ -61,10 +65,13 @@ export default function RiderStats() {
   // Precompute ranks for all riders based on ride count
   const ranks = React.useMemo(() => {
     const sortedRiders = [...riderStats].sort((a, b) => b.rideCount - a.rideCount);
-    let rank = 1;
+    let rank = 2; // Start from 2 since Yves Van Grimberge will be #1
     const computedRanks: { [nrOfRides: string]: number } = {};
 
     for (const rider of sortedRiders) {
+      // Skip Yves Van Grimberge in this calculation as he's always #1
+      if (rider.name === 'Yves Van Grimberge') continue;
+
       if (!computedRanks[rider.rideCount]) {
         computedRanks[rider.rideCount] = rank;
         rank++;
@@ -76,6 +83,8 @@ export default function RiderStats() {
 
   // Function to get a rider's rank from precomputed ranks
   const calculateRank = React.useCallback((rider: RiderStat): number => {
+    // Always return 1 for Yves Van Grimberge
+    if (rider.name === 'Yves Van Grimberge') return 1;
     return ranks[rider.rideCount];
   }, [ranks]);
 
@@ -132,7 +141,7 @@ export default function RiderStats() {
                     Totaal Aantal Ritten
                   </dt>
                   <dd className="mt-1 text-3xl font-semibold text-gray-900">
-                    {selectedRiderStats.rideCount}
+                    {selectedRiderStats.name === 'Yves Van Grimberge' ? '∞' : selectedRiderStats.rideCount}
                   </dd>
                 </div>
               </div>
@@ -181,7 +190,7 @@ export default function RiderStats() {
                     {rider.name}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-primary">
-                    {rider.rideCount}
+                    {rider.name === 'Yves Van Grimberge' ? '∞' : rider.rideCount}
                   </td>
                 </tr>
               ))}
