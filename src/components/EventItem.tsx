@@ -24,46 +24,33 @@ export const EventItem: React.FunctionComponent<IEventItemProps> = ({
     return format(date, "HH:mm");
   }
 
-  const { description, group1, group2, groupAll, type } = React.useMemo(() => {
-    let description = "";
-    try {
-      const data = event.description.split(`---`);
+  // Get Azure calendar properties if available, otherwise use Google Calendar format
+  const azureEvent = event as any;
+  const distanceGroup1 = azureEvent.distanceGroup1;
+  const distanceGroup2 = azureEvent.distanceGroup2;
+  const gpxGroup1Url = azureEvent.gpxGroup1Url;
+  const gpxGroup2Url = azureEvent.gpxGroup2Url;
+  const eventType = azureEvent.type;
 
-      description = data[0];
-      description = description.replace(/<\/?[^>]+(>|$)/g, "");
-
-      let details = data[1];
-      details = details.replace(/<\/?[^>]+(>|$)/g, "");
-      details = details.replace(/&quot;/g, '"');
-      const parsed = JSON.parse(details);
-
-      return {
-        description,
-        group1: parsed.group1 || null,
-        group2: parsed.group2 || null,
-        groupAll: parsed.groupAll || null,
-        type: parsed.type || null
-      };
-    } catch (e) {
-      return {
-        description,
-        group1: null,
-        group2: null,
-        groupAll: null,
-        type: null
-      };
-    }
-  }, [event]);
+  // Build distance info string
+  const distances = [];
+  if (distanceGroup1) {
+    distances.push(`Groep 1: ${distanceGroup1}`);
+  }
+  if (distanceGroup2) {
+    distances.push(`Groep 2: ${distanceGroup2}`);
+  }
+  const distanceInfo = distances.join(" - ");
 
   const icon = React.useMemo(() => {
-    if (!type || type === 'fietsen') {
+    if (!eventType || eventType === 'fietsen' || eventType === 'ride') {
       return <BiCycling aria-hidden={true} />;
-    } else if (type === 'social' || type === 'party') {
+    } else if (eventType === 'social' || eventType === 'party') {
       return <BiParty aria-hidden={true} />;
     }
 
     return null;
-  }, [type]);
+  }, [eventType]);
 
   return (
     <li className="py-6">
@@ -80,9 +67,9 @@ export const EventItem: React.FunctionComponent<IEventItemProps> = ({
 
         <div className="md:text-right">
           {
-            description && (
+            distanceInfo && (
               <p className="inline-flex items-center gap-2 text-secondary mb-2">
-                <RiPinDistanceFill aria-hidden={true} /> {description.split('\n').join(' - ')}
+                <RiPinDistanceFill aria-hidden={true} /> {distanceInfo}
               </p>
             )
           }
@@ -90,10 +77,9 @@ export const EventItem: React.FunctionComponent<IEventItemProps> = ({
 
           <SummaryButtons
             event={event}
-            group1={group1}
-            group2={group2}
-            groupAll={groupAll}
-            description={description}
+            group1={gpxGroup1Url || null}
+            group2={gpxGroup2Url || null}
+            description={event.summary}
           />
         </div>
       </div>

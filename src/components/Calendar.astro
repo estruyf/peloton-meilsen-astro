@@ -10,6 +10,8 @@ const webapp =
   "pelotonmeilsen-funcs-chhgdfdrdbc2gtc2.westeurope-01.azurewebsites.net";
 const apiUrl = `https://${webapp}/api/calendar?startDate=${today}`;
 
+console.log("Fetching calendar events from:", apiUrl);
+
 interface AzureCalendarEvent {
   id: string;
   title: string;
@@ -23,54 +25,19 @@ interface AzureCalendarEvent {
   type: "ride" | "social";
 }
 
-let events: Event[] = [];
+let events: (Event & AzureCalendarEvent)[] = [];
 
 try {
   const response = await fetch(apiUrl);
   if (response.ok) {
     const calendarEvents: AzureCalendarEvent[] = await response.json();
 
-    // Transform Azure calendar events to Google Calendar Event format
+    // Map Azure events directly with minimal transformation
     events = calendarEvents.map((azEvent) => {
       // Combine date and startTime for the dateTime
       const dateTime = azEvent.startTime
         ? `${azEvent.date}T${azEvent.startTime}:00`
         : `${azEvent.date}T09:00:00`;
-
-      // Build description with group distances
-      let distanceDescription = "";
-      if (azEvent.distanceGroup1 || azEvent.distanceGroup2) {
-        const parts = [];
-        if (azEvent.distanceGroup1)
-          parts.push(`Group 1: ${azEvent.distanceGroup1}`);
-        if (azEvent.distanceGroup2)
-          parts.push(`Group 2: ${azEvent.distanceGroup2}`);
-        distanceDescription = parts.join(" - ");
-      }
-
-      // Build JSON details for EventItem parsing
-      const details = {
-        group1: azEvent.distanceGroup1
-          ? {
-              name: "Group 1",
-              distance: azEvent.distanceGroup1,
-              gpx: azEvent.gpxGroup1Url,
-            }
-          : null,
-        group2: azEvent.distanceGroup2
-          ? {
-              name: "Group 2",
-              distance: azEvent.distanceGroup2,
-              gpx: azEvent.gpxGroup2Url,
-            }
-          : null,
-        groupAll: null,
-        type: azEvent.type === "ride" ? "fietsen" : "social",
-      };
-
-      const description = distanceDescription
-        ? `${distanceDescription}---${JSON.stringify(details)}`
-        : `---${JSON.stringify(details)}`;
 
       return {
         kind: "calendar#event",
@@ -81,7 +48,7 @@ try {
         created: new Date().toISOString(),
         updated: new Date().toISOString(),
         summary: azEvent.title,
-        description,
+        description: "",
         location: azEvent.startLocation,
         creator: {
           email: "info@pelotonmeilsen.be",
@@ -107,7 +74,17 @@ try {
         iCalUID: "",
         sequence: 0,
         eventType: "default",
-      } as Event;
+        // Include Azure-specific fields
+        title: azEvent.title,
+        date: azEvent.date,
+        startTime: azEvent.startTime,
+        startLocation: azEvent.startLocation,
+        distanceGroup1: azEvent.distanceGroup1,
+        distanceGroup2: azEvent.distanceGroup2,
+        gpxGroup1Url: azEvent.gpxGroup1Url,
+        gpxGroup2Url: azEvent.gpxGroup2Url,
+        type: azEvent.type,
+      } as Event & AzureCalendarEvent;
     });
   }
 } catch (error) {
