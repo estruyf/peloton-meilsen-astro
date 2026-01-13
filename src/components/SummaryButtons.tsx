@@ -64,7 +64,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
 
   return (
     <>
-      <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full lg:flex lg:space-x-2 lg:gap-0 lg:grid-cols-none lg:grid-rows-none lg:w-auto justify-self-end">
+      <div className="flex flex-col w-full gap-3 sm:flex-row sm:flex-wrap sm:justify-end">
         {
           garmin && (
             <a
@@ -72,7 +72,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               title='GPX'
-              className="w-full text-center lg:w-auto lg:flex items-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors"
             >
               GPX
             </a>
@@ -85,7 +85,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
               <button
                 onClick={() => handleViewGpx(group1, 'Groep 1')}
                 title='Bekijk GPX op kaart'
-                className="hidden lg:inline-flex w-full text-center lg:w-auto items-center justify-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
+                className="hidden lg:inline-flex w-full sm:w-auto items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors"
               >
                 <BiMap className="h-4 w-4 mr-1" aria-hidden={true} />
                 <span>Kaart (groep 1)</span>
@@ -93,7 +93,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
               <button
                 onClick={() => handleDownloadGpx(group1, 'Groep 1')}
                 title='Download GPX'
-                className="lg:hidden w-full text-center items-center justify-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors inline-flex"
+                className="lg:hidden w-full items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors inline-flex"
               >
                 <BiDownload className="h-4 w-4 mr-1" aria-hidden={true} />
                 <span>GPX (groep 1)</span>
@@ -108,7 +108,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
               <button
                 onClick={() => handleViewGpx(group2, 'Groep 2')}
                 title='Bekijk GPX op kaart'
-                className="hidden lg:inline-flex w-full text-center lg:w-auto items-center justify-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
+                className="hidden lg:inline-flex w-full sm:w-auto items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors"
               >
                 <BiMap className="h-4 w-4 mr-1" aria-hidden={true} />
                 <span>Kaart (groep 2)</span>
@@ -116,7 +116,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
               <button
                 onClick={() => handleDownloadGpx(group2, 'Groep 2')}
                 title='Download GPX'
-                className="lg:hidden w-full text-center items-center justify-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors inline-flex"
+                className="lg:hidden w-full items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors inline-flex"
               >
                 <BiDownload className="h-4 w-4 mr-1" aria-hidden={true} />
                 <span>GPX (groep 2)</span>
@@ -132,7 +132,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               title='Bekijk startlocatie'
-              className="w-full text-center lg:w-auto lg:flex items-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors"
             >
               Bekijk startlocatie
             </a>
@@ -140,7 +140,7 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
         }
 
         <button
-          className="w-full text-center lg:w-auto lg:flex items-center px-4 py-2 bg-secondary text-primary text-sm rounded-lg hover:bg-secondary/90 transition-colors"
+          className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors"
           title='Voeg toe aan je agenda'
           onClick={addSingleEventToCalendar}
         >
