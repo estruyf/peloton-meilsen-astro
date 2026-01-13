@@ -1,22 +1,118 @@
 ---
-import type { CalendarEvents } from "../models/CalendarEvents";
+import type { Event } from "../models";
 import { CalendarView } from "./CalendarView";
 
 // Get today in the format "2024-12-30"
 const today = new Date().toISOString().split("T")[0];
-const nextYear = new Date().getFullYear() + 1;
-const nextYearToday = `${nextYear}-01-01`;
 
-const googleApi = `https://clients6.google.com/calendar/v3/calendars/9bbd6f5fa0b03af92856f5f16dc87c3e515c9ad884df703aec2c16bb303d3bb7%40group.calendar.google.com/events?calendarId=9bbd6f5fa0b03af92856f5f16dc87c3e515c9ad884df703aec2c16bb303d3bb7%40group.calendar.google.com&singleEvents=true&eventTypes=default&eventTypes=focusTime&eventTypes=outOfOffice&timeZone=Europe%2FBrussels&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=${today}T00%3A00%3A00%2B18%3A00&timeMax=${nextYearToday}T00%3A00%3A00-18%3A00&key=${import.meta.env.GOOGLE_CAL_KEY}&%24unique=gc237`;
-const response = await fetch(googleApi);
-const data: CalendarEvents = await response.json();
-const events = (data.items || []).sort((a, b) => {
-  return (
-    new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime()
-  );
-});
+// Use the Azure Functions calendar API
+const webapp =
+  "pelotonmeilsen-funcs-chhgdfdrdbc2gtc2.westeurope-01.azurewebsites.net";
+const apiUrl = `https://${webapp}/api/calendar?startDate=${today}`;
 
-const iCal = `https://calendar.google.com/calendar/ical/9bbd6f5fa0b03af92856f5f16dc87c3e515c9ad884df703aec2c16bb303d3bb7%40group.calendar.google.com/public/basic.ics`;
+interface AzureCalendarEvent {
+  id: string;
+  title: string;
+  date: string;
+  startTime?: string;
+  startLocation: string;
+  distanceGroup1?: string;
+  distanceGroup2?: string;
+  gpxGroup1Url?: string;
+  gpxGroup2Url?: string;
+  type: "ride" | "social";
+}
+
+let events: Event[] = [];
+
+try {
+  const response = await fetch(apiUrl);
+  if (response.ok) {
+    const calendarEvents: AzureCalendarEvent[] = await response.json();
+
+    // Transform Azure calendar events to Google Calendar Event format
+    events = calendarEvents.map((azEvent) => {
+      // Combine date and startTime for the dateTime
+      const dateTime = azEvent.startTime
+        ? `${azEvent.date}T${azEvent.startTime}:00`
+        : `${azEvent.date}T09:00:00`;
+
+      // Build description with group distances
+      let distanceDescription = "";
+      if (azEvent.distanceGroup1 || azEvent.distanceGroup2) {
+        const parts = [];
+        if (azEvent.distanceGroup1)
+          parts.push(`Group 1: ${azEvent.distanceGroup1}`);
+        if (azEvent.distanceGroup2)
+          parts.push(`Group 2: ${azEvent.distanceGroup2}`);
+        distanceDescription = parts.join(" - ");
+      }
+
+      // Build JSON details for EventItem parsing
+      const details = {
+        group1: azEvent.distanceGroup1
+          ? {
+              name: "Group 1",
+              distance: azEvent.distanceGroup1,
+              gpx: azEvent.gpxGroup1Url,
+            }
+          : null,
+        group2: azEvent.distanceGroup2
+          ? {
+              name: "Group 2",
+              distance: azEvent.distanceGroup2,
+              gpx: azEvent.gpxGroup2Url,
+            }
+          : null,
+        groupAll: null,
+        type: azEvent.type === "ride" ? "fietsen" : "social",
+      };
+
+      const description = distanceDescription
+        ? `${distanceDescription}---${JSON.stringify(details)}`
+        : `---${JSON.stringify(details)}`;
+
+      return {
+        kind: "calendar#event",
+        etag: "",
+        id: azEvent.id,
+        status: "confirmed",
+        htmlLink: "",
+        created: new Date().toISOString(),
+        updated: new Date().toISOString(),
+        summary: azEvent.title,
+        description,
+        location: azEvent.startLocation,
+        creator: {
+          email: "info@pelotonmeilsen.be",
+        },
+        organizer: {
+          email: "info@pelotonmeilsen.be",
+          displayName: "Peloton Meilsen",
+          self: false,
+        },
+        start: {
+          dateTime,
+          timeZone: "Europe/Brussels",
+        },
+        end: {
+          dateTime,
+          timeZone: "Europe/Brussels",
+        },
+        recurringEventId: "",
+        originalStartTime: {
+          dateTime,
+          timeZone: "Europe/Brussels",
+        },
+        iCalUID: "",
+        sequence: 0,
+        eventType: "default",
+      } as Event;
+    });
+  }
+} catch (error) {
+  console.error("Error fetching calendar events from Azure Functions:", error);
+}
 ---
 
 {
@@ -26,14 +122,6 @@ const iCal = `https://calendar.google.com/calendar/ical/9bbd6f5fa0b03af92856f5f1
         <h2 id="agenda" class="text-4xl mb-4 font-bold mb:inline-block">
           Agenda
         </h2>
-
-        <a
-          href={iCal}
-          class="inline-block text-sm underline decoration-dotted underline-offset-2 hover:decoration-solid"
-          title="Voeg de kalender toe aan je agenda"
-        >
-          Voeg de kalender toe aan je agenda
-        </a>
       </div>
 
       <CalendarView events={events} client:only />
