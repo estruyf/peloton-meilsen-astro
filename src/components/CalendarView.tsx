@@ -2,7 +2,7 @@ import * as React from 'react';
 import type { Event } from '../models';
 import { EventItem } from './EventItem';
 
-export interface ICalendarViewProps {}
+export interface ICalendarViewProps { }
 
 interface AzureCalendarEvent {
   id: string;
