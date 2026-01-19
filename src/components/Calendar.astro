@@ -1,110 +1,16 @@
 ---
-import type { Event } from "../models";
 import { CalendarView } from "./CalendarView";
-
-// Get today in the format "2024-12-30"
-const today = new Date().toISOString().split("T")[0];
-
-// Use the Azure Functions calendar API
-const webapp =
-  "pelotonmeilsen-funcs-chhgdfdrdbc2gtc2.westeurope-01.azurewebsites.net";
-const apiUrl = `https://${webapp}/api/calendar?startDate=${today}`;
-
-console.log("Fetching calendar events from:", apiUrl);
-
-interface AzureCalendarEvent {
-  id: string;
-  title: string;
-  date: string;
-  startTime?: string;
-  startLocation: string;
-  distanceGroup1?: string;
-  distanceGroup2?: string;
-  gpxGroup1Url?: string;
-  gpxGroup2Url?: string;
-  type: "ride" | "social";
-}
-
-let events: (Event & AzureCalendarEvent)[] = [];
-
-try {
-  const response = await fetch(apiUrl);
-  if (response.ok) {
-    const calendarEvents: AzureCalendarEvent[] = await response.json();
-
-    // Map Azure events directly with minimal transformation
-    events = calendarEvents.map((azEvent) => {
-      // Combine date and startTime for the dateTime
-      const dateTime = azEvent.startTime
-        ? `${azEvent.date}T${azEvent.startTime}:00`
-        : `${azEvent.date}T09:00:00`;
-
-      return {
-        kind: "calendar#event",
-        etag: "",
-        id: azEvent.id,
-        status: "confirmed",
-        htmlLink: "",
-        created: new Date().toISOString(),
-        updated: new Date().toISOString(),
-        summary: azEvent.title,
-        description: "",
-        location: azEvent.startLocation,
-        creator: {
-          email: "info@pelotonmeilsen.be",
-        },
-        organizer: {
-          email: "info@pelotonmeilsen.be",
-          displayName: "Peloton Meilsen",
-          self: false,
-        },
-        start: {
-          dateTime,
-          timeZone: "Europe/Brussels",
-        },
-        end: {
-          dateTime,
-          timeZone: "Europe/Brussels",
-        },
-        recurringEventId: "",
-        originalStartTime: {
-          dateTime,
-          timeZone: "Europe/Brussels",
-        },
-        iCalUID: "",
-        sequence: 0,
-        eventType: "default",
-        // Include Azure-specific fields
-        title: azEvent.title,
-        date: azEvent.date,
-        startTime: azEvent.startTime,
-        startLocation: azEvent.startLocation,
-        distanceGroup1: azEvent.distanceGroup1,
-        distanceGroup2: azEvent.distanceGroup2,
-        gpxGroup1Url: azEvent.gpxGroup1Url,
-        gpxGroup2Url: azEvent.gpxGroup2Url,
-        type: azEvent.type,
-      } as Event & AzureCalendarEvent;
-    });
-  }
-} catch (error) {
-  console.error("Error fetching calendar events from Azure Functions:", error);
-}
 ---
 
-{
-  events && events.length > 0 && (
-    <div class="container mx-auto py-8 md:py-20">
-      <div class="mb-8 md:flex md:flex-row md:justify-between md:items-center">
-        <h2 id="agenda" class="text-4xl mb-4 font-bold mb:inline-block">
-          Agenda
-        </h2>
-      </div>
+<div class="container mx-auto py-8 md:py-20">
+  <div class="mb-8 md:flex md:flex-row md:justify-between md:items-center">
+    <h2 id="agenda" class="text-4xl mb-4 font-bold mb:inline-block">
+      Agenda
+    </h2>
+  </div>
 
-      <CalendarView events={events} client:only />
-    </div>
-  )
-}
+  <CalendarView client:only="react" />
+</div>
 
 <!-- <div class="container mx-auto px-4 py-12">
   <h2 id="agenda" class="text-4xl font-bold mb-8">Agenda</h2>

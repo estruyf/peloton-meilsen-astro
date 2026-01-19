@@ -125,20 +125,6 @@ export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
           )
         }
 
-        {
-          event.location && (
-            <a
-              href={`https://www.openstreetmap.org/search?query=${encodeURIComponent(event.location)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              title='Bekijk startlocatie'
-              className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors"
-            >
-              Bekijk startlocatie
-            </a>
-          )
-        }
-
         <button
           className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors"
           title='Voeg toe aan je agenda'
