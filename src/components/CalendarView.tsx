@@ -119,7 +119,40 @@ export const CalendarView: React.FunctionComponent<ICalendarViewProps> = () => {
   }, [filterEvents, currentPage]);
 
   if (loading) {
-    return <p className="text-center py-8">Evenementen laden...</p>;
+    return (
+      <div className="space-y-3">
+        {Array.from({ length: 4 }).map((_, index) => (
+          <div
+            key={index}
+            className="rounded-xl border border-slate-200 bg-white/80 shadow-sm p-4 md:p-5 animate-pulse"
+          >
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+              <div className="flex items-start gap-3 w-full md:w-auto">
+                <div className="h-10 w-10 rounded-full bg-primary/20" />
+                <div className="space-y-2 w-full">
+                  <div className="h-5 w-48 rounded bg-slate-200" />
+                  <div className="flex flex-wrap gap-2">
+                    <div className="h-4 w-32 rounded bg-slate-200" />
+                    <div className="h-4 w-16 rounded bg-slate-200" />
+                    <div className="h-5 w-14 rounded-full bg-slate-200" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-start md:items-end gap-2 w-full md:w-auto">
+                <div className="h-4 w-32 rounded bg-slate-200" />
+                <div className="h-4 w-40 rounded bg-slate-200" />
+              </div>
+            </div>
+
+            <div className="mt-4 flex flex-col md:flex-row md:justify-end md:items-center gap-3">
+              <div className="h-10 w-28 rounded bg-slate-200" />
+              <div className="h-10 w-28 rounded bg-slate-200" />
+            </div>
+          </div>
+        ))}
+      </div>
+    );
   }
 
   if (error) {
