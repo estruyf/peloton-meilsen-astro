@@ -1,5 +1,5 @@
 const webapp =
-  "pelotonmeilsen-funcs-chhgdfdrdbc2gtc2.westeurope-01.azurewebsites.net";
+  "pelotonmeilsen-api-ethpfmc5gkenfbdx.westeurope-01.azurewebsites.net";
 
 export async function getMembers() {
   try {

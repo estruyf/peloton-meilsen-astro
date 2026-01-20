@@ -29,7 +29,7 @@ export const CalendarView: React.FunctionComponent<ICalendarViewProps> = () => {
     const fetchEvents = async () => {
       try {
         const today = new Date().toISOString().split("T")[0];
-        const webapp = "pelotonmeilsen-funcs-chhgdfdrdbc2gtc2.westeurope-01.azurewebsites.net";
+        const webapp = "pelotonmeilsen-api-ethpfmc5gkenfbdx.westeurope-01.azurewebsites.net";
         const apiUrl = `https://${webapp}/api/calendar?startDate=${today}`;
 
         const response = await fetch(apiUrl);
