@@ -1,134 +1,151 @@
 ---
+import LogoMark from "./LogoMark.astro";
+
 const navItems = [
-  { href: "/", text: "Home" },
   { href: "/#agenda", text: "Agenda" },
   { href: "/fotogalerij", text: "Fotogalerij" },
-  { href: "/#documenten", text: "Documenten" },
   { href: "/rangschikking", text: "Rangschikking" },
+  { href: "/veiligheid", text: "Veiligheid" },
+  { href: "/#documenten", text: "Documenten" },
 ];
+
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isActive = (href: string) =>
+  !href.startsWith("/#") && (path === href || path.startsWith(`${href}/`));
 ---
 
 <header
-  class="bg-light text-primary py-4 sticky top-0 left-0 right-0 transition-all duration-300 z-50"
+  id="site-header"
+  class="sticky top-0 z-50 border-b border-paper/10 bg-ink/95 text-paper backdrop-blur supports-[backdrop-filter]:bg-ink/85"
 >
-  <div class="container mx-auto px-4">
-    <nav class="flex justify-between items-center">
-      <a href="/" class="flex items-center space-x-2 hover:text-accent">
-        <svg
-          data-name="Peloton Meilsen - Logo"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 612 612"
-          class="w-10 h-10"
-        >
-          <path
-            fill="currentcolor"
-            d="M278.03,47.68c205.74-13.65,340.68,213.43,225.64,386.4-97.74,146.96-313.07,148.2-412.89,2.71C-17.47,279.04,88.46,60.26,278.03,47.68ZM105.38,347.21c36.55,140.14,210.26,194.88,320.82,98.59,116.07-101.08,76.97-290.68-68.48-338.1-123.23-40.18-250.85,48.13-259.1,176.02h235.75c2,0,9.88-5.45,11.5-7.41,7.87-9.56,6.23-24.21-3.4-31.77-.96-.75-6.36-4.05-6.75-4.05h-56.07v29.05l-2.03,2.03h-73.63v-94.57h149.28c5.31,0,22.72,5.8,28.18,8.3,61.88,28.29,63.13,125.81,0,153.63-6.11,2.69-23.49,8.3-29.53,8.3h-72.28v81.06h-75.66v-81.06h-98.62Z"
-          ></path>
+  <nav class="wrap flex h-16 items-center justify-between gap-6 md:h-20" aria-label="Hoofdnavigatie">
+    <a href="/" class="group flex items-center gap-3" aria-label="Peloton Meilsen — home">
+      <LogoMark class="h-9 w-9 text-paper transition-transform duration-300 group-hover:rotate-[-12deg] md:h-10 md:w-10" />
+      <span class="font-display text-xl leading-none tracking-wide md:text-2xl">
+        Peloton <span class="text-signal">Meilsen</span>
+      </span>
+    </a>
+
+    <ul class="hidden items-center gap-1 lg:flex">
+      {
+        navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
+              class="relative rounded-full px-4 py-2 text-sm font-medium text-paper/75 transition-colors hover:text-paper aria-[current=page]:text-paper aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-4 aria-[current=page]:after:-bottom-0.5 aria-[current=page]:after:h-0.5 aria-[current=page]:after:bg-signal"
+            >
+              {item.text}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="flex items-center gap-2">
+      <a
+        href="/lidmaatschap"
+        aria-current={isActive("/lidmaatschap") ? "page" : undefined}
+        class="btn-signal hidden px-4 py-2.5 sm:inline-flex"
+      >
+        Word lid
+        <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4">
+          <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.64l-3.22-3.22a.75.75 0 1 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"></path>
         </svg>
-        <span class="text-xl font-bold">Peloton Meilsen</span>
       </a>
-      <ul id="nav-menu" class="hidden md:flex md:space-x-6 md:items-center">
+
+      <button
+        id="nav-toggle"
+        type="button"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-paper/20 text-paper transition hover:border-paper lg:hidden"
+        aria-label="Menu openen"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="relative block h-3.5 w-5" aria-hidden="true">
+          <span class="bar absolute left-0 top-0 h-0.5 w-5 bg-current transition-transform duration-300"></span>
+          <span class="bar absolute left-0 top-1.5 h-0.5 w-5 bg-current transition-opacity duration-300"></span>
+          <span class="bar absolute left-0 top-3 h-0.5 w-5 bg-current transition-transform duration-300"></span>
+        </span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div
+    id="mobile-menu"
+    class="fixed inset-x-0 bottom-0 top-16 z-[45] hidden overflow-y-auto bg-ink text-paper md:top-20 lg:hidden"
+  >
+    <div class="wrap flex min-h-full flex-col py-10">
+      <ul class="space-y-1">
         {
-          navItems.map((item) => (
+          navItems.map((item, i) => (
             <li>
               <a
                 href={item.href}
-                class="text-white md:text-primary md:hover:text-primary/90 hover:text-secondary transition-colors"
-                title={item.text}
+                aria-current={isActive(item.href) ? "page" : undefined}
+                class="group flex items-baseline gap-4 border-b border-paper/10 py-4 aria-[current=page]:text-signal"
               >
-                {item.text}
+                <span class="text-xs font-semibold tabular-nums text-paper/40">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span class="font-display text-5xl transition-transform group-hover:translate-x-2">
+                  {item.text}
+                </span>
               </a>
             </li>
           ))
         }
       </ul>
-      <button
-        id="nav-toggle"
-        class="md:hidden z-50"
-        aria-label="Menu omschakelen"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          class="w-6 h-6 hamburger-icon"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          class="w-6 h-6 close-icon hidden"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-    </nav>
-  </div>
-  <div
-    id="menu-overlay"
-    class="fixed inset-0 bg-opacity-50 backdrop-blur-sm hidden z-40"
-  >
-  </div>
-</header>
+      <a href="/lidmaatschap" class="btn-signal mt-10 self-start px-6 py-4 text-base">
+        Word lid van de club
+      </a>
+      <p class="mt-auto pt-12 text-sm text-paper/60">
+        Vragen? Mail naar
+        <a href="mailto:info@pelotonmeilsen.be" class="text-paper underline underline-offset-4">
+          info@pelotonmeilsen.be
+        </a>
+      </p>
+    </div>
+</div>
 
 <script>
-  const navToggle = document.getElementById("nav-toggle");
-  const navMenu = document.getElementById("nav-menu");
-  const menuOverlay = document.getElementById("menu-overlay");
-  const hamburgerIcon = navToggle?.querySelector(".hamburger-icon");
-  const closeIcon = navToggle?.querySelector(".close-icon");
+  const toggle = document.getElementById("nav-toggle");
+  const menu = document.getElementById("mobile-menu");
 
-  function toggleMenu() {
-    navMenu?.classList.toggle("open");
-    menuOverlay?.classList.toggle("hidden");
-    document.body.classList.toggle("overflow-hidden");
-    hamburgerIcon?.classList.toggle("hidden");
-    closeIcon?.classList.toggle("hidden");
+  function setOpen(open: boolean) {
+    if (!toggle || !menu) return;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
+    menu.classList.toggle("hidden", !open);
+    document.body.classList.toggle("overflow-hidden", open);
   }
 
-  if (navToggle && navMenu && menuOverlay) {
-    navToggle.addEventListener("click", toggleMenu);
-    menuOverlay.addEventListener("click", toggleMenu);
-  }
+  toggle?.addEventListener("click", () => {
+    setOpen(toggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  // Close when navigating (incl. same-page anchors) or pressing Escape
+  menu?.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && toggle?.getAttribute("aria-expanded") === "true") {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+  window.matchMedia("(min-width: 1024px)").addEventListener("change", (e) => {
+    if (e.matches) setOpen(false);
+  });
 </script>
 
 <style>
-  @media (max-width: 768px) {
-    #nav-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      bottom: 0;
-      width: 70%;
-      max-width: 300px;
-      background-color: var(--color-primary);
-      padding: 6rem 2rem 2rem;
-      transition: right 0.3s ease-in-out;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      z-index: 45;
-    }
-
-    #nav-menu.open {
-      right: 0;
-    }
+  #nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
   }
-
-  :root {
-    --color-primary: #002b3a;
-    --color-accent: #ffffff;
+  #nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
 </style>

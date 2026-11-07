@@ -1,110 +1,117 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Documents from "../components/Documents.astro";
-import PelotonMeilsen from "../components/PelotonMeilsen.astro";
+import PageHero from "../components/PageHero.astro";
+
+const obligations = [
+  "Het huishoudelijk reglement van de vereniging naleven",
+  "De besluiten van de raad van bestuur naleven",
+  "Lidgeld betalen voor elk nieuw seizoen",
+  "Handelen in lijn met de doelstelling van de club: “Eén Peloton”",
+];
 ---
 
-<Layout title="Lidmaatschap">
-  <PelotonMeilsen />
+<Layout
+  title="Lidmaatschap"
+  description="Word lid van Peloton Meilsen. Vul het lidmaatschapsformulier in en we nemen zo snel mogelijk contact met je op."
+>
+  <PageHero
+    eyebrow="Lid worden"
+    title="Rij mee met ons peloton"
+    intro="Fijn dat je interesse hebt om lid te worden van Peloton Meilsen! Laat je gegevens achter en we nemen zo snel mogelijk contact met je op."
+  />
 
-  <div class="container mx-auto px-4">
-    <section class="py-8 md:py-20 space-y-8">
-      <h1 class="text-4xl font-bold mb-6">Lidmaatschap</h1>
+  <section class="wrap py-16 md:py-24">
+    <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-6">
+        <h2 class="font-display text-4xl md:text-5xl">Hoe werkt het?</h2>
+        <div class="prose-club mt-6 max-w-xl">
+          <p>
+            Iedereen die door de raad van bestuur wordt aanvaard, kan lid
+            worden, mits betaling van het jaarlijkse lidgeld.
+          </p>
+          <p>
+            Minderjarigen vallen onder volledige verantwoordelijkheid van hun
+            ouders en kunnen meefietsen onder begeleiding van een ouder of
+            volwassene.
+          </p>
+        </div>
 
-      <div class="space-y-4">
-        <p>Fijn dat je interesse hebt om lid te worden van Peloton Meilsen!</p>
-
-        <p>
-          Iedereen die door de raad van bestuur wordt aanvaard, kan lid worden,
-          mits betaling van het jaarlijkse lidgeld.
-        </p>
-
-        <p>
-          Minderjarigen vallen onder volledige verantwoordelijkheid van hun
-          ouders en kunnen meefietsen onder begeleiding van een ouder of
-          volwassene.
-        </p>
-
-        <p>De leden van de vereniging zijn verplicht:</p>
-
-        <ul class="space-y-2 list-disc pl-6">
-          <li>Het huishoudelijk reglement van de vereniging na te leven;</li>
-          <li>De besluiten van de raad van bestuur na te leven;</li>
-          <li>Lidgeld te betalen voor elk nieuw seizoen;</li>
-          <li>
-            Te handelen in lijn met de doelstellingen van de club: “Eén
-            Peloton”.
-          </li>
+        <h3 class="mt-12 text-sm font-semibold uppercase tracking-[0.18em] text-ink/50">
+          Als lid engageer je je om
+        </h3>
+        <ul class="mt-5 space-y-3">
+          {
+            obligations.map((item) => (
+              <li class="flex items-start gap-4 rounded-2xl border border-ink/10 bg-paper-50 p-4">
+                <span
+                  class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ink text-signal"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="h-3.5 w-3.5">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+                <span class="text-ink/85">{item}</span>
+              </li>
+            ))
+          }
         </ul>
 
-        <p>
-          Gelieve het lidmaatschapsformulier in te vullen en we nemen zo snel
-          mogelijk contact met je op.
+        <p class="mt-8 text-sm text-ink/60">
+          Lees ook het
+          <a
+            href="/documenten/pelotonmeilsen_huishoudelijkreglement_2025.pdf"
+            target="_blank"
+            rel="noopener"
+            class="font-semibold text-ink underline underline-offset-4">huishoudelijk reglement</a
+          >
+          en ons <a href="/veiligheid" class="font-semibold text-ink underline underline-offset-4">veiligheidsprotocol</a>.
         </p>
       </div>
 
-      <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        class="space-y-6 bg-light p-8 rounded-lg shadow-md"
-      >
-        <div>
-          <label
-            for="name"
-            class="block text-sm font-medium text-gray-700 mb-1"
-          >
-            Naam
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            required
-            class="w-full text-primary px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-          />
-        </div>
-
-        <div>
-          <label
-            for="email"
-            class="block text-sm font-medium text-gray-700 mb-1"
-          >
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            class="w-full text-primary px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-          />
-        </div>
-
-        <div>
-          <label
-            for="message"
-            class="block text-sm font-medium text-gray-700 mb-1"
-          >
-            Opmerkingen
-          </label>
-          <textarea
-            name="message"
-            id="message"
-            rows="4"
-            class="w-full text-primary px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          class="w-full bg-primary text-secondary py-3 px-6 rounded-md hover:opacity-90 transition-opacity font-semibold"
+      <div class="lg:col-span-6">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          class="rounded-[2rem] bg-ink p-6 text-paper shadow-2xl shadow-ink/20 sm:p-8 md:p-10 lg:sticky lg:top-28"
         >
-          Verzenden
-        </button>
-      </form>
-    </section>
+          <p class="eyebrow text-signal">Lidmaatschapsformulier</p>
+          <h2 class="font-display mt-3 text-4xl">Schrijf je in</h2>
 
-    <Documents />
-  </div>
+          <div class="mt-8 space-y-5">
+            <div>
+              <label for="name" class="mb-2 block text-sm font-medium text-paper/80">Naam</label>
+              <input type="text" name="name" id="name" required autocomplete="name" class="field" />
+            </div>
+
+            <div>
+              <label for="email" class="mb-2 block text-sm font-medium text-paper/80">E-mail</label>
+              <input type="email" name="email" id="email" required autocomplete="email" class="field" />
+            </div>
+
+            <div>
+              <label for="message" class="mb-2 block text-sm font-medium text-paper/80">
+                Opmerkingen <span class="text-paper/50">(optioneel)</span>
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                class="field"
+                placeholder="Vertel ons kort iets over jezelf en hoe vaak je fietst."
+              ></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-signal mt-8 w-full py-4 text-base">
+            Verzenden
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <Documents />
 </Layout>

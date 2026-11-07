@@ -52,7 +52,7 @@ export default function RiderStats() {
       setRiderStats(sortedByRideCount);
     } catch (error) {
       console.error('Error loading data:', error);
-      setError('Failed to load rider statistics. Please try again later.');
+      setError('De rangschikking kon niet geladen worden. Probeer het later opnieuw.');
     } finally {
       setLoading(false);
     }
@@ -92,111 +92,112 @@ export default function RiderStats() {
     ? riderStats.find(rider => rider.name === selectedRider)
     : null;
 
+  const displayRides = (rider: RiderStat) =>
+    rider.name === 'Yves Van Grimberge' ? '∞' : rider.rideCount;
+
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="text-xl">Loading...</div>
+      <div className="grid animate-pulse gap-6 lg:grid-cols-12" aria-busy="true" aria-label="Rangschikking wordt geladen">
+        <div className="h-72 rounded-3xl bg-ink/10 lg:col-span-4" />
+        <div className="space-y-2 lg:col-span-8">
+          {Array.from({ length: 8 }).map((_, i) => (
+            <div key={i} className="h-14 rounded-2xl bg-ink/10" />
+          ))}
+        </div>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="text-xl text-red-600">{error}</div>
+      <div role="alert" className="rounded-3xl border border-red-300 bg-red-50 p-6 text-red-800">
+        {error}
       </div>
     );
   }
 
   return (
-    <div className="mx-auto py-6">
-      <div className="bg-light rounded-lg shadow p-6">
-        <h2 className="text-xl text-primary font-semibold mb-4">Check statistieken</h2>
-        <div className="mb-4">
-          <label htmlFor="rider-select" className="block text-sm font-medium text-primary mb-2">
-            Selecteer je naam:
+    <div className="grid gap-6 lg:grid-cols-12 lg:gap-10">
+      <div className="lg:col-span-4">
+        <div className="rounded-3xl bg-ink p-6 text-paper md:p-8 lg:sticky lg:top-28">
+          <p className="eyebrow text-signal">Jouw statistieken</p>
+          <label htmlFor="rider-select" className="mt-5 block text-sm font-medium text-paper/80">
+            Selecteer je naam
           </label>
           <select
             id="rider-select"
             value={selectedRider}
             onChange={handleRiderSelect}
-            className="mt-1 block w-full pl-3 pr-10 py-2 text-base text-primary border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary sm:text-sm rounded-md"
+            className="field mt-2"
           >
-            <option value="">-- Selecteer een rijder --</option>
+            <option value="">— Selecteer een rijder —</option>
             {members.map(rider => (
               <option key={rider.id} value={rider.name}>
                 {rider.name}
               </option>
             ))}
           </select>
-        </div>
 
-        {selectedRiderStats && (
-          <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-            <h3 className="text-lg font-medium text-primary">{selectedRiderStats.name} - Statistieken</h3>
-            <div className="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div className="bg-light overflow-hidden shadow rounded-lg">
-                <div className="px-4 py-5 sm:p-6">
-                  <dt className="text-sm font-medium text-primary truncate">
-                    Totaal Aantal Ritten
-                  </dt>
-                  <dd className="mt-1 text-3xl font-semibold text-gray-900">
-                    {selectedRiderStats.name === 'Yves Van Grimberge' ? '∞' : selectedRiderStats.rideCount}
-                  </dd>
-                </div>
+          {selectedRiderStats ? (
+            <dl className="mt-6 grid grid-cols-2 gap-3" aria-live="polite">
+              <div className="rounded-2xl bg-paper/10 p-4">
+                <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-paper/60">Ritten</dt>
+                <dd className="font-display mt-2 text-5xl text-signal">{displayRides(selectedRiderStats)}</dd>
               </div>
-              <div className="bg-light overflow-hidden shadow rounded-lg">
-                <div className="px-4 py-5 sm:p-6">
-                  <dt className="text-sm font-medium text-primary truncate">
-                    Rang
-                  </dt>
-                  <dd className="mt-1 text-3xl font-semibold text-gray-900">
-                    {calculateRank(selectedRiderStats)} / {riderStats.length}
-                  </dd>
-                </div>
+              <div className="rounded-2xl bg-paper/10 p-4">
+                <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-paper/60">Rang</dt>
+                <dd className="mt-2">
+                  <span className="font-display text-5xl">{calculateRank(selectedRiderStats)}</span>
+                  <span className="text-sm text-paper/60"> / {riderStats.length}</span>
+                </dd>
               </div>
-            </div>
-          </div>
-        )}
+            </dl>
+          ) : (
+            <p className="mt-6 text-sm text-paper/60">
+              Kies je naam om je aantal ritten en je plaats in het peloton te zien.
+            </p>
+          )}
+
+          <p className="mt-6 border-t border-paper/10 pt-5 text-sm text-paper/60">
+            Totaal aantal rijders: <strong className="text-paper">{riderStats.length}</strong>
+          </p>
+        </div>
       </div>
 
-      <div className="bg-light rounded-lg shadow p-6 mt-6">
-        <h2 className="text-xl font-semibold text-primary mb-4">Leaderboard</h2>
-        <p className="text-primary mb-4">
-          Totaal aantal rijders: <strong>{riderStats.length}</strong>
-        </p>
-        <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-primary uppercase tracking-wider">
-                  Rang
-                </th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-primary uppercase tracking-wider">
-                  Rijder
-                </th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-primary uppercase tracking-wider">
-                  Ritten
-                </th>
-              </tr>
-            </thead>
-            <tbody className="bg-light divide-y divide-gray-200">
-              {riderStats.map((rider, index) => (
-                <tr key={index} className={selectedRider === rider.name ? "bg-gray-100" : ""}>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">
-                    {calculateRank(rider)}
+      <div className="lg:col-span-8">
+        <table className="w-full border-separate border-spacing-y-2">
+          <caption className="sr-only">Leaderboard op basis van het aantal gereden ritten</caption>
+          <thead>
+            <tr className="text-left text-xs font-semibold uppercase tracking-[0.16em] text-ink/50">
+              <th scope="col" className="w-20 px-4 pb-2 md:w-24 md:px-6">Rang</th>
+              <th scope="col" className="px-4 pb-2">Rijder</th>
+              <th scope="col" className="px-4 pb-2 text-right md:px-6">Ritten</th>
+            </tr>
+          </thead>
+          <tbody>
+            {riderStats.map((rider) => {
+              const rank = calculateRank(rider);
+              const selected = selectedRider === rider.name;
+              const podium = rank <= 3;
+              const rowBg = selected
+                ? 'bg-signal text-ink'
+                : podium
+                  ? 'bg-ink text-paper'
+                  : 'bg-paper-50 text-ink';
+              return (
+                <tr key={rider.id ?? rider.name} className={rowBg} aria-current={selected ? 'true' : undefined}>
+                  <td className="rounded-l-2xl px-4 py-3 md:px-6">
+                    <span className={`font-display text-2xl ${podium && !selected ? 'text-signal' : ''}`}>{rank}</span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-primary">
-                    {rider.name}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-primary">
-                    {rider.name === 'Yves Van Grimberge' ? '∞' : rider.rideCount}
+                  <td className="px-4 py-3 font-semibold">{rider.name}</td>
+                  <td className="rounded-r-2xl px-4 py-3 text-right font-semibold tabular-nums md:px-6">
+                    {displayRides(rider)}
                   </td>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   );

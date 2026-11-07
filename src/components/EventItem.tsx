@@ -1,104 +1,63 @@
 import * as React from 'react';
-import type { Event } from '../models';
 import { format } from 'date-fns';
 import { nl } from 'date-fns/locale/nl';
+import { BiCycling, BiParty, BiMap, BiTime } from "react-icons/bi";
+import type { RideEvent } from '../models';
 import { SummaryButtons } from './SummaryButtons';
-import { BiCycling, BiParty } from "react-icons/bi";
-import { RiPinDistanceFill } from 'react-icons/ri';
 
 export interface IEventItemProps {
-  event: Event;
+  event: RideEvent;
 }
 
-export const EventItem: React.FunctionComponent<IEventItemProps> = ({
-  event
-}: React.PropsWithChildren<IEventItemProps>) => {
+export const isSocialEvent = (type?: string) => type === 'social' || type === 'party';
 
-  const formatEventDate = (dateString: string): string => {
-    const date = new Date(dateString);
-    return format(date, "EEEE, d MMMM yyyy", { locale: nl });
-  }
-
-  const formatEventTime = (dateString: string): string => {
-    const date = new Date(dateString);
-    return format(date, "HH:mm");
-  }
-
-  // Get Azure calendar properties if available, otherwise use Google Calendar format
-  const azureEvent = event as any;
-  const distanceGroup1 = azureEvent.distanceGroup1;
-  const distanceGroup2 = azureEvent.distanceGroup2;
-  const gpxGroup1Url = azureEvent.gpxGroup1Url;
-  const gpxGroup2Url = azureEvent.gpxGroup2Url;
-  const eventType = azureEvent.type;
-
-  // Build distance info string
-  const distances = [];
-  if (distanceGroup1) {
-    distances.push(`Groep 1: ${distanceGroup1}`);
-  }
-  if (distanceGroup2) {
-    distances.push(`Groep 2: ${distanceGroup2}`);
-  }
-  const distanceInfo = distances.join(" - ");
-
-  const icon = React.useMemo(() => {
-    if (!eventType || eventType === 'fietsen' || eventType === 'ride') {
-      return <BiCycling aria-hidden={true} />;
-    } else if (eventType === 'social' || eventType === 'party') {
-      return <BiParty aria-hidden={true} />;
-    }
-
-    return null;
-  }, [eventType]);
+export const EventItem: React.FunctionComponent<IEventItemProps> = ({ event }) => {
+  const date = new Date(event.start);
+  const social = isSocialEvent(event.type);
 
   return (
-    <li className="py-3">
-      <div className="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white/90 shadow-sm p-4 md:p-5">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-          <div className="flex items-start gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white shadow-sm">
-              {icon}
-            </div>
-            <div>
-              <h3 className="text-lg md:text-xl font-semibold text-slate-900 leading-snug">{event.summary}</h3>
-              <div className="text-sm text-slate-600 flex flex-wrap gap-2 mt-1">
-                <span className="inline-flex items-center gap-2 font-medium text-slate-800">
-                  {formatEventDate(event.start.dateTime)}
-                  <span className="text-slate-400">•</span>
-                  {formatEventTime(event.start.dateTime)}
+    <li>
+      <article className="group flex flex-col gap-4 rounded-3xl border border-ink/10 bg-paper-50 p-4 transition-colors hover:border-ink/30 md:flex-row md:items-center md:gap-6 md:p-5">
+        <div className="flex items-start gap-4 md:flex-1 md:items-center md:gap-6">
+          <time
+            dateTime={event.start}
+            className={`flex w-16 shrink-0 flex-col items-center justify-center rounded-2xl py-3 md:w-20 md:py-4 ${social ? 'bg-kit text-paper' : 'bg-ink text-paper'}`}
+          >
+            <span className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-paper/60">
+              {format(date, 'EEE', { locale: nl })}
+            </span>
+            <span className="font-display text-4xl md:text-5xl">{format(date, 'd')}</span>
+            <span className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-signal">
+              {format(date, 'MMM', { locale: nl }).replace('.', '')}
+            </span>
+          </time>
+
+          <div className="min-w-0 flex-1">
+            <p className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-kit">
+              {social ? <BiParty aria-hidden={true} /> : <BiCycling aria-hidden={true} />}
+              {social ? 'Sociaal' : 'Rit'}
+            </p>
+            <h4 className="mt-1 text-xl font-bold leading-tight text-ink md:text-2xl">{event.title}</h4>
+            <p className="sr-only">{format(date, "EEEE d MMMM yyyy", { locale: nl })}</p>
+            <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-ink/70">
+              {event.hasStartTime && (
+                <span className="inline-flex items-center gap-1.5">
+                  <BiTime aria-hidden={true} className="text-ink/40" />
+                  {social ? 'Start' : 'Vertrek'} {format(date, 'HH:mm')}
                 </span>
-                {eventType && (
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">
-                    {eventType === 'social' || eventType === 'party' ? 'Sociaal' : 'Rit'}
-                  </span>
-                )}
-              </div>
+              )}
+              {event.location && (
+                <span className="inline-flex items-center gap-1.5">
+                  <BiMap aria-hidden={true} className="text-ink/40" />
+                  {event.location}
+                </span>
+              )}
             </div>
           </div>
-
-          <div className="flex flex-col items-start md:items-end gap-1 text-sm text-slate-700">
-            {distanceInfo && (
-              <p className="inline-flex items-center gap-2 font-medium">
-                <RiPinDistanceFill aria-hidden={true} className="text-primary" />
-                {distanceInfo}
-              </p>
-            )}
-            {event.location && (
-              <p className="text-slate-600">{event.location}</p>
-            )}
-          </div>
         </div>
 
-        <div className="flex flex-col md:flex-row md:justify-end md:items-center gap-3">
-          <SummaryButtons
-            event={event}
-            group1={gpxGroup1Url || null}
-            group2={gpxGroup2Url || null}
-            description={event.summary}
-          />
-        </div>
-      </div>
+        <SummaryButtons event={event} />
+      </article>
     </li>
   );
 };

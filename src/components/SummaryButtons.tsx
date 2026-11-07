@@ -1,145 +1,98 @@
 import * as React from 'react';
-import { BiCalendarPlus, BiMap, BiDownload } from 'react-icons/bi';
-import type { Event } from '../models';
+import { BiCalendarPlus, BiMap } from 'react-icons/bi';
+import type { RideEvent, RideGroup } from '../models';
 import { GPXViewer } from './GPXViewer';
 
 export interface ISummaryButtonsProps {
-  event: Event;
-  group1: string;
-  group2: string;
-  description: string;
-  garmin?: string;
+  event: RideEvent;
 }
 
-export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({
-  group1,
-  group2,
-  event,
-  description,
-  garmin
-}: React.PropsWithChildren<ISummaryButtonsProps>) => {
-  const [viewingGpx, setViewingGpx] = React.useState<string | null>(null);
-  const [gpxTitle, setGpxTitle] = React.useState<string>('');
+// Rides don't carry an end time; assume a typical club ride duration
+const DEFAULT_DURATION_HOURS = 3;
 
-  const addSingleEventToCalendar = React.useCallback(() => {
-    const calendarEvent = {
-      title: event.summary,
-      location: event.location,
-      description: description,
-      startTime: new Date(event.start.dateTime),
-      endTime: new Date(event.end.dateTime),
-    };
+const toIcsDate = (date: Date) => date.toISOString().replace(/-|:|\.\d+/g, '');
+const escapeIcs = (value = '') => value.replace(/\\/g, '\\\\').replace(/([,;])/g, '\\$1').replace(/\n/g, '\\n');
 
-    const icsContent = `BEGIN:VCALENDAR
-  VERSION:2.0
-  BEGIN:VEVENT
-  SUMMARY:${calendarEvent.title}
-  DESCRIPTION:${calendarEvent.description}
-  DTSTART:${calendarEvent.startTime.toISOString().replace(/-|:|\.\d+/g, '')}
-  DTEND:${calendarEvent.endTime.toISOString().replace(/-|:|\.\d+/g, '')}
-  LOCATION:${calendarEvent.location}
-  END:VEVENT
-  END:VCALENDAR`;
+export const SummaryButtons: React.FunctionComponent<ISummaryButtonsProps> = ({ event }) => {
+  const [viewing, setViewing] = React.useState<RideGroup | null>(null);
 
-    const blob = new Blob([icsContent], { type: 'text/calendar' });
+  const addToCalendar = React.useCallback(() => {
+    const start = new Date(event.start);
+    const end = new Date(start.getTime() + DEFAULT_DURATION_HOURS * 60 * 60 * 1000);
+    const description = event.groups
+      .filter((g) => g.distance)
+      .map((g) => `${g.label}: ${g.distance}`)
+      .join('\n');
+
+    // ICS lines must not be indented: a leading space marks a folded continuation line
+    const ics = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Peloton Meilsen//Agenda//NL',
+      'BEGIN:VEVENT',
+      `UID:${event.id}@pelotonmeilsen.be`,
+      `DTSTAMP:${toIcsDate(new Date())}`,
+      `DTSTART:${toIcsDate(start)}`,
+      `DTEND:${toIcsDate(end)}`,
+      `SUMMARY:${escapeIcs(event.title)}`,
+      `DESCRIPTION:${escapeIcs(description)}`,
+      `LOCATION:${escapeIcs(event.location)}`,
+      'END:VEVENT',
+      'END:VCALENDAR',
+    ].join('\r\n');
+
+    const blob = new Blob([ics], { type: 'text/calendar' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${calendarEvent.title}.ics`;
+    a.download = `${event.title}.ics`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [event, description]);
-
-  const handleDownloadGpx = React.useCallback((gpxUrl: string, label: string) => {
-    const a = document.createElement('a');
-    a.href = gpxUrl;
-    a.download = `${event.summary}-${label}.gpx`;
-    a.click();
-  }, [event.summary]);
-
-  const handleViewGpx = React.useCallback((gpxUrl: string, label: string) => {
-    setViewingGpx(gpxUrl);
-    setGpxTitle(`${event.summary} - ${label}`);
-  }, [event.summary]);
+  }, [event]);
 
   return (
     <>
-      <div className="flex flex-col w-full gap-3 sm:flex-row sm:flex-wrap sm:justify-end">
-        {
-          garmin && (
-            <a
-              href={`https://connect.garmin.com/modern/course/${garmin}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              title='GPX'
-              className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors"
+      <div className="flex flex-wrap items-center justify-end gap-2">
+        {event.groups.map((group) =>
+          group.gpxUrl ? (
+            <button
+              key={group.label}
+              type="button"
+              onClick={() => setViewing(group)}
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-ink/15 bg-paper px-4 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper sm:flex-none"
+              title={`Bekijk route ${group.label.toLowerCase()}`}
             >
-              GPX
-            </a>
+              <BiMap className="h-4 w-4" aria-hidden={true} />
+              <span>{group.label}</span>
+              {group.distance && <span className="font-normal opacity-70">· {group.distance}</span>}
+            </button>
+          ) : (
+            <span
+              key={group.label}
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-ink/5 px-4 py-2.5 text-sm font-semibold text-ink sm:flex-none"
+            >
+              {group.label}
+              {group.distance && <span className="font-normal opacity-70">· {group.distance}</span>}
+            </span>
           )
-        }
-
-        {
-          group1 && (
-            <>
-              <button
-                onClick={() => handleViewGpx(group1, 'Groep 1')}
-                title='Bekijk GPX op kaart'
-                className="hidden lg:inline-flex w-full sm:w-auto items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors"
-              >
-                <BiMap className="h-4 w-4 mr-1" aria-hidden={true} />
-                <span>Kaart (groep 1)</span>
-              </button>
-              <button
-                onClick={() => handleDownloadGpx(group1, 'Groep 1')}
-                title='Download GPX'
-                className="lg:hidden w-full items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors inline-flex"
-              >
-                <BiDownload className="h-4 w-4 mr-1" aria-hidden={true} />
-                <span>GPX (groep 1)</span>
-              </button>
-            </>
-          )
-        }
-
-        {
-          group2 && (
-            <>
-              <button
-                onClick={() => handleViewGpx(group2, 'Groep 2')}
-                title='Bekijk GPX op kaart'
-                className="hidden lg:inline-flex w-full sm:w-auto items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors"
-              >
-                <BiMap className="h-4 w-4 mr-1" aria-hidden={true} />
-                <span>Kaart (groep 2)</span>
-              </button>
-              <button
-                onClick={() => handleDownloadGpx(group2, 'Groep 2')}
-                title='Download GPX'
-                className="lg:hidden w-full items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors inline-flex"
-              >
-                <BiDownload className="h-4 w-4 mr-1" aria-hidden={true} />
-                <span>GPX (groep 2)</span>
-              </button>
-            </>
-          )
-        }
+        )}
 
         <button
-          className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 bg-secondary text-primary text-sm font-medium rounded-lg hover:bg-secondary/90 transition-colors"
-          title='Voeg toe aan je agenda'
-          onClick={addSingleEventToCalendar}
+          type="button"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ink text-paper transition-colors hover:bg-signal hover:text-ink"
+          title="Voeg toe aan je agenda"
+          onClick={addToCalendar}
         >
-          <span className='sr-only'>Voeg toe aan je agenda</span>
-          <BiCalendarPlus className='h-6 mx-auto' aria-hidden={true} />
+          <span className="sr-only">Voeg {event.title} toe aan je agenda</span>
+          <BiCalendarPlus className="h-5 w-5" aria-hidden={true} />
         </button>
       </div>
 
-      {viewingGpx && (
+      {viewing?.gpxUrl && (
         <GPXViewer
-          gpxUrl={viewingGpx}
-          title={gpxTitle}
-          onClose={() => setViewingGpx(null)}
+          gpxUrl={viewing.gpxUrl}
+          title={`${event.title} — ${viewing.label}`}
+          onClose={() => setViewing(null)}
         />
       )}
     </>

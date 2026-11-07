@@ -34,36 +34,35 @@ export const GalleryEventList: React.FC<{ initialEvents?: GalleryEvent[] }> = ({
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center py-20">
-        <div className="text-xl text-secondary">Laden...</div>
+      <div className="grid animate-pulse gap-6 md:grid-cols-2" aria-busy="true">
+        <div className="aspect-[4/3] rounded-3xl bg-ink/10 md:col-span-2 md:aspect-[21/9]" />
+        <div className="aspect-[4/3] rounded-3xl bg-ink/10" />
+        <div className="aspect-[4/3] rounded-3xl bg-ink/10" />
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-        <strong className="font-bold">Fout!</strong>
-        <span className="block sm:inline"> {error}</span>
+      <div role="alert" className="rounded-3xl border border-red-300 bg-red-50 p-6 text-red-800">
+        {error}
       </div>
     );
   }
 
   if (events.length === 0) {
     return (
-      <div className="text-center py-10">
-        <p className="text-xl text-secondary">Er zijn nog geen foto's toegevoegd aan de galerij.</p>
-        <p className="text-secondary mt-4">
-          Voeg foto's toe door ze in de juiste mappenstructuur te plaatsen in de public/gallery map.
-        </p>
+      <div className="rounded-3xl border border-dashed border-ink/20 p-10 text-center">
+        <p className="font-display text-3xl">Nog geen albums</p>
+        <p className="mt-2 text-ink/60">Er zijn nog geen foto's toegevoegd aan de galerij.</p>
       </div>
     );
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {events.map((event) => (
-        <GalleryEventCard key={event.id} event={event} />
+    <div className="grid gap-6 md:grid-cols-2">
+      {events.map((event, i) => (
+        <GalleryEventCard key={event.id} event={event} featured={i === 0} />
       ))}
     </div>
   );

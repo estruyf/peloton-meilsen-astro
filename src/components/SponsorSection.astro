@@ -23,29 +23,40 @@ const sponsors = [
 ];
 ---
 
-<section class="py-8 md:py-20 bg-light">
-  <div class="container mx-auto px-4">
-    <h2 class="text-primary text-3xl font-bold text-center mb-12">
-      Onze sponsors
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<section class="bg-ink text-paper" aria-labelledby="sponsors-title">
+  <div class="wrap py-16 md:py-24">
+    <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="eyebrow text-signal">Met dank aan</p>
+        <h2 id="sponsors-title" class="font-display mt-3 text-4xl md:text-6xl">Onze sponsors</h2>
+      </div>
+      <p class="max-w-sm text-paper/60">
+        Zij maken onze clubkledij en activiteiten mogelijk. Rij je langs? Steun
+        ze terug.
+      </p>
+    </div>
+
+    <ul class="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-paper/10 bg-paper/10 lg:grid-cols-4">
       {
         sponsors.map((sponsor) => (
-          <a
-            href={sponsor.website}
-            class="p-6 bg-primary rounded-lg hover:bg-primary/90 transition-colors flex items-center"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={sponsor.logo || ""}
-              alt={`${sponsor.name} logo`}
-              class="w-full h-auto"
-              loading="lazy"
-            />
-          </a>
+          <li class="bg-ink">
+            <a
+              href={sponsor.website}
+              class="group flex h-full min-h-[9rem] items-center justify-center p-8 transition-colors hover:bg-ink-600 md:min-h-[11rem]"
+              target="_blank"
+              rel="noopener noreferrer"
+              title={sponsor.name}
+            >
+              <img
+                src={sponsor.logo}
+                alt={`${sponsor.name} logo`}
+                class="max-h-16 w-auto max-w-full object-contain opacity-80 transition-opacity group-hover:opacity-100"
+                loading="lazy"
+              />
+            </a>
+          </li>
         ))
       }
-    </div>
+    </ul>
   </div>
 </section>

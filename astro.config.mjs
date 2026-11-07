@@ -6,5 +6,5 @@ import galleryIntegration from './src/lib/galleryIntegration';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), galleryIntegration],
+  integrations: [tailwind({ applyBaseStyles: false }), react(), galleryIntegration],
 });
