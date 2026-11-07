@@ -1,7 +1,9 @@
 ---
+import { format } from "date-fns";
+import { nl } from "date-fns/locale/nl";
 import Layout from "../../layouts/Layout.astro";
 import Documents from "../../components/Documents.astro";
-import PelotonMeilsen from "../../components/PelotonMeilsen.astro";
+import PageHero from "../../components/PageHero.astro";
 import { GalleryEventDetail } from "../../components/GalleryEventDetail";
 
 export async function getStaticPaths() {
@@ -20,14 +22,25 @@ export async function getStaticPaths() {
 }
 
 const { event } = Astro.props;
+const eyebrow = [
+  event.date ? format(new Date(event.date), "d MMMM yyyy", { locale: nl }) : null,
+  `${event.images.length} foto's`,
+]
+  .filter(Boolean)
+  .join(" · ");
 ---
 
-<Layout title={event.title || "Fotogalerij"}>
-  <PelotonMeilsen />
+<Layout title={event.title || "Fotogalerij"} description={event.description}>
+  <PageHero
+    eyebrow={eyebrow}
+    title={event.title}
+    intro={event.description}
+    back={{ href: "/fotogalerij", text: "Terug naar de galerij" }}
+  />
 
-  <div class="container mx-auto px-4">
+  <section class="wrap py-12 md:py-20">
     <GalleryEventDetail eventId={event.id} initialEvent={event} client:load />
+  </section>
 
-    <Documents />
-  </div>
+  <Documents />
 </Layout>

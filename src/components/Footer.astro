@@ -1,25 +1,100 @@
 ---
+import LogoMark from "./LogoMark.astro";
+
 const currentYear = new Date().getFullYear();
+
+const columns = [
+  {
+    title: "Rijden",
+    links: [
+      { href: "/#agenda", text: "Agenda" },
+      { href: "/rangschikking", text: "Rangschikking" },
+      { href: "/veiligheid", text: "Veiligheidsprotocol" },
+    ],
+  },
+  {
+    title: "Club",
+    links: [
+      { href: "/lidmaatschap", text: "Lid worden" },
+      { href: "/fotogalerij", text: "Fotogalerij" },
+      {
+        href: "/documenten/pelotonmeilsen_huishoudelijkreglement_2025.pdf",
+        text: "Huishoudelijk reglement",
+        external: true,
+      },
+    ],
+  },
+];
 ---
 
-<footer class="bg-primary py-8 mt-auto">
-  <div class="container mx-auto px-4 text-center">
-    <p>
-      &copy; {currentYear} Peloton Meilsen. Alle rechten voorbehouden. Gebouwd door
-      <a
-        href="https://eliostruyf.com"
-        class="text-secondary hover:text-secondary/90 underline decoration-dotted underline-offset-2 hover:decoration-solid"
-        >Elio Struyf</a
-      >.
+<footer class="relative overflow-hidden bg-ink-900 text-paper">
+  <LogoMark
+    class="pointer-events-none absolute -bottom-40 -right-32 h-[34rem] w-[34rem] text-paper/[0.03]"
+  />
 
+  <div class="wrap relative py-16 md:py-20">
+    <div class="grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <a href="/" class="inline-flex items-center gap-3" aria-label="Peloton Meilsen — home">
+          <LogoMark class="h-12 w-12 text-paper" />
+          <span class="font-display text-3xl">Peloton Meilsen</span>
+        </a>
+        <p class="mt-6 max-w-sm text-paper/60">
+          Eén peloton. Sportief van karakter, maar het sociale primeert — we
+          zitten liever op de vélo dan achter een bureau.
+        </p>
+        <a
+          href="mailto:info@pelotonmeilsen.be"
+          class="mt-6 inline-flex items-center gap-2 font-semibold text-signal hover:underline hover:underline-offset-4"
+        >
+          info@pelotonmeilsen.be
+        </a>
+      </div>
+
+      {
+        columns.map((col) => (
+          <div class="md:col-span-3">
+            <h2 class="eyebrow text-paper/50">{col.title}</h2>
+            <ul class="mt-5 space-y-3">
+              {col.links.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener" : undefined}
+                    class="text-paper/80 transition-colors hover:text-signal"
+                  >
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="road-stripe mt-16 text-paper/10" aria-hidden="true"></div>
+
+    <div class="mt-8 flex flex-col gap-3 text-sm text-paper/50 md:flex-row md:items-center md:justify-between">
+      <p>&copy; {currentYear} Peloton Meilsen. Alle rechten voorbehouden.</p>
+      <p>
+        Gebouwd door
+        <a
+          href="https://eliostruyf.com"
+          class="text-paper/80 underline decoration-dotted underline-offset-4 hover:decoration-solid"
+          >Elio Struyf</a
+        >
+      </p>
       <a
         class="hidden"
         href="https://visitorbadge.io/status?path=https%3A%2F%2Fpelotonmeilsen.be"
       >
         <img
+          alt=""
           src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fpelotonmeilsen.be&countColor=%23263759"
         />
       </a>
-    </p>
+    </div>
   </div>
 </footer>

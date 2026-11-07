@@ -28,6 +28,24 @@ export const GPXViewer: React.FunctionComponent<IGPXViewerProps> = ({
     a.click();
   }, [gpxUrl, title]);
 
+  const closeButton = useRef<HTMLButtonElement>(null);
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    closeButton.current?.focus();
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onCloseRef.current();
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, []);
+
   useEffect(() => {
     if (!mapContainer.current) return;
 
@@ -45,7 +63,7 @@ export const GPXViewer: React.FunctionComponent<IGPXViewerProps> = ({
         // Fetch GPX file
         const response = await fetch(gpxUrl);
         if (!response.ok) {
-          throw new Error(`Failed to fetch GPX file: ${response.statusText}`);
+          throw new Error(`GPX-bestand kon niet geladen worden (${response.status})`);
         }
 
         const gpxText = await response.text();
@@ -55,7 +73,7 @@ export const GPXViewer: React.FunctionComponent<IGPXViewerProps> = ({
         const gpxDoc = parser.parseFromString(gpxText, 'text/xml');
 
         if (gpxDoc.getElementsByTagName('parsererror').length > 0) {
-          throw new Error('Invalid GPX file format');
+          throw new Error('Ongeldig GPX-bestand');
         }
 
         // Extract track points
@@ -98,7 +116,7 @@ export const GPXViewer: React.FunctionComponent<IGPXViewerProps> = ({
         }
 
         if (coordinates.length < 2) {
-          throw new Error('No valid coordinates found in GPX file');
+          throw new Error('Geen route gevonden in het GPX-bestand');
         }
 
         // Compute simple stats
@@ -120,11 +138,11 @@ export const GPXViewer: React.FunctionComponent<IGPXViewerProps> = ({
         // Add start marker
         L.circleMarker(coordinates[0], {
           radius: 8,
-          fillColor: '#22c55e',
-          color: '#fff',
-          weight: 2,
+          fillColor: '#d4ff3f',
+          color: '#002b3a',
+          weight: 3,
           opacity: 1,
-          fillOpacity: 0.9,
+          fillOpacity: 1,
         })
           .addTo(map.current)
           .bindPopup('Start');
@@ -153,7 +171,7 @@ export const GPXViewer: React.FunctionComponent<IGPXViewerProps> = ({
         setLoading(false);
       } catch (err) {
         console.error('Map error:', err);
-        setError(err instanceof Error ? err.message : 'Error loading map');
+        setError(err instanceof Error ? err.message : 'Kaart kon niet geladen worden');
         setLoading(false);
       }
     };
@@ -169,58 +187,64 @@ export const GPXViewer: React.FunctionComponent<IGPXViewerProps> = ({
   }, [gpxUrl]);
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg shadow-xl w-full max-w-4xl h-[80vh] flex flex-col">
-        <div className="flex flex-col gap-3 border-b p-4">
-          <div className="flex items-start justify-between gap-4">
-            <div className="min-w-0">
-              <h2 className="text-lg font-semibold truncate text-gray-900">{title}</h2>
-              {routeStats && (
-                <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-gray-600">
-                  <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 font-medium text-slate-700">
-                    <span className="h-2 w-2 rounded-full bg-primary" aria-hidden={true} />
-                    Afstand: {routeStats.distanceKm} km
-                  </span>
-                </div>
-              )}
-            </div>
-            <div className="flex items-center gap-2 flex-shrink-0">
-              <button
-                onClick={handleDownloadGpx}
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-slate-300 hover:bg-slate-50 transition-colors"
-                title="Download GPX"
-              >
-                <BiDownload className="h-4 w-4" aria-hidden={true} />
-                <span>Download</span>
-              </button>
-              <button
-                onClick={onClose}
-                className="text-gray-500 hover:text-gray-700 text-2xl leading-none"
-                aria-label="Close"
-              >
-                ×
-              </button>
-            </div>
+    <div
+      className="fixed inset-0 z-[60] flex items-stretch justify-center bg-ink-900/80 backdrop-blur-sm md:items-center md:p-6"
+      onClick={onClose}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="gpx-title"
+        className="flex h-full w-full max-w-5xl flex-col overflow-hidden bg-paper-50 shadow-2xl md:h-[82vh] md:rounded-3xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-start justify-between gap-4 bg-ink p-4 text-paper md:p-5">
+          <div className="min-w-0">
+            <p className="eyebrow text-signal">Route</p>
+            <h2 id="gpx-title" className="mt-1 truncate text-lg font-bold md:text-xl">{title}</h2>
+            {routeStats && (
+              <p className="mt-1 text-sm text-paper/70">
+                Afstand <strong className="text-paper">{routeStats.distanceKm} km</strong>
+              </p>
+            )}
+          </div>
+          <div className="flex shrink-0 items-center gap-2">
+            <button
+              type="button"
+              onClick={handleDownloadGpx}
+              className="inline-flex items-center gap-2 rounded-full bg-signal px-4 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-signal-600"
+              title="Download GPX"
+            >
+              <BiDownload className="h-4 w-4" aria-hidden={true} />
+              <span>GPX</span>
+            </button>
+            <button
+              ref={closeButton}
+              type="button"
+              onClick={onClose}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-paper/20 text-2xl leading-none text-paper transition-colors hover:border-paper"
+              aria-label="Sluiten"
+            >
+              ×
+            </button>
           </div>
         </div>
 
-        <div className="flex-1 relative bg-gray-50">
+        <div className="relative flex-1 bg-paper-200">
           {loading && (
-            <div className="absolute inset-0 flex items-center justify-center z-10">
-              <div className="text-gray-600">Loading map...</div>
+            <div className="absolute inset-0 z-[1000] flex items-center justify-center">
+              <div className="rounded-full bg-paper-50 px-4 py-2 text-sm font-medium text-ink shadow">Kaart laden…</div>
             </div>
           )}
           {error && (
-            <div className="absolute inset-0 flex items-center justify-center z-10">
-              <div className="text-red-600 text-center">
-                <p>Error: {error}</p>
+            <div className="absolute inset-0 z-[1000] flex items-center justify-center p-6">
+              <div role="alert" className="max-w-sm rounded-2xl bg-paper-50 p-5 text-center text-red-700 shadow">
+                <p>{error}</p>
+                <p className="mt-2 text-sm text-ink/60">Je kan het bestand wel nog downloaden.</p>
               </div>
             </div>
           )}
-          <div
-            ref={mapContainer}
-            className="w-full h-full"
-          />
+          <div ref={mapContainer} className="h-full w-full" />
         </div>
       </div>
     </div>

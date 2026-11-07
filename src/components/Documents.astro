@@ -1,38 +1,58 @@
 ---
 const documents = [
   {
-    title: "Huishoudelijke regels",
+    title: "Huishoudelijk reglement",
     description: "Belangrijke informatie voor alle leden",
     link: "/documenten/pelotonmeilsen_huishoudelijkreglement_2025.pdf",
     target: "_blank",
+    meta: "PDF",
   },
   {
-    title: "Lidmaatschapsformulier",
+    title: "Lidmaatschap",
     description: "Word lid van onze fietsgemeenschap",
     link: "/lidmaatschap",
+    meta: "Formulier",
   },
   {
     title: "Veiligheidsprotocol",
     description: "Essentiële veiligheidsrichtlijnen voor groepsritten",
     link: "/veiligheid",
+    meta: "Richtlijnen",
   },
 ];
 ---
 
-<div class="container mx-auto py-8 md:py-20">
-  <h2 id="documenten" class="text-4xl font-bold mb-8">Clubdocumenten</h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<section class="wrap py-16 md:py-24" aria-labelledby="documenten">
+  <p class="eyebrow text-kit">Goed om te weten</p>
+  <h2 id="documenten" class="font-display mt-3 text-4xl md:text-6xl">Clubdocumenten</h2>
+
+  <div class="mt-10 grid gap-4 md:grid-cols-3">
     {
-      documents.map((doc) => (
+      documents.map((doc, i) => (
         <a
           href={doc.link}
           target={doc.target}
-          class="block p-6 bg-light hover:bg-secondary text-primary rounded-lg  transition-colors"
+          rel={doc.target ? "noopener" : undefined}
+          class="group relative flex min-h-[13rem] flex-col justify-between overflow-hidden rounded-3xl border border-ink/10 bg-paper-50 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-ink hover:bg-ink hover:text-paper"
         >
-          <h3 class="text-xl font-semibold mb-2">{doc.title}</h3>
-          <p class="text-primary/80">{doc.description}</p>
+          <div class="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.18em] text-ink/50 group-hover:text-paper/60">
+            <span>{String(i + 1).padStart(2, "0")}</span>
+            <span>{doc.meta}</span>
+          </div>
+          <div>
+            <h3 class="font-display text-3xl">{doc.title}</h3>
+            <p class="mt-2 text-ink/70 group-hover:text-paper/70">{doc.description}</p>
+          </div>
+          <span
+            class="absolute bottom-7 right-7 flex h-10 w-10 items-center justify-center rounded-full bg-ink text-paper transition-all group-hover:rotate-[-45deg] group-hover:bg-signal group-hover:text-ink"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.64l-3.22-3.22a.75.75 0 1 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" />
+            </svg>
+          </span>
         </a>
       ))
     }
   </div>
-</div>
+</section>

@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Documents from "../components/Documents.astro";
-import PelotonMeilsen from "../components/PelotonMeilsen.astro";
+import PageHero from "../components/PageHero.astro";
 import { GalleryEventList } from "../components/GalleryEventList";
 
 // Import all gallery data files at build time
@@ -20,21 +20,19 @@ const sortedEvents = events.sort((a, b) => {
 });
 ---
 
-<Layout title="Fotogalerij">
-  <PelotonMeilsen />
+<Layout
+  title="Fotogalerij"
+  description="Bekijk de mooiste momenten van de ritten en evenementen van Peloton Meilsen."
+>
+  <PageHero
+    eyebrow="Fotogalerij"
+    title="Onderweg vastgelegd"
+    intro="Bekijk de mooiste momenten van onze ritten en evenementen. Klik op een album om de foto's te bekijken."
+  />
 
-  <div class="container mx-auto px-4">
-    <div class="container mx-auto py-8 md:py-20">
-      <h1 class="text-4xl font-bold mb-4">Fotogalerij</h1>
+  <section class="wrap py-16 md:py-24">
+    <GalleryEventList initialEvents={sortedEvents} client:load />
+  </section>
 
-      <p class="text-xl text-secondary max-w-2xl mb-8">
-        Bekijk de mooiste momenten van onze ritten en evenementen. Klik op een
-        album om de foto's te bekijken.
-      </p>
-
-      <GalleryEventList initialEvents={sortedEvents} client:load />
-    </div>
-
-    <Documents />
-  </div>
+  <Documents />
 </Layout>

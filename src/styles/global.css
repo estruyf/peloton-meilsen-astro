@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased;
+    font-feature-settings: "ss01", "tnum" 0;
+  }
+
+  ::selection {
+    @apply bg-signal text-ink;
+  }
+
+  /* Dual ring stays visible on both navy and paper surfaces */
+  :focus-visible {
+    outline: 2px solid #002b3a;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px #d4ff3f;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Condensed, heavy display type for headlines */
+  .font-display {
+    font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
+    font-stretch: 70%;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 0.92;
+    text-transform: uppercase;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em];
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-[2px] w-6 bg-current;
+  }
+
+  .wrap {
+    @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-10;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-40;
+  }
+
+  .btn-signal {
+    @apply btn bg-signal text-ink hover:bg-signal-600;
+  }
+
+  .btn-ink {
+    @apply btn bg-ink text-paper hover:bg-ink-600;
+  }
+
+  .btn-ghost-light {
+    @apply btn border border-paper/30 text-paper hover:border-paper hover:bg-paper/10;
+  }
+
+  .btn-ghost-dark {
+    @apply btn border border-ink/20 text-ink hover:border-ink hover:bg-ink/5;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-ink/15 bg-paper-50 px-4 py-3 text-ink placeholder:text-ink/40 transition focus:border-ink focus:outline-none focus:ring-2 focus:ring-signal;
+  }
+
+  /* Subtle road-marking stripe used as section divider */
+  .road-stripe {
+    background-image: repeating-linear-gradient(
+      90deg,
+      currentColor 0 28px,
+      transparent 28px 44px
+    );
+    height: 3px;
+  }
+
+  .prose-club p {
+    @apply leading-relaxed text-ink/80;
+  }
+
+  .prose-club p + p {
+    @apply mt-4;
+  }
+}
